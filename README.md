@@ -48,20 +48,6 @@ The platform guides users through a structured five-phase workflow: mentor prepa
 - Finetuned SmolVLM-500M for pitch deck specific evaluation
 - Sub-2-minute processing latency for 10-minute pitch videos
 
-### Production MLOps Infrastructure
-- **Continuous Learning**: Automated retraining triggered by user feedback corrections
-- **Experiment Tracking**: Weights & Biases integration for comprehensive training monitoring
-- **Model Versioning**: DVC for dataset and model checkpoint versioning
-- **CI/CD Pipeline**: GitHub Actions for automated testing, training, and deployment
-- **Monitoring**: Evidently AI for drift detection and Prometheus/Grafana for metrics
-- **A/B Testing**: Framework for safe model deployment and performance comparison
-
-### User Experience
-- Structured practice workflow with mentor guidance
-- Comprehensive feedback reports with actionable recommendations
-- Personal dashboard tracking improvement metrics across sessions
-- Session history with quantitative performance scores
-
 
 ### Models
 
