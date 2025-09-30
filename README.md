@@ -8,7 +8,7 @@
 - Uttapreksha Patel
 
 ## Repository Link
-[GitHub Repo](https://github.com/your-org/your-repo-name)
+[GitHub Repo]: (https://github.com/harshitashitut/MLOps-Project.git)
 
 ## Folder Structure
 ├── src/
