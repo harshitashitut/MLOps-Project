@@ -20,6 +20,26 @@ PitchQuest Multimodal transforms pitch practice by analyzing video presentations
 
 The platform guides users through a structured five-phase workflow: mentor preparation, investor simulation with video recording, multimodal analysis, post-session mentor discussion, and progress tracking through a personal dashboard.
 
+**Note**: This project is under active development. Architecture, file structure, and implementation details are subject to change as we refine the system based on testing and performance evaluation.
+
+## Technical Architecture
+
+**Note:** File structure and architecture details are tentative and subject to modification based on testing and performance requirements.
+
+### Core Components
+
+**Frontend**: Next.js web application with video upload, real-time analysis display, and dashboard visualization
+
+**Backend**: FastAPI service handling video processing, model orchestration, and agent coordination
+
+**ML Pipeline**: Multi-model inference system combining transcription, emotion detection, pose estimation, facial analysis, and vision-language understanding
+
+**MLOps**: Automated training pipeline, model registry, drift monitoring, and A/B testing framework
+
+**Database**: Supabase (PostgreSQL) for session data, analysis results, user feedback, and training metrics
+
+
+
 ## Key Features
 
 ### Multimodal Analysis Pipeline
@@ -42,21 +62,6 @@ The platform guides users through a structured five-phase workflow: mentor prepa
 - Personal dashboard tracking improvement metrics across sessions
 - Session history with quantitative performance scores
 
-## Technical Architecture
-
-**Note:** File structure and architecture details are tentative and subject to modification based on testing and performance requirements.
-
-### Core Components
-
-**Frontend**: Next.js web application with video upload, real-time analysis display, and dashboard visualization
-
-**Backend**: FastAPI service handling video processing, model orchestration, and agent coordination
-
-**ML Pipeline**: Multi-model inference system combining transcription, emotion detection, pose estimation, facial analysis, and vision-language understanding
-
-**MLOps**: Automated training pipeline, model registry, drift monitoring, and A/B testing framework
-
-**Database**: Supabase (PostgreSQL) for session data, analysis results, user feedback, and training metrics
 
 ### Models
 
@@ -88,56 +93,7 @@ pitchquest-multimodal/
 
 **Detailed structure will be finalized during development and may include additional directories for MLOps infrastructure, deployment configurations, and documentation.**
 
-## Installation
 
-### Prerequisites
-- Python 3.9+
-- Node.js 18+
-- Docker (optional, for containerized deployment)
-- AWS CLI (for Lambda deployment)
-
-### Setup
-
-```bash
-# Clone repository
-git clone https://github.com/harshitashitut/MLOps-Project.git
-cd MLOps-Project
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Install frontend dependencies
-cd frontend
-npm install
-cd ..
-
-# Configure environment variables
-cp .env.example .env
-# Edit .env with your API keys and configuration
-```
-
-## Usage
-
-### Local Development
-
-```bash
-# Start backend server
-python src/main.py
-
-# Start frontend (in separate terminal)
-cd frontend
-npm run dev
-```
-
-### Running Analysis
-
-1. Navigate to the web interface
-2. Complete mentor preparation session
-3. Record or upload pitch video (under 10 minutes)
-4. Receive multimodal analysis within 2 minutes
-5. Review comprehensive feedback report
-6. Engage in post-session mentor chat
-7. Track progress in personal dashboard
 
 ## Model Training
 
@@ -181,40 +137,6 @@ Access monitoring dashboards:
 - **System Metrics**: Grafana dashboard (requires setup)
 - **Drift Detection**: Evidently AI reports
 
-## Testing
-
-```bash
-# Run all tests
-pytest tests/
-
-# Run specific test suite
-pytest tests/unit/
-pytest tests/integration/
-
-# Run with coverage
-pytest --cov=src tests/
-```
-
-## Deployment
-
-### AWS Lambda Deployment
-
-```bash
-# Build Docker image
-docker build -t pitchquest-backend .
-
-# Deploy to AWS Lambda
-aws lambda update-function-code \
-  --function-name pitchquest-processor \
-  --image-uri <ECR_IMAGE_URI>
-```
-
-### Frontend Deployment (Vercel)
-
-```bash
-cd frontend
-vercel deploy --prod
-```
 
 ## Dataset Information
 
@@ -236,16 +158,6 @@ vercel deploy --prod
 - **System Uptime**: > 99%
 - **Cost per Analysis**: < $0.30
 - **User Satisfaction**: > 4.0/5.0
-
-## Contributing
-
-This is an academic project for MLOps coursework. Contributions are welcome from team members. Please follow these guidelines:
-
-1. Create feature branch from main
-2. Write tests for new functionality
-3. Ensure all tests pass before submitting PR
-4. Document code and update README if needed
-5. Request review from at least one team member
 
 ## License
 
@@ -270,4 +182,4 @@ For questions or issues, please contact team members through university email or
 
 ---
 
-**Note**: This project is under active development. Architecture, file structure, and implementation details are subject to change as we refine the system based on testing and performance evaluation.
+
