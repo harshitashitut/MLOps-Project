@@ -1,0 +1,54 @@
+2025-10-27 20:27:11 - __main__ - INFO - <module>:18 -  Logging system initialized
+2025-10-27 20:27:11 - __main__ - INFO - <module>:19 - Testing INFO level
+2025-10-27 20:27:11 - __main__ - WARNING - <module>:20 -   Testing WARNING level
+2025-10-27 20:27:11 - __main__ - ERROR - <module>:21 -  Testing ERROR level
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:60 - ================================================================================
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:61 - PIPELINE START: Quick Test Pipeline
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:62 - Timestamp: 2025-10-27T20:27:11.479261
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:64 - Configuration:
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:66 -   test_mode: True
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:66 -   version: 1.0
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_start:67 - ================================================================================
+2025-10-27 20:27:11 - __main__ - INFO - <module>:30 - Processing data...
+2025-10-27 20:27:11 - __main__ - INFO - <module>:31 - Running models...
+2025-10-27 20:27:11 - __main__ - INFO - <module>:32 - Generating results...
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:70 - ================================================================================
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:71 - PIPELINE END: Quick Test Pipeline
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:72 - Status: SUCCESS
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:73 - Timestamp: 2025-10-27T20:27:11.486319
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:75 - Duration: 5.00 seconds
+2025-10-27 20:27:11 - __main__ - INFO - log_pipeline_end:76 - ================================================================================
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:79 - 
+Data Statistics for Sample Dataset:
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:80 - ----------------------------------------
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:82 - total_records: 1000
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:82 - missing_values: 12
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:82 - columns: 25
+2025-10-27 20:27:11 - __main__ - INFO - log_data_stats:83 - ----------------------------------------
+2025-10-27 20:32:56 - __main__ - INFO - <module>:18 -  Logging system initialized
+2025-10-27 20:32:56 - __main__ - INFO - <module>:19 - Testing INFO level
+2025-10-27 20:32:56 - __main__ - WARNING - <module>:20 -   Testing WARNING level
+2025-10-27 20:32:56 - __main__ - ERROR - <module>:21 -  Testing ERROR level
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:60 - ================================================================================
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:61 - PIPELINE START: Test Pipeline
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:62 - Timestamp: 2025-10-27T20:32:56.794215
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:64 - Configuration:
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:66 -   test_mode: True
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:66 -   version: 1.0
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_start:67 - ================================================================================
+2025-10-27 20:32:56 - __main__ - INFO - <module>:30 - Processing data...
+2025-10-27 20:32:56 - __main__ - INFO - <module>:31 - Running models...
+2025-10-27 20:32:56 - __main__ - INFO - <module>:32 - Generating results...
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:70 - ================================================================================
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:71 - PIPELINE END: Test Pipeline
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:72 - Status: SUCCESS
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:73 - Timestamp: 2025-10-27T20:32:56.799958
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:75 - Duration: 5.00 seconds
+2025-10-27 20:32:56 - __main__ - INFO - log_pipeline_end:76 - ================================================================================
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:79 - 
+Data Statistics for Sample Dataset:
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:80 - ----------------------------------------
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:82 - total_records: 1000
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:82 - missing_values: 12
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:82 - columns: 25
+2025-10-27 20:32:56 - __main__ - INFO - log_data_stats:83 - ----------------------------------------
