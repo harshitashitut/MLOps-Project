@@ -1,16 +1,11 @@
 """
 Interview Analysis Backend
 Analyzes interview videos using speech transcription and LLM feedback
+Saves transcriptions to local storage
 """
 
 import sys
 sys.path.append("/home/mohit/.local/lib/python3.13/site-packages")
-
-
-"""
-Interview Analysis Backend
-Analyzes interview videos using speech transcription and LLM feedback
-"""
 
 import os
 import torch
@@ -23,17 +18,24 @@ import cv2
 import subprocess
 import tempfile
 from pathlib import Path
+from datetime import datetime
 
 class InterviewAnalyzer:
-    def __init__(self, use_gpu=True):
+    def __init__(self, use_gpu=True, storage_dir="../store"):
         """
         Initialize the analyzer with speech recognition and LLM models
         
         Args:
             use_gpu: Whether to use GPU acceleration if available
+            storage_dir: Directory to save transcriptions (default: "store")
         """
         self.device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
         print(f"Using device: {self.device}")
+        
+        # Set up storage directory
+        self.storage_dir = Path(storage_dir)
+        self.storage_dir.mkdir(exist_ok=True)
+        print(f"Transcriptions will be saved to: {self.storage_dir.absolute()}")
         
         # Initialize speech recognition model (Whisper)
         self.transcription_pipeline = None
@@ -132,6 +134,61 @@ class InterviewAnalyzer:
             print(f"Error extracting audio: {e}")
             raise
     
+    def save_analysis(self, transcription, feedback, video_path, question=None):
+        """
+        Save transcription and LLM feedback to a text file in the storage directory
+        
+        Args:
+            transcription: The transcription text
+            feedback: LLM analysis feedback
+            video_path: Original video path (used for naming)
+            question: Optional question to include in the file
+            
+        Returns:
+            Path to saved analysis file
+        """
+        # Generate filename based on video name and timestamp
+        video_name = Path(video_path).stem
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{video_name}_{timestamp}.txt"
+        
+        output_path = self.storage_dir / filename
+        
+        # Write analysis to file
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write("="*60 + "\n")
+            f.write("INTERVIEW ANALYSIS REPORT\n")
+            f.write("="*60 + "\n\n")
+            
+            # Metadata
+            f.write(f"Video: {Path(video_path).name}\n")
+            f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Transcription length: {len(transcription)} characters\n\n")
+            
+            # Question
+            if question:
+                f.write("="*60 + "\n")
+                f.write("QUESTION\n")
+                f.write("="*60 + "\n\n")
+                f.write(f"{question}\n\n")
+            
+            # Transcription
+            f.write("="*60 + "\n")
+            f.write("TRANSCRIPTION\n")
+            f.write("="*60 + "\n\n")
+            f.write(transcription)
+            f.write("\n\n")
+            
+            # LLM Feedback
+            f.write("="*60 + "\n")
+            f.write("AI FEEDBACK\n")
+            f.write("="*60 + "\n\n")
+            f.write(feedback)
+            f.write("\n")
+        
+        print(f"✓ Analysis report saved to: {output_path}")
+        return str(output_path)
+    
     def transcribe_audio(self, audio_path):
         """
         Transcribe audio file to text
@@ -149,6 +206,7 @@ class InterviewAnalyzer:
         result = self.transcription_pipeline(audio_path)
         transcription = result["text"]
         print(f"Transcription complete: {len(transcription)} characters")
+        
         return transcription
     
     def analyze_answer(self, question, answer, context="job interview"):
@@ -209,7 +267,7 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
         print("Analysis complete")
         return feedback
     
-    def analyze_video(self, video_path, question, context="job interview"):
+    def analyze_video(self, video_path, question, context="job interview", save_analysis=True):
         """
         Complete pipeline: extract audio, transcribe, and analyze
         
@@ -217,9 +275,10 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
             video_path: Path to video file
             question: The interview question
             context: Interview context
+            save_analysis: Whether to save full analysis (transcription + feedback) to file
             
         Returns:
-            Dictionary with transcription and feedback
+            Dictionary with transcription, feedback, and file path
         """
         # Extract audio
         audio_path = self.extract_audio(video_path)
@@ -231,10 +290,16 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
             # Analyze answer
             feedback = self.analyze_answer(question, transcription, context)
             
+            # Save complete analysis to file
+            analysis_file = None
+            if save_analysis:
+                analysis_file = self.save_analysis(transcription, feedback, video_path, question)
+            
             return {
                 "transcription": transcription,
                 "feedback": feedback,
-                "question": question
+                "question": question,
+                "analysis_file": analysis_file
             }
         finally:
             # Clean up temporary audio file
@@ -244,28 +309,30 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
 
 # Example usage
 if __name__ == "__main__":
-    # Initialize analyzer
-    analyzer = InterviewAnalyzer(use_gpu=True)
+    # Initialize analyzer with storage directory
+    analyzer = InterviewAnalyzer(
+        use_gpu=True,
+        storage_dir="../store"  # Transcriptions will be saved here
+    )
     
     # Load models
     analyzer.load_transcription_model("openai/whisper-base")
     
-    # RECOMMENDED: Use one of these better models for LLM analysis
-    # Option 1: Best quality (needs ~6GB RAM, but much better results)
-    # analyzer.load_llm_model("microsoft/Phi-3-mini-4k-instruct")
-    
-    # Option 2: Larger FLAN-T5 (needs ~3GB RAM, better than base)
-    # analyzer.load_llm_model("google/flan-t5-large")
-    
-    # Option 3: Current - smallest model (often gives poor results)
     analyzer.load_llm_model("google/flan-t5-large")
+    
+    # Option 3: Smallest model (often gives poor results)
+    # analyzer.load_llm_model("google/flan-t5-base")
     
     # Analyze a video
     video_path = "/home/mohit/Downloads/project_mlops/MLOps-Project/Data Pipeline/Data/video1.webm"
     question = "Tell me about yourself"
     
     if os.path.exists(video_path):
-        result = analyzer.analyze_video(video_path, question)
+        result = analyzer.analyze_video(
+            video_path, 
+            question,
+            save_analysis=True  # Set to False if you don't want to save
+        )
         
         print("\n" + "="*60)
         print("ANALYSIS RESULTS")
@@ -273,10 +340,9 @@ if __name__ == "__main__":
         print(f"\nQuestion: {result['question']}")
         print(f"\nTranscription:\n{result['transcription']}")
         print(f"\nFeedback:\n{result['feedback']}")
+        
+        if result['analysis_file']:
+            print(f"\n✓ Full analysis saved to: {result['analysis_file']}")
+        
     else:
         print(f"Video file not found: {video_path}")
-        print("\nTo use this script:")
-        print("1. Install dependencies: pip install transformers torch opencv-python")
-        print("2. Install ffmpeg: apt-get install ffmpeg (Linux) or brew install ffmpeg (Mac)")
-        print("3. Provide a video file path")
-        print("\nRECOMMENDED: Use microsoft/Phi-3-mini-4k-instruct for much better feedback!")
