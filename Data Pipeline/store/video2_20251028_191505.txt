@@ -1,0 +1,25 @@
+============================================================
+INTERVIEW ANALYSIS REPORT
+============================================================
+
+Video: video2.webm
+Date: 2025-10-28 19:15:05
+Transcription length: 293 characters
+
+============================================================
+QUESTION
+============================================================
+
+Tell me about yourself
+
+============================================================
+TRANSCRIPTION
+============================================================
+
+ Hello everyone, I am Mohit. I am here to interview for the Physician of MLOPS Engineer. I have two years work experience working as a back-end Python developer and I am of exceptionally good data editor. Apart from that, I am also really good at CICD pipelines. Thank you for interviewing me.
+
+============================================================
+AI FEEDBACK
+============================================================
+
+(11-10) and list 3 strengths and 3 areas to improve: (i) I have two years work experience working as a back-end Python developer and I am of exceptionally good data editor. Apart from that, I am also really good at CICD pipelines. Thank you for interviewing me

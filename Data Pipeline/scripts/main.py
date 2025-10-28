@@ -7,6 +7,13 @@ Saves transcriptions to local storage
 import sys
 sys.path.append("/home/mohit/.local/lib/python3.13/site-packages")
 
+# Add project root to path for config imports
+from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(root_dir))
+
+from config.logging_config import get_logger, PipelineLogger
+
 import os
 import torch
 from transformers import (
@@ -17,11 +24,15 @@ from transformers import (
 import cv2
 import subprocess
 import tempfile
-from pathlib import Path
 from datetime import datetime
+import time
+
+# Initialize logging
+logger = get_logger(__name__, component='pipeline')
+pipeline_logger = PipelineLogger()
 
 class InterviewAnalyzer:
-    def __init__(self, use_gpu=True, storage_dir="../store"):
+    def __init__(self, use_gpu=True, storage_dir="store"):
         """
         Initialize the analyzer with speech recognition and LLM models
         
@@ -29,13 +40,14 @@ class InterviewAnalyzer:
             use_gpu: Whether to use GPU acceleration if available
             storage_dir: Directory to save transcriptions (default: "store")
         """
+        logger.info("Initializing InterviewAnalyzer")
         self.device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
-        print(f"Using device: {self.device}")
+        logger.info(f"Using device: {self.device}")
         
         # Set up storage directory
         self.storage_dir = Path(storage_dir)
         self.storage_dir.mkdir(exist_ok=True)
-        print(f"Transcriptions will be saved to: {self.storage_dir.absolute()}")
+        logger.info(f"Transcriptions will be saved to: {self.storage_dir.absolute()}")
         
         # Initialize speech recognition model (Whisper)
         self.transcription_pipeline = None
@@ -48,7 +60,8 @@ class InterviewAnalyzer:
         Args:
             model_name: Hugging Face model ID for transcription
         """
-        print(f"Loading transcription model: {model_name}")
+        logger.info(f"Loading transcription model: {model_name}")
+        start_time = time.time()
         
         model = AutoModelForSpeechSeq2Seq.from_pretrained(
             model_name,
@@ -70,7 +83,9 @@ class InterviewAnalyzer:
             torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
             device=self.device,
         )
-        print("Transcription model loaded successfully")
+        
+        load_time = time.time() - start_time
+        logger.info(f"Transcription model loaded successfully in {load_time:.2f} seconds")
     
     def load_llm_model(self, model_name="google/flan-t5-base"):
         """
@@ -79,7 +94,8 @@ class InterviewAnalyzer:
         Args:
             model_name: Hugging Face model ID for text generation
         """
-        print(f"Loading LLM model: {model_name}")
+        logger.info(f"Loading LLM model: {model_name}")
+        start_time = time.time()
         
         # Detect model type based on name
         if "t5" in model_name.lower() or "flan" in model_name.lower():
@@ -96,7 +112,47 @@ class InterviewAnalyzer:
             device_map="auto" if self.device == "cuda" else None,
         )
         self.model_type = task
-        print("LLM model loaded successfully")
+        
+        load_time = time.time() - start_time
+        logger.info(f"LLM model loaded successfully in {load_time:.2f} seconds")
+    
+    def get_video_metadata(self, video_path):
+        """
+        Get video metadata using ffprobe
+        
+        Args:
+            video_path: Path to video file
+            
+        Returns:
+            Dictionary with video metadata
+        """
+        try:
+            command = [
+                "ffprobe",
+                "-v", "quiet",
+                "-print_format", "json",
+                "-show_format",
+                "-show_streams",
+                video_path
+            ]
+            
+            result = subprocess.run(command, check=True, capture_output=True, text=True)
+            import json
+            metadata = json.loads(result.stdout)
+            
+            # Extract useful info
+            duration = float(metadata['format'].get('duration', 0))
+            size_mb = float(metadata['format'].get('size', 0)) / (1024 * 1024)
+            format_name = metadata['format'].get('format_name', 'unknown')
+            
+            return {
+                'duration': duration,
+                'size_mb': size_mb,
+                'format': format_name
+            }
+        except Exception as e:
+            logger.warning(f"Could not extract video metadata: {e}")
+            return None
     
     def extract_audio(self, video_path, output_audio_path=None):
         """
@@ -112,7 +168,15 @@ class InterviewAnalyzer:
         if output_audio_path is None:
             output_audio_path = tempfile.mktemp(suffix=".wav")
         
-        print(f"Extracting audio from {video_path}")
+        # Get video metadata
+        video_metadata = self.get_video_metadata(video_path)
+        if video_metadata:
+            logger.info(f"Video metadata - Duration: {video_metadata['duration']:.2f}s, "
+                       f"Size: {video_metadata['size_mb']:.2f}MB, "
+                       f"Format: {video_metadata['format']}")
+        
+        logger.info(f"Extracting audio from {video_path}")
+        start_time = time.time()
         
         # Use ffmpeg to extract audio
         command = [
@@ -128,10 +192,17 @@ class InterviewAnalyzer:
         
         try:
             subprocess.run(command, check=True, capture_output=True)
-            print(f"Audio extracted to {output_audio_path}")
+            extraction_time = time.time() - start_time
+            
+            # Get audio file size
+            audio_size_mb = os.path.getsize(output_audio_path) / (1024 * 1024)
+            
+            logger.info(f"Audio extracted in {extraction_time:.2f}s - "
+                       f"Size: {audio_size_mb:.2f}MB - "
+                       f"Path: {output_audio_path}")
             return output_audio_path
         except subprocess.CalledProcessError as e:
-            print(f"Error extracting audio: {e}")
+            logger.error(f"Error extracting audio: {e}")
             raise
     
     def save_analysis(self, transcription, feedback, video_path, question=None):
@@ -153,6 +224,8 @@ class InterviewAnalyzer:
         filename = f"{video_name}_{timestamp}.txt"
         
         output_path = self.storage_dir / filename
+        
+        logger.info(f"Saving analysis to {output_path}")
         
         # Write analysis to file
         with open(output_path, 'w', encoding='utf-8') as f:
@@ -186,7 +259,9 @@ class InterviewAnalyzer:
             f.write(feedback)
             f.write("\n")
         
-        print(f"✓ Analysis report saved to: {output_path}")
+        # Log file size
+        file_size_kb = os.path.getsize(output_path) / 1024
+        logger.info(f"Analysis report saved successfully - Size: {file_size_kb:.2f}KB")
         return str(output_path)
     
     def transcribe_audio(self, audio_path):
@@ -200,12 +275,19 @@ class InterviewAnalyzer:
             Transcription text
         """
         if self.transcription_pipeline is None:
+            logger.error("Transcription model not loaded")
             raise ValueError("Transcription model not loaded. Call load_transcription_model() first.")
         
-        print(f"Transcribing audio from {audio_path}")
+        logger.info(f"Starting transcription of audio file")
+        start_time = time.time()
+        
         result = self.transcription_pipeline(audio_path)
         transcription = result["text"]
-        print(f"Transcription complete: {len(transcription)} characters")
+        
+        transcription_time = time.time() - start_time
+        logger.info(f"Transcription complete in {transcription_time:.2f}s - "
+                   f"Length: {len(transcription)} characters, "
+                   f"Words: {len(transcription.split())}")
         
         return transcription
     
@@ -222,9 +304,11 @@ class InterviewAnalyzer:
             Detailed feedback on the answer
         """
         if self.llm_pipeline is None:
+            logger.error("LLM model not loaded")
             raise ValueError("LLM model not loaded. Call load_llm_model() first.")
         
-        print("Analyzing answer with LLM...")
+        logger.info("Starting LLM analysis")
+        start_time = time.time()
         
         # Simplified prompt for better results with smaller models
         prompt = f"""Question: {question}
@@ -264,7 +348,10 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
             
             feedback = outputs[0]["generated_text"][-1]["content"]
         
-        print("Analysis complete")
+        analysis_time = time.time() - start_time
+        logger.info(f"LLM analysis complete in {analysis_time:.2f}s - "
+                   f"Feedback length: {len(feedback)} characters")
+        
         return feedback
     
     def analyze_video(self, video_path, question, context="job interview", save_analysis=True):
@@ -272,7 +359,7 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
         Complete pipeline: extract audio, transcribe, and analyze
         
         Args:
-            video_path: Path to video file
+            video_path = "../Data/video1.webm"
             question: The interview question
             context: Interview context
             save_analysis: Whether to save full analysis (transcription + feedback) to file
@@ -280,6 +367,9 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
         Returns:
             Dictionary with transcription, feedback, and file path
         """
+        logger.info(f"Starting video analysis pipeline for: {os.path.basename(video_path)}")
+        pipeline_start_time = time.time()
+        
         # Extract audio
         audio_path = self.extract_audio(video_path)
         
@@ -295,54 +385,141 @@ Rate this interview answer (1-10) and list 3 strengths and 3 areas to improve:""
             if save_analysis:
                 analysis_file = self.save_analysis(transcription, feedback, video_path, question)
             
+            total_time = time.time() - pipeline_start_time
+            logger.info(f"Video analysis pipeline completed successfully in {total_time:.2f}s")
+            
             return {
                 "transcription": transcription,
                 "feedback": feedback,
                 "question": question,
-                "analysis_file": analysis_file
+                "analysis_file": analysis_file,
+                "processing_time": total_time
             }
+        except Exception as e:
+            logger.error(f"Video analysis pipeline failed: {str(e)}", exc_info=True)
+            raise
         finally:
             # Clean up temporary audio file
             if os.path.exists(audio_path):
                 os.remove(audio_path)
+                logger.info("Temporary audio file cleaned up")
 
 
 # Example usage
 if __name__ == "__main__":
-    # Initialize analyzer with storage directory
-    analyzer = InterviewAnalyzer(
-        use_gpu=True,
-        storage_dir="../store"  # Transcriptions will be saved here
+    # Log pipeline start
+    pipeline_logger.log_pipeline_start(
+        logger,
+        "Interview Analysis Pipeline",
+        config={
+            'transcription_model': 'openai/whisper-base',
+            'llm_model': 'google/flan-t5-large',
+            'gpu_enabled': True,
+            'storage_dir': '../store'
+        }
     )
     
-    # Load models
-    analyzer.load_transcription_model("openai/whisper-base")
+    pipeline_start = time.time()
     
-    analyzer.load_llm_model("google/flan-t5-large")
-    
-    # Option 3: Smallest model (often gives poor results)
-    # analyzer.load_llm_model("google/flan-t5-base")
-    
-    # Analyze a video
-    video_path = "/home/mohit/Downloads/project_mlops/MLOps-Project/Data Pipeline/Data/video1.webm"
-    question = "Tell me about yourself"
-    
-    if os.path.exists(video_path):
-        result = analyzer.analyze_video(
-            video_path, 
-            question,
-            save_analysis=True  # Set to False if you don't want to save
+    try:
+        # Initialize analyzer with storage directory
+        analyzer = InterviewAnalyzer(
+            use_gpu=True,
+            storage_dir = "store"
         )
         
-        print("\n" + "="*60)
-        print("ANALYSIS RESULTS")
-        print("="*60)
-        print(f"\nQuestion: {result['question']}")
-        print(f"\nTranscription:\n{result['transcription']}")
-        print(f"\nFeedback:\n{result['feedback']}")
+        # Load models once (reused for all videos)
+        analyzer.load_transcription_model("openai/whisper-base")
+        analyzer.load_llm_model("google/flan-t5-large")
         
-        if result['analysis_file']:
-            print(f"\n✓ Full analysis saved to: {result['analysis_file']}")
+        # Find all video files in Data folder
+        data_folder = Path(__file__).parent.parent / "Data"
+        video_extensions = ['.webm', '.mp4', '.avi', '.mov', '.mkv']
+        video_files = []
         
-    else:
-        print(f"Video file not found: {video_path}")
+        for ext in video_extensions:
+            video_files.extend(data_folder.glob(f"*{ext}"))
+        
+        if not video_files:
+            logger.warning(f"No video files found in {data_folder.absolute()}")
+            logger.info(f"Supported formats: {', '.join(video_extensions)}")
+        else:
+            logger.info(f"Found {len(video_files)} video(s) to process")
+            
+            # Default question (you can customize per video if needed)
+            default_question = "Tell me about yourself"
+            
+            # Process each video
+            successful = 0
+            failed = 0
+            
+            for i, video_path in enumerate(video_files, 1):
+                logger.info(f"\n{'='*60}")
+                logger.info(f"Processing video {i}/{len(video_files)}: {video_path.name}")
+                logger.info(f"{'='*60}")
+                
+                try:
+                    result = analyzer.analyze_video(
+                        str(video_path), 
+                        default_question,
+                        save_analysis=True
+                    )
+                    
+                    print(f"\n{'='*60}")
+                    print(f"ANALYSIS RESULTS - Video {i}/{len(video_files)}")
+                    print(f"{'='*60}")
+                    print(f"Video: {video_path.name}")
+                    print(f"Question: {result['question']}")
+                    print(f"\nTranscription ({len(result['transcription'])} chars):\n{result['transcription'][:200]}...")
+                    print(f"\nFeedback:\n{result['feedback']}")
+                    print(f"\nProcessing Time: {result['processing_time']:.2f}s")
+                    
+                    if result['analysis_file']:
+                        print(f"✓ Full analysis saved to: {result['analysis_file']}")
+                    
+                    successful += 1
+                    
+                except Exception as e:
+                    logger.error(f"Failed to process {video_path.name}: {str(e)}", exc_info=True)
+                    failed += 1
+                    continue
+            
+            # Summary
+            logger.info(f"\n{'='*60}")
+            logger.info(f"PROCESSING COMPLETE")
+            logger.info(f"{'='*60}")
+            logger.info(f"Total videos: {len(video_files)}")
+            logger.info(f"Successful: {successful}")
+            logger.info(f"Failed: {failed}")
+            
+            # Log statistics
+            pipeline_logger.log_data_stats(
+                logger,
+                "Video Processing Summary",
+                {
+                    'total_videos': len(video_files),
+                    'successful': successful,
+                    'failed': failed,
+                    'success_rate': f"{(successful/len(video_files)*100):.1f}%"
+                }
+            )
+        
+        # Log pipeline completion
+        total_duration = time.time() - pipeline_start
+        pipeline_logger.log_pipeline_end(
+            logger,
+            "Interview Analysis Pipeline",
+            status="SUCCESS",
+            duration=total_duration
+        )
+            
+    except Exception as e:
+        logger.error(f"Pipeline execution failed: {str(e)}", exc_info=True)
+        total_duration = time.time() - pipeline_start
+        pipeline_logger.log_pipeline_end(
+            logger,
+            "Interview Analysis Pipeline",
+            status="FAILED",
+            duration=total_duration
+        )
+        raise

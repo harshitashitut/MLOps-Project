@@ -1,11 +1,11 @@
 import sys
 from pathlib import Path
 
-root_dir = Path(__file__).resolve().parent.parent.parent
+# Add the Data Pipeline root directory to Python path
+root_dir = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(root_dir))
 
 from config.logging_config import get_logger, PipelineLogger
-
 # Create logger
 logger = get_logger(__name__, component='pipeline')
 pipeline_logger = PipelineLogger()
