@@ -1,171 +1,289 @@
-# PitchQuest Multimodal: AI-Powered Pitch Analysis System
+# Airflow Video Processing Pipeline
 
-A comprehensive multimodal AI platform that analyzes pitch presentations across content, delivery, and visual performance dimensions. This system provides automated feedback comparable to professional pitch coaches through advanced machine learning and MLOps practices.
+An automated video processing pipeline built with Apache Airflow that extracts and processes video components for machine learning applications.
 
-## Team Members
+## 🎯 Project Motivation
 
-- Harshita Shitut
-- Mohit Kakda
-- Muhammad Salman
-- Sachin Muttu Baraddi
-- Uttapreksha Patel
+This project serves as the **foundation for a larger speech delivery analysis system**. The goal is to build an end-to-end MLOps pipeline that analyzes the quality of speech presentations by evaluating multiple factors:
 
-## Project Overview
+- **Audio Analysis**: Prosody, pace, tone, filler words, pauses
+- **Visual Analysis**: Posture, gestures, eye contact, facial expressions  
+- **Content Analysis**: Speech structure, clarity, word choice
 
-PitchQuest Multimodal transforms pitch practice by analyzing video presentations through three specialized lenses:
+### Why Airflow?
 
-- **Content Analysis**: Evaluates problem-solution clarity, market sizing, business model completeness, and competitive differentiation through speech transcription and natural language processing
-- **Delivery Analysis**: Assesses speaking pace, vocal confidence, filler word usage, emotional tone, and articulation through audio processing and emotion detection
-- **Visual Analysis**: Examines body language, posture, eye contact, hand gestures, facial expressions, and pitch deck slide quality through computer vision and finetuned vision-language models
+Speech analysis requires orchestrating multiple complex tasks:
+1. Video preprocessing and component extraction
+2. Parallel processing through multiple ML models
+3. Aggregation of results from different modalities
+4. Reproducible, scalable pipeline for batch processing
 
-The platform guides users through a structured five-phase workflow: mentor preparation, investor simulation with video recording, multimodal analysis, post-session mentor discussion, and progress tracking through a personal dashboard.
+**Airflow provides the orchestration layer** that makes this entire workflow manageable, scalable, and production-ready.
 
-**Note**: This project is under active development. Architecture, file structure, and implementation details are subject to change as we refine the system based on testing and performance evaluation.
+## 🏗️ Architecture
 
-## Technical Architecture
-
-**Note:** File structure and architecture details are tentative and subject to modification based on testing and performance requirements.
-
-### Core Components
-
-**Frontend**: Next.js web application with video upload, real-time analysis display, and dashboard visualization
-
-**Backend**: FastAPI service handling video processing, model orchestration, and agent coordination
-
-**ML Pipeline**: Multi-model inference system combining transcription, emotion detection, pose estimation, facial analysis, and vision-language understanding
-
-**MLOps**: Automated training pipeline, model registry, drift monitoring, and A/B testing framework
-
-**Database**: Supabase (PostgreSQL) for session data, analysis results, user feedback, and training metrics
-
-
-
-## Key Features
-
-### Multimodal Analysis Pipeline
-- Parallel processing of audio, video frames, and slide images
-- Integration of multiple pre-trained models (Whisper, Wav2Vec2, MediaPipe, DeepFace, SmolVLM)
-- Finetuned SmolVLM-500M for pitch deck specific evaluation
-- Sub-2-minute processing latency for 10-minute pitch videos
-
-
-### Models
-
-**Pre-trained Models** (used as-is):
-- Whisper API: Speech-to-text transcription
-- Wav2Vec2: Speech emotion recognition
-- MediaPipe Pose: Body pose estimation
-- DeepFace: Facial emotion detection
-- SmolVLM-500M (base): Body language description
-
-**Finetuned Models** (trained in this project):
-- SmolVLM-500M: Pitch deck slide analysis (trained on 500-1,000 labeled slides)
-
-## Repository Structure
+### Pipeline Flow Diagram
 
 ```
-pitchquest-multimodal/
-├── src/
-│   └── Main project code (API, ML models, agents)
-├── data/
-│   └── Datasets and data collection scripts
-├── notebooks/
-│   └── Exploratory analysis and experiments
-├── tests/
-│   └── Unit and integration tests
-├── requirements.txt
+Video Input
+    ↓
+┌─────────────────────────────┐
+│   load_video_task           │
+│   - Validates video file    │
+│   - Extracts metadata       │
+└─────────────────────────────┘
+    ↓
+┌──────────────────────────────────────┐
+│   Parallel Processing                │
+├──────────────────┬───────────────────┤
+│ extract_audio    │ extract_frames    │
+│ - Audio stream   │ - Key frames      │
+│ - WAV format     │ - Every 30th frame│
+└──────────────────┴───────────────────┘
+    ↓
+┌─────────────────────────────┐
+│   save_results_task         │
+│   - Consolidate outputs     │
+│   - Generate summary        │
+└─────────────────────────────┘
+```
+
+### Airflow DAG Visualization
+
+![Airflow DAG Graph](Assets/Screenshot%202025-10-19%20at%2023.24.30.png)
+
+*Live view of the Video Processing Pipeline in Airflow UI showing task dependencies and parallel execution*
+
+## 🚀 Features
+
+- **Automated Workflow**: End-to-end video processing without manual intervention
+- **Parallel Processing**: Audio and frame extraction run simultaneously
+- **Task Dependencies**: Ensures proper execution order
+- **Error Handling**: Robust error handling with retry logic
+- **Monitoring**: Real-time pipeline monitoring via Airflow UI
+- **Scalable**: Containerized with Docker for easy deployment
+
+## 📁 Project Structure
+
+```
+airflow_lab_3/
+├── dags/
+│   ├── airflow_video.py          # DAG definition
+│   ├── src/
+│   │   ├── __init__.py
+│   │   └── video_processing.py   # Processing functions
+│   ├── videos/                   # Input videos
+│   │   └── test_speech.mp4
+│   └── outputs/                  # Processed outputs
+│       ├── frames/               # Extracted frames
+│       ├── audio/                # Audio files
+│       └── processing_summary.txt
+├── logs/                         # Airflow logs
+├── plugins/                      # Custom plugins
+├── config/                       # Airflow configs
+├── docker-compose.yaml           # Docker orchestration
+├── .env                          # Environment variables
+├── .gitignore
 └── README.md
 ```
 
-**Detailed structure will be finalized during development and may include additional directories for MLOps infrastructure, deployment configurations, and documentation.**
+## 🛠️ Tech Stack
 
+- **Apache Airflow 2.9.2**: Workflow orchestration
+- **Docker & Docker Compose**: Containerization
+- **Python 3.12**: Core processing
+- **imageio & imageio-ffmpeg**: Video/audio processing
+- **opencv-python-headless**: Frame extraction
+- **PostgreSQL**: Airflow metadata database
+- **Redis**: Task queue management
 
+## 📋 Prerequisites
 
-## Model Training
+- Docker Desktop installed and running
+- At least 5GB RAM allocated to Docker
+- Basic understanding of Python and command line
 
-### Finetuning SmolVLM for Slide Analysis
+## 🔧 Setup Instructions
 
-```bash
-# Prepare dataset
-python scripts/scrape_pitch_decks.py
-python scripts/label_slides.py
-
-# Run training
-python mlops/training/finetune_smolvlm.py
-
-# Validate model
-python mlops/training/validate_model.py
-```
-
-Training uses LoRA (Low-Rank Adaptation) and takes approximately 2-4 hours on a T4 GPU (Google Colab free tier).
-
-## MLOps Pipeline
-
-### Automated Retraining
-
-The system automatically retrains models when:
-- 100 user feedback corrections accumulated
-- Weekly scheduled runs (configurable)
-- Manual trigger via GitHub Actions
+### 1. Clone the Repository
 
 ```bash
-# Check if retraining needed
-python scripts/check_retraining_trigger.py
-
-# Trigger manual retraining
-gh workflow run retrain.yml
+git clone https://github.com/yourusername/airflow-video-pipeline.git
+cd airflow-video-pipeline
 ```
 
-### Monitoring
+### 2. Configure Docker Memory
 
-Access monitoring dashboards:
-- **Model Performance**: Weights & Biases project dashboard
-- **System Metrics**: Grafana dashboard (requires setup)
-- **Drift Detection**: Evidently AI reports
+Open Docker Desktop → Settings → Resources → Set Memory to **5GB**
 
+### 3. Initialize Airflow
 
-## Dataset Information
+```bash
+# Fetch docker-compose.yaml
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.2/docker-compose.yaml'
 
-### Pitch Deck Slide Dataset
-- **Size**: 500-1,000 labeled slides
-- **Sources**: Y Combinator Demo Day, SlideShare, Sequoia Capital examples, team-created samples
-- **Labels**: Quality scores for clarity, design, data visualization, readability
-- **Format**: JPEG images (1920x1080) with JSON metadata
+# Set environment variables
+echo -e "AIRFLOW_UID=$(id -u)" > .env
 
-### User Feedback Dataset
-- Continuously collected from production usage
-- Triggers automated retraining pipeline
-- Stored in Supabase with full audit trail
+# Initialize the database
+docker compose up airflow-init
+```
 
-## Performance Targets
+### 4. Start Airflow
 
-- **Processing Latency**: < 2 minutes per 10-minute video
-- **Model Accuracy**: > 85% agreement with human evaluators
-- **System Uptime**: > 99%
-- **Cost per Analysis**: < $0.30
-- **User Satisfaction**: > 4.0/5.0
+```bash
+docker compose up
+```
 
-## License
+Wait 2-3 minutes for all services to start.
 
-To be determined. This is an academic project developed for educational purposes.
+### 5. Access Airflow UI
 
-## Acknowledgments
+Navigate to `http://localhost:8080`
 
-- Anthropic Claude for AI assistance
-- HuggingFace for model hosting and transformers library
-- OpenAI for Whisper API
-- Google for MediaPipe
-- Weights & Biases for experiment tracking
-- Course instructors and teaching assistants
+**Login credentials:**
+- Username: `airflow`
+- Password: `airflow`
 
-## Repository Link
+### 6. Run the Pipeline
 
-[GitHub Repository](https://github.com/harshitashitut/MLOps-Project.git)
+1. Find **"Video_Processing_Pipeline"** in the DAGs list
+2. Click the ▶️ play button to trigger manually
+3. Monitor execution in the Graph view
+4. Check logs for detailed output
 
-## Contact
+## ✅ Demo & Results
 
-For questions or issues, please contact team members through university email or create an issue in the GitHub repository.
+### Successful Pipeline Execution
+
+The pipeline successfully processes videos with all tasks completing:
+
+![Successful DAG Run](assets/successful_run.png)
+*All tasks completed successfully (shown in green)*
+
+### Sample Outputs
+
+- **Frames Extracted**: 10 key frames at 1-second intervals
+- **Processing Time**: ~30 seconds for 10-second video
+- **Output Files**: JPG frames + processing summary
+
+Check the `dags/outputs/` directory for:
+- `frames/` - Extracted video frames
+- `processing_summary.txt` - Execution summary
+
+## 📊 Pipeline Tasks
+
+### Task 1: load_video_task
+- Scans `dags/videos/` directory for MP4 files
+- Validates video file existence
+- Extracts basic metadata
+- Returns serialized video information
+
+### Task 2: extract_audio_task  
+- Receives video information from Task 1
+- Extracts audio stream (if available)
+- Saves as WAV format in `outputs/audio/`
+- Handles videos without audio gracefully
+
+### Task 3: extract_frames_task
+- Receives video information from Task 1  
+- Samples every 30th frame (configurable)
+- Extracts up to 10 frames for efficiency
+- Saves as JPG in `outputs/frames/`
+
+### Task 4: save_results_task
+- Aggregates results from all previous tasks
+- Generates processing summary
+- Logs completion status
+- Creates `processing_summary.txt`
+
+## 🎓 Learning Outcomes
+
+This lab demonstrates key MLOps concepts:
+
+✅ **Workflow Orchestration**: Building DAGs with task dependencies  
+✅ **Parallel Processing**: Running independent tasks concurrently  
+✅ **Containerization**: Using Docker for consistent environments  
+✅ **Error Handling**: Implementing retry logic and graceful failures  
+✅ **Monitoring**: Tracking pipeline execution and debugging  
+✅ **Scalability**: Designing for batch processing at scale  
+
+## 🔮 Future Enhancements
+
+### Phase 1: Complete Video Processing
+- ✅ Frame extraction (completed)
+- ⏳ Audio extraction refinement
+- ⏳ OCR for text extraction from slides
+
+### Phase 2: ML Model Integration
+- Speech-to-text transcription (Whisper API)
+- Posture detection (Computer Vision model)
+- Gesture recognition (MediaPipe)
+- Eye contact analysis (Face detection)
+- Sentiment analysis (NLP model)
+
+### Phase 3: Production Deployment
+- Cloud deployment (AWS/GCP)
+- Kubernetes orchestration
+- Auto-scaling workers
+- CI/CD pipeline integration
+- Real-time processing capabilities
+
+### Phase 4: Speech Quality Scoring
+- Multi-modal result aggregation
+- Weighted scoring algorithm
+- Feedback generation
+- User dashboard
+
+## 🐛 Troubleshooting
+
+### Error: Exit code 137
+**Cause**: Insufficient Docker memory  
+**Solution**: Increase Docker memory to 5GB+ in Settings
+
+### Error: DAG Import Errors
+**Cause**: Python cache or syntax errors  
+**Solution**: 
+```bash
+find dags/ -type d -name "__pycache__" -exec rm -rf {} +
+docker compose restart airflow-scheduler-1
+```
+
+### Error: No video found
+**Cause**: Missing video file in `dags/videos/`  
+**Solution**: Add an MP4 file to `dags/videos/` directory
+
+## 📚 References
+
+- [Apache Airflow Documentation](https://airflow.apache.org/docs/)
+- [Airflow Best Practices](https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html)
+- [MLOps Principles](https://ml-ops.org/)
+- [Docker Compose Guide](https://docs.docker.com/compose/)
+
+## 📝 License
+
+MIT License - feel free to use for learning and projects
+
+## 👤 Author
+
+**Your Name**
+- LinkedIn: [your-profile]
+- GitHub: [@yourusername]
+- Email: your.email@example.com
 
 ---
 
+**Course**: MLOps (Machine Learning Operations)  
+**Institution**: Northeastern University  
+**Lab**: Airflow Lab - Video Processing Pipeline  
+**Date**: October 2025
 
+---
+
+## 🌟 Acknowledgments
+
+- **Lab Credits**: Dhanush Kumar Shankar
+- **Course Instructor**: Ramin Mohammadi
+- **Institution**: Northeastern University, Khoury College of Computer Sciences
+
+*This project demonstrates workflow orchestration principles that scale from lab exercises to production ML systems processing millions of videos.*
