@@ -80,9 +80,10 @@ Due to cost and scalability considerations during early development, we are curr
 # Airflow Integration
 
 ## Current DAG Reference
-![Current DAG Reference](https://raw.githubusercontent.com/harshitashitut/MLOps-Project/main/Data%20Pipeline/Assets/Screenshot%202025-10-19%20at%2023.2....png)
+![Current DAG Reference](image.png)
 
-We use an Airflow setup inspired by this [repository](https://github.com/harshitashitut/MLOps-Project/tree/main/Data%20Pipeline). The DAG temporarily orchestrates preprocessing, model inference, and result storage steps.
+We use an Airflow setup inspired by this [repository](https://github.com/msalmancodes/airflow_lab_3.git). 
+The DAG temporarily orchestrates preprocessing, model inference, and result storage steps.
 
 ## Example Temporary DAG
 ```python
