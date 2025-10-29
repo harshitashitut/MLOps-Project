@@ -102,20 +102,8 @@ with DAG(
 ```
 
 ## Proposed Full Pipeline (Upcoming)
-```
-[Data Upload]
-     ↓
-[Preprocessing & Transcription]
-     ↓
-[Multimodal Analysis]
-   ├── Audio (Whisper)
-   ├── Text (FLAN-T5)
-   └── Visual (GIT-Large-COCO)
-     ↓
-[Result Storage in Supabase]
-     ↓
-[Model Performance Logging & Retraining Trigger]
-```
+<img width="1658" height="611" alt="image" src="https://github.com/user-attachments/assets/7a64e73d-9685-436a-9d31-616e937cff0f" />
+
 
 # Logging and Monitoring
 
