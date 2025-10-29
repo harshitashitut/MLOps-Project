@@ -132,16 +132,10 @@ The logging framework (configured via `config/logging_config.py`) uses a structu
 - **Data Statistics Logging:** Records dataset metadata (record counts, missing values, etc.) to evaluate data health.
 - **Granular Log Storage:** Logs are saved daily under `logs/pipeline/` with separate files for standard and error logs.
 
-**Example of logging actions captured:**
-```python
-logger.info("Logging system initialized")
-logger.warning("Testing WARNING level")
-logger.error("Testing ERROR level")
+**Sample of logging actions captured:**
 
-pipeline_logger.log_pipeline_start(logger, "Test Pipeline", config={'test_mode': True, 'version': '1.0'})
-pipeline_logger.log_data_stats(logger, "Sample Dataset", {'total_records': 1000, 'missing_values': 12, 'columns': 25})
-pipeline_logger.log_pipeline_end(logger, "Test Pipeline", status="SUCCESS", duration=5.0)
-```
+<img width="923" height="719" alt="image" src="https://github.com/user-attachments/assets/ee2fc2df-1085-421b-a78a-235eb8cb84f6" />
+
 
 ## Monitoring Tools:
 
@@ -216,6 +210,36 @@ Once operational, PitchQuest transitions to adaptive processing that dynamically
 The current approach operates under several constraints. Because demographic data is neither collected nor inferred, all monitored features act as indirect proxies rather than direct measures of representation. Moreover, the inference-only deployment environment restricts access to model internals, preventing parameter-level debiasing interventions. Finally, small sample sizes at launch limit the statistical robustness of bias estimates.
 
 Planned improvements include the introduction of optional, privacy-protected demographic self-reporting, partnerships with diverse speaker and investor groups for validation testing, and the establishment of an independent external bias audit board responsible for transparency and fairness oversight. Future development will also incorporate intersectional analysis frameworks to capture multi-dimensional fairness metrics across modalities.
+
+## 6. Output Format Details
+
+Each processed video generates a structured text file containing:
+
+1. **Metadata Section**
+   - Original video filename
+   - Processing timestamp
+   - Transcription length metrics
+
+2. **Question Context**
+   - Interview question or prompt
+
+3. **Transcription Section**
+   - Complete speech-to-text conversion using Whisper
+   - Preserves natural speech patterns and pauses
+
+4. **AI Analysis Section**
+   - Automated feedback generation
+   - Scoring and recommendations
+   - Strengths and improvement areas
+
+These outputs are stored in the `store/` directory and serve as inputs for downstream analytics and user feedback modules.
+**Sample Output in Report:**
+**(A) Sample Output Report Format 1**
+<img width="904" height="663" alt="image" src="https://github.com/user-attachments/assets/bd0e8845-ebf7-4817-b6b5-876dee5999b9" />
+
+**(B) Sample Output in Report Format 2**
+<img width="925" height="684" alt="image" src="https://github.com/user-attachments/assets/af92af3f-abf1-4702-afc1-87bd3cf0e928" />
+
 
 ### References
 
