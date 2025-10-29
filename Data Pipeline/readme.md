@@ -234,7 +234,7 @@ Each processed video generates a structured text file containing:
 
 These outputs are stored in the `store/` directory and serve as inputs for downstream analytics and user feedback modules.
 **Sample Output in Report:**
-**(A) Sample Output Report Format 1**
+**(A) Sample Output in Report Format 1**
 <img width="904" height="663" alt="image" src="https://github.com/user-attachments/assets/bd0e8845-ebf7-4817-b6b5-876dee5999b9" />
 
 **(B) Sample Output in Report Format 2**
