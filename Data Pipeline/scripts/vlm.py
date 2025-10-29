@@ -215,17 +215,17 @@ class BodyLanguageAnalyzer:
         
         # Check for positive indicators
         if any(word in all_descriptions for word in ['smiling', 'smile', 'happy']):
-            observations.append("✓ Positive facial expressions detected")
+            observations.append(" Positive facial expressions detected")
         
         if any(word in all_descriptions for word in ['sitting', 'standing', 'upright']):
-            observations.append("✓ Proper posture maintained")
+            observations.append(" Proper posture maintained")
         
         if any(word in all_descriptions for word in ['professional', 'formal', 'business']):
-            observations.append("✓ Professional appearance")
+            observations.append(" Professional appearance")
         
         # Check for potential issues
         if any(word in all_descriptions for word in ['looking down', 'distracted', 'away']):
-            observations.append("⚠ Consider maintaining better eye contact with camera")
+            observations.append(" Consider maintaining better eye contact with camera")
         
         if len(observations) == 0:
             observations.append("• General professional demeanor observed")
@@ -263,7 +263,7 @@ if __name__ == "__main__":
         result = analyzer.analyze_video(
             video_path=video_path,
             num_frames=5,  # Extract 5 frames
-            cleanup=True   # Delete frames after analysis
+            cleanup=True   # Delete frames after analysis(we could also save these but we chorse not to as our model is pretty small)
         )
         
         print("\n" + "="*60)
@@ -273,7 +273,3 @@ if __name__ == "__main__":
         
     else:
         print(f"Video file not found: {video_path}")
-        print("\nMake sure to:")
-        print("1. Update video_path with your actual video file")
-        print("2. Install dependencies: pip install transformers torch pillow opencv-python")
-        print("3. Have sufficient RAM (at least 4GB free recommended)")
