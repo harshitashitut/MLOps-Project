@@ -1,0 +1,10 @@
+transformers
+torch
+torchaudio
+accelerate
+huggingface-hub
+requests
+opencv-python
+pillow
+numpy
+tqdm
