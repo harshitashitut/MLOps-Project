@@ -5,6 +5,14 @@ The Data Pipeline module is a key component of the PitchQuest Multimodal system 
 # Directory Structure
 ```
 Data Pipeline/
+├── Assets/
+│   └── Screenshot 2025-10-19 at 23.2....png
+│
+├── Dag/
+│   ├── outputs/
+│   │   └── processing_summary.txt
+│   └── src/
+│
 ├── Data/
 │   ├── video1.webm
 │   └── video2.webm
@@ -30,11 +38,15 @@ Data Pipeline/
 │   ├── __init__.py
 │   └── testTxtGeneration.py
 │
+├── .DS_Store
+├── airflow_video.py
 └── README.md
 ```
 
 ## Folders Overview:
 
+- **Assets/** → Documentation images and screenshots.
+- **Dag/** → Airflow DAG configurations and outputs.
 - **Data/** → Raw pitch videos submitted by users.
 - **logs/pipeline/** → Stores runtime logs, error traces, and log testing scripts.
 - **scripts/** → Core pipeline logic, model invocation, and text generation.
@@ -68,9 +80,9 @@ Due to cost and scalability considerations during early development, we are curr
 # Airflow Integration
 
 ## Current DAG Reference
-![Current DAG Reference](image.png)
+![Current DAG Reference](https://raw.githubusercontent.com/harshitashitut/MLOps-Project/main/Data%20Pipeline/Assets/Screenshot%202025-10-19%20at%2023.2....png)
 
-We use an Airflow setup inspired by this [repository](https://github.com/username/repo-name). The DAG temporarily orchestrates preprocessing, model inference, and result storage steps.
+We use an Airflow setup inspired by this [repository](https://github.com/harshitashitut/MLOps-Project/tree/main/Data%20Pipeline). The DAG temporarily orchestrates preprocessing, model inference, and result storage steps.
 
 ## Example Temporary DAG
 ```python
@@ -102,7 +114,7 @@ with DAG(
 ```
 
 ## Proposed Full Pipeline (Upcoming)
-<img width="1658" height="611" alt="image" src="https://github.com/user-attachments/assets/7a64e73d-9685-436a-9d31-616e937cff0f" />
+<img width="1569" height="572" alt="image" src="https://github.com/user-attachments/assets/8501d310-217c-4f99-941b-c9d516da893f" />
 
 
 # Logging and Monitoring
