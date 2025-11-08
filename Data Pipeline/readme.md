@@ -1,6 +1,6 @@
 # Overview
 
-The Data Pipeline module is a key component of the PitchQuest Multimodal system — an AI-powered platform for automated pitch analysis across speech, visual, and content modalities. This pipeline handles data ingestion, preprocessing, logging, anomaly detection, and orchestration of model inference workflows for multimodal inputs.
+The Data Pipeline module is a key component of the PitchQuest Multimodal system, an AI-powered platform for automated pitch analysis across speech, visual, and content modalities. This pipeline handles data ingestion, preprocessing, logging, anomaly detection, and orchestration of model inference workflows for multimodal inputs.
 
 # Directory Structure
 ```
@@ -182,7 +182,7 @@ The SmolVLM model exhibits a strong dependency on memorized visual priors rather
 
 ### 3. Post-Deployment Monitoring
 
-To identify bias manifestations in real-world usage, PitchQuest implements feature slicing — a privacy-preserving monitoring approach that relies solely on technical attributes extracted automatically from input data.
+To identify bias manifestations in real-world usage, PitchQuest implements feature slicing, a privacy-preserving monitoring approach that relies solely on technical attributes extracted automatically from input data.
 
 The system tracks model performance across various feature categories, including video quality, audio quality, speech characteristics, and content structure. Specifically, it examines parameters such as resolution, lighting, frame stability, signal-to-noise ratio, background noise, speech pace, pause frequency, slide density, and overall video duration. These observable variables serve as proxies for contextual and environmental diversity.
 
