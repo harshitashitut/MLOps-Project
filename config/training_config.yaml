@@ -1,0 +1,84 @@
+# Training Configuration for SmolVLM Finetuning
+
+# Model Configuration
+model:
+  name: "HuggingFaceTB/SmolVLM-500M-Instruct"
+  cache_dir: "./model_cache"
+  load_in_8bit: true
+  device_map: "auto"
+
+# LoRA Configuration
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules: 
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Training Arguments
+training:
+  output_dir: "./outputs"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 2.0e-4
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 500
+  eval_steps: 500
+  save_total_limit: 3
+  fp16: true
+  gradient_checkpointing: true
+  optim: "paged_adamw_8bit"
+  lr_scheduler_type: "cosine"
+  max_grad_norm: 1.0
+  seed: 42
+
+# Data Configuration
+data:
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  max_length: 512
+  image_size: [384, 384]
+  augmentation: true
+
+# Evaluation Metrics
+evaluation:
+  metrics:
+    - "accuracy"
+    - "f1_score"
+    - "precision"
+    - "recall"
+  save_predictions: true
+
+# Weights & Biases Configuration
+wandb:
+  project: "pitchquest-smolvlm"
+  entity: uttapreksha24-northeastern-university  # TODO: Set your W&B username here
+  name: uttapreksha24
+  tags:
+    - "smolvlm"
+    - "pitch-deck"
+    - "finetuning"
+  log_model: true
+  watch_model: false
+
+# Early Stopping
+early_stopping:
+  enabled: true
+  patience: 3
+  metric: "eval_loss"
+  mode: "min"
+
+# Model Registry
+registry:
+  auto_register: true
+  min_accuracy_threshold: 0.85
+  huggingface_repo: "uttapreksha24-northeastern-university/pitchquest-smolvlm"  # TODO: Change this

@@ -1,0 +1,15 @@
+{
+  "version": "v1.0.2",
+  "history": [
+    {
+      "version": "v1.0.0",
+      "date": "2024-11-17T10:30:00",
+      "model_path": "./outputs"
+    },
+    {
+      "version": "v1.0.1",
+      "date": "2024-11-18T15:45:00",
+      "model_path": "./outputs"
+    }
+  ]
+}

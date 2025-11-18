@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/manual_uploads/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/labeled/*.json
+!data/labeled/.gitkeep
+data/user_feedback/*
+!data/user_feedback/.gitkeep
+
+# Models
+outputs/
+model_cache/
+*.bin
+*.safetensors
+*.pth
+*.ckpt
+
+# Logs
+*.log
+logs/
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Monitoring
+monitoring/drift_reports/*
+!monitoring/drift_reports/.gitkeep
+monitoring/performance_metrics/*
+!monitoring/performance_metrics/.gitkeep

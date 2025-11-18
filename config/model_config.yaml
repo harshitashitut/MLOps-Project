@@ -1,0 +1,134 @@
+# Model Configuration for PitchQuest SmolVLM
+
+# Base Model Information
+base_model:
+  name: "HuggingFaceTB/SmolVLM-500M-Instruct"
+  architecture: "vision-language-model"
+  size: "500M parameters"
+  modalities:
+    - "vision"
+    - "text"
+  
+  # Model Specifications
+  specs:
+    vision_encoder: "SigLIP-400M"
+    language_model: "SmolLM-500M"
+    max_image_size: [384, 384]
+    max_sequence_length: 2048
+    vocab_size: 49152
+
+# Pre-trained Models Used (No Finetuning)
+pretrained_models:
+  whisper:
+    name: "openai/whisper-large-v3"
+    purpose: "Speech-to-text transcription"
+    api: true
+    
+  wav2vec2:
+    name: "superb/wav2vec2-base-superb-er"
+    purpose: "Speech emotion recognition"
+    
+  mediapipe_pose:
+    name: "MediaPipe Pose"
+    purpose: "Body pose estimation"
+    provider: "Google"
+    
+  deepface:
+    name: "DeepFace"
+    purpose: "Facial emotion detection"
+    
+  smolvlm_base:
+    name: "HuggingFaceTB/SmolVLM-500M-Instruct"
+    purpose: "Body language description (pre-trained)"
+
+# Finetuned Model (Trained in this project)
+finetuned_model:
+  base: "HuggingFaceTB/SmolVLM-500M-Instruct"
+  task: "Pitch deck slide analysis"
+  finetuning_method: "LoRA"
+  
+  training_dataset:
+    size: "500-1000 labeled slides"
+    sources:
+      - "Y Combinator Demo Day"
+      - "SlideShare"
+      - "Sequoia Capital examples"
+      - "Team-created samples"
+    
+  evaluation_criteria:
+    - "Clarity"
+    - "Design"
+    - "Data Visualization"
+    - "Readability"
+    - "Content Quality"
+
+# Model Loading Configuration
+loading:
+  use_8bit: true
+  use_4bit: false
+  device_map: "auto"
+  torch_dtype: "float16"
+  
+  cache_dir: "./model_cache"
+  local_files_only: false
+  trust_remote_code: false
+
+# Inference Configuration
+inference:
+  max_new_tokens: 256
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: true
+  num_beams: 1
+  
+  batch_size: 1
+  use_cache: true
+
+# Model Performance Targets
+performance:
+  accuracy_target: 0.85  # 85% agreement with humans
+  inference_latency: 2.0  # seconds per slide
+  throughput: 30  # slides per minute
+  
+  quality_metrics:
+    mae_target: 0.5  # Mean Absolute Error
+    within_1_point: 0.90  # 90% predictions within 1 point
+
+# Model Registry
+registry:
+  huggingface_hub: "Uttapreksha24/pitchquest-smolvlm"
+  versioning: "semantic"  # v1.0.0, v1.0.1, etc.
+  
+  deployment:
+    production: null
+    staging: null
+    development: "local"
+
+# Hardware Requirements
+hardware:
+  training:
+    min_vram: "16GB"
+    recommended_vram: "24GB"
+    recommended_gpu: "NVIDIA T4, A10, or better"
+    alternative: "Google Colab T4 (free tier)"
+    
+  inference:
+    min_vram: "8GB"
+    recommended_vram: "12GB"
+    cpu_fallback: true
+    
+# Model Monitoring
+monitoring:
+  track_metrics:
+    - "inference_latency"
+    - "prediction_accuracy"
+    - "user_feedback_score"
+    - "model_confidence"
+  
+  drift_detection: true
+  retraining_triggers:
+    - "performance_drop > 5%"
+    - "drift_score > 0.3"
+    - "user_feedback >= 100"
+    - "scheduled_weekly"
