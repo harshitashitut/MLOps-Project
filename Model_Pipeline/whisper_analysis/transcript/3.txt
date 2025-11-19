@@ -1,0 +1,5 @@
+L1 regularizer adds absolute value penalties. Encourages sparsity → feature selection.
+
+L2 regularizer adds squared penalties. Shrinks weights but doesn’t force them to zero.
+
+ we Use L1 when you expect some features are redundant; use L2 when you want stable, small weights to reduce overfitting.

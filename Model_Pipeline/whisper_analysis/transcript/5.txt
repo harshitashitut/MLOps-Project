@@ -1,0 +1,14 @@
+Signs of overfitting include
+
+Training accuracy high, test accuracy significantly lower.
+
+Loss curves diverging .
+Prevention methods:
+
+Regularization  like L1 and L2.
+
+Early stopping.
+
+Data augmentation.
+
+Cross-validation.

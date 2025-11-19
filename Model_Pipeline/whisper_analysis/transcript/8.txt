@@ -1,0 +1,1 @@
+Model drift is performance degradation over time due to changes in data patterns. Detect it by monitoring prediction distributions, tracking performance metrics, and comparing current data statistics with training data.

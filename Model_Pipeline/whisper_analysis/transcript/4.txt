@@ -1,0 +1,6 @@
+Gradient descent minimizes a loss function by updating parameters in the opposite direction of its gradient.
+Update rule:
+
+𝑤 changes such that  w−α∇L(w) 
+
+Where α is the learning rate.
