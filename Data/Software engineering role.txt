@@ -1,0 +1,317 @@
+Software engineering role:
+
+
+1.
+
+Q: What is the difference between a process and a thread?
+A: A process is an independent program with its own memory space, while threads are lightweight execution units within the same process that share memory. Threads allow parallelism with lower overhead, whereas processes provide stronger isolation.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent depth and clarity with correct distinctions.
+
+2.
+
+Q: Explain REST architecture principles.
+A: REST is based on stateless communication, uniform interfaces, client-server separation, cacheability, and a layered architecture. Resources are represented with standard methods like GET, POST, PUT, and DELETE.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Thorough explanation with clear REST principles.
+
+3.
+
+Q: What is multithreading and why is it useful?
+A: Multithreading enables concurrent execution within a program, improving responsiveness and throughput. It’s commonly used for I/O-bound workloads, parallel computation, and background tasks.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Well explained with practical benefits.
+
+4.
+
+Q: Describe the SOLID principles.
+A: SOLID consists of: Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion. They guide maintainable, extensible, and modular object-oriented design.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Excellent summary with precise definitions.
+
+5.
+
+Q: What is a race condition?
+A: A race condition occurs when multiple threads access shared data concurrently and the final outcome depends on execution timing. Proper synchronization (locks, atomics, etc.) is required to prevent it.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Very strong explanation with solution context.
+
+6.
+
+Q: Explain dependency injection.
+A: Dependency injection supplies a class’s required dependencies from external sources instead of creating them internally. This improves testability, decoupling, and code maintainability.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent clarity and practical focus.
+
+7.
+
+Q: What is a deadlock?
+A: A deadlock occurs when threads hold resources and wait for others in a circular dependency, preventing progress. Avoidance strategies include lock ordering, timeouts, and minimizing shared state.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Great explanation with prevention strategies.
+
+8.
+
+Q: Explain Big O notation.
+A: Big O notation expresses algorithmic complexity in terms of input size, capturing worst-case growth. It abstractly compares performance without focusing on hardware or implementation details.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent conceptual summary.
+
+9.
+
+Q: What happens during a context switch?
+A: The CPU saves the state of the running process or thread, loads the state of the next one, and updates internal registers. This enables multitasking but incurs overhead.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Strong explanation capturing key details.
+
+10.
+
+Q: Describe how garbage collection works.
+A: Garbage collectors identify unreachable objects, reclaim memory, and compact the heap in some implementations. Algorithms include mark-and-sweep, generational GC, and reference counting.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent technical completeness.
+
+11.
+
+Q: What is a design pattern?
+A: A design pattern is a reusable solution template for common software design problems. Examples include Singleton, Factory, Observer, and Strategy.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Very clear with relevant examples.
+
+12.
+
+Q: Explain the difference between SQL and NoSQL databases.
+A: SQL databases are relational, schema-based, and ACID-compliant, while NoSQL databases provide flexible schema, horizontal scalability, and distributed architectures for high-volume unstructured data.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent contrast with correct attributes.
+
+13.
+
+Q: What is a microservice?
+A: A microservice is an independently deployable component responsible for a single business capability. It communicates through lightweight protocols and allows scaling and development autonomy.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Strong explanation emphasizing independence.
+
+14.
+
+Q: How does hashing work?
+A: Hashing converts input data into a fixed-size hash value using a deterministic function. Good hash functions minimize collisions and ensure uniform distribution.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Very solid; could mention applications.
+
+15.
+
+Q: Describe continuous integration.
+A: CI automates building and testing code whenever developers commit changes. It ensures early detection of integration issues and promotes stable development pipelines.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation with process clarity.
+
+16.
+
+Q: What is a thread?
+A: A small unit of work inside a process.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 6
+Feedback: Correct but overly simplistic.
+
+17.
+
+Q: What is REST?
+A: A way of building APIs that use HTTP methods.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs architectural principles.
+
+18.
+
+Q: Explain MVC architecture.
+A: MVC splits applications into Model, View, and Controller.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Correct but lacks details about responsibilities.
+
+19.
+
+Q: What is a database index?
+A: It speeds up lookups in a database.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs explanation of B-trees or trade-offs.
+
+20.
+
+Q: What is Git branching?
+A: Creating separate lines of development.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Fair, but could discuss workflows.
+
+21.
+
+Q: What is a stack?
+A: A LIFO data structure.
+Structure: 7 | Clarity: 8 | Relevance: 8 | Overall: 7
+Feedback: Correct but basic.
+
+22.
+
+Q: What is caching?
+A: Storing frequently used data temporarily.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs more detail (levels, invalidation).
+
+23.
+
+Q: What is API rate limiting?
+A: Limiting how many requests a user can send.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 6
+Feedback: Should mention preventing abuse and ensuring stability.
+
+24.
+
+Q: What is polymorphism?
+A: Objects acting differently based on type.
+Structure: 7 | Clarity: 6 | Relevance: 7 | Overall: 6
+Feedback: Needs clearer distinction between compile-time and runtime.
+
+25.
+
+Q: What is Docker used for?
+A: Running apps in containers.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Lacks explanation of isolation and portability.
+
+26.
+
+Q: What is unit testing?
+A: Testing small parts of code.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Very basic; lacks frameworks or purpose.
+
+27.
+
+Q: What is refactoring?
+A: Improving code without changing its behavior.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Good but could list examples.
+
+28.
+
+Q: Explain memory leaks.
+A: When memory is not freed.
+Structure: 6 | Clarity: 6 | Relevance: 7 | Overall: 6
+Feedback: Needs explanation of causes and impacts.
+
+29.
+
+Q: What is an interface?
+A: A contract of methods.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs examples and purpose.
+
+30.
+
+Q: What is a load balancer?
+A: Something that distributes traffic.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Too high level; needs strategies like round-robin.
+
+31.
+
+Q: What is a thread?
+A: A program that runs faster.
+Structure: 2 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Incorrect definition.
+
+32.
+
+Q: What is a race condition?
+A: When two programs race each other.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Completely wrong.
+
+33.
+
+Q: What is REST?
+A: Something related to resting a server.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Not even close to correct.
+
+34.
+
+Q: What is Big O notation?
+A: A big number.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Totally incorrect.
+
+35.
+
+Q: What is SQL?
+A: A program for computers.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Missing database concept entirely.
+
+36.
+
+Q: Explain garbage collection.
+A: Cleaning trash in memory manually.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Misleading and wrong.
+
+37.
+
+Q: What is an API?
+A: A website.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Completely incorrect.
+
+38.
+
+Q: What is CI/CD?
+A: Clicking commands in development.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Nonsensical.
+
+39.
+
+Q: What is a microservice?
+A: A very small service.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Too literal, lacks system context.
+
+40.
+
+Q: What is a class?
+A: Something in school.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Not related to programming.
+
+41.
+
+Q: What is Docker?
+A: Something used on ships.
+Structure: 2 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Incorrect domain.
+
+42.
+
+Q: What is caching?
+A: Hiding things.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Not meaningful.
+
+43.
+
+Q: What is polymorphism?
+A: Changing forms like animals.
+Structure: 3 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Not related to software engineering.
+
+44.
+
+Q: What is a database transaction?
+A: Buying things in a database.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Wrong and confusing.
+
+45.
+
+Q: Why use version control?
+A: To control versions because people like order.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Vague, missing purpose and mechanics.

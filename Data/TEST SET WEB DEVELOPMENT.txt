@@ -1,0 +1,95 @@
+TEST SET — WEB DEVELOPMENT ROLE
+
+Q: What is the DOM?
+A: The DOM represents the structure of an HTML document as a tree. JavaScript can modify elements, attributes, and styles via the DOM API.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation.
+
+
+
+Q: Explain event delegation.
+A: Event delegation attaches a single listener to a parent element to handle events from its children using event bubbling, improving efficiency.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Clear and correct.
+
+
+
+Q: What is CORS?
+A: CORS is a browser mechanism that restricts cross-origin requests unless the server permits them using headers like Access-Control-Allow-Origin.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Precise and complete.
+
+
+
+Q: What is Flexbox used for?
+A: Flexbox simplifies layout along a single axis, enabling dynamic spacing, alignment, ordering, and resizing of elements.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Strong.
+
+
+
+Q: What is React?
+A: React is a UI library using a virtual DOM to efficiently render components and manage state. It enables building fast, interactive UIs using JSX and component-based architecture.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent depth.
+
+
+Q: What is HTML?
+A: A markup language for building web pages.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Correct but basic.
+
+
+Q: What is CSS specificity?
+A: It determines rule priority.
+Structure: 6 | Clarity: 7 | Relevance: 6 | Overall: 6
+Feedback: Needs weight formula.
+
+
+Q: What is the virtual DOM?
+A: A copy of the real DOM used in frameworks.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs description of diffing.
+
+
+Q: What is a media query?
+A: CSS that changes with screen size.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs examples.
+
+
+Q: What is a CDN?
+A: A network to deliver website content faster.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Should mention caching.
+
+
+
+Q: What is the DOM?
+A: Something the browser uses for stuff.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Too vague.
+
+
+Q: What is HTML?
+A: A code for the internet.
+Structure: 2 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Incomplete.
+
+
+Q: What is CSS?
+A: A tool to design things.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Too superficial.
+
+
+Q: What is React?
+A: Something that reacts to clicks.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Incorrect.
+
+
+Q: What is CORS?
+A: Something about browser cores.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Wrong and unclear.

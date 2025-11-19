@@ -1,0 +1,318 @@
+Wed dev role:
+
+1.
+
+Q: What is the DOM?
+A: The DOM (Document Object Model) is a tree-like representation of the structure of an HTML document. JavaScript can use the DOM API to manipulate elements, attributes, and styles dynamically.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent accuracy and explanation of purpose.
+
+2.
+
+Q: Explain the difference between block-level and inline elements in HTML.
+A: Block-level elements occupy the full available width and start on a new line (e.g., <div>, <p>). Inline elements only take up the width of their content and do not break the flow (e.g., <span>, <a>).
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Very clear with correct examples.
+
+3.
+
+Q: What is the purpose of CSS Flexbox?
+A: Flexbox provides a layout system optimized for single-axis alignment, allowing flexible spacing, ordering, and alignment of elements within a container.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Strong explanation highlighting purpose and benefits.
+
+4.
+
+Q: Explain the difference between synchronous and asynchronous JavaScript.
+A: Synchronous code blocks the thread until each operation completes, while asynchronous code uses callbacks, promises, or async/await to run non-blocking operations, improving responsiveness.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation with proper concepts.
+
+5.
+
+Q: What are web components?
+A: Web components are reusable custom elements built using the Shadow DOM, HTML templates, and custom element APIs. They encapsulate styles and logic for portability.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Very strong; could add an example use case.
+
+6.
+
+Q: What is responsive design?
+A: Responsive design adapts layouts to different screen sizes using fluid grids, flexible images, and media queries to ensure usability across devices.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Perfectly described.
+
+7.
+
+Q: Explain how HTTP works.
+A: HTTP is a stateless request–response protocol where clients send requests and servers reply with resources or status codes. Versions like HTTP/2 support multiplexing and header compression for performance.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Excellent depth for an interview.
+
+8.
+
+Q: What is event bubbling in JavaScript?
+A: Event bubbling means an event triggered on a child element propagates upward through the ancestor elements. You can stop it using event.stopPropagation().
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Clear, correct, and complete.
+
+9.
+
+Q: Explain CORS.
+A: CORS (Cross-Origin Resource Sharing) is a browser security mechanism that restricts requests from different origins unless the server explicitly allows them via headers like Access-Control-Allow-Origin.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Great explanation with key header detail.
+
+10.
+
+Q: What is a Single Page Application (SPA)?
+A: An SPA dynamically updates content using JavaScript without reloading the page, often relying on frameworks like React or Vue and using client-side routing.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent and concise.
+
+11.
+
+Q: What is the difference between cookies, localStorage, and sessionStorage?
+A: Cookies are small key–value pairs sent with every HTTP request. localStorage persists indefinitely, while sessionStorage persists only for the page session and isn't sent to the server.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Covers the fundamental differences clearly.
+
+12.
+
+Q: How does the browser rendering pipeline work?
+A: The browser parses HTML into a DOM, parses CSS into a CSSOM, combines them into a render tree, calculates layout, and paints pixels. Reflows and repaints occur when styles or layout change.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Excellent technical breakdown.
+
+13.
+
+Q: What is debouncing?
+A: Debouncing delays the execution of a function until after a specified waiting period has passed since the last trigger, reducing unnecessary calls—for example, during input events.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Clear explanation with practical context.
+
+14.
+
+Q: What is JSX?
+A: JSX is a syntax extension in React that allows writing HTML-like code inside JavaScript, which transpiles into React.createElement calls.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Very accurate and concise.
+
+15.
+
+Q: What is webpack?
+A: Webpack is a module bundler that processes and bundles JavaScript, CSS, images, and other assets. It supports loaders, plugins, code splitting, and tree shaking.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent coverage of core features.
+
+⭐ SECTION 2 — 15 GOOD / AVERAGE ANSWERS (Correct but incomplete)
+16.
+
+Q: What is the DOM?
+A: It's a structure that represents web pages.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 6
+Feedback: Needs details on tree structure and manipulation.
+
+17.
+
+Q: What is Flexbox?
+A: A layout system for arranging items.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Correct but not detailed.
+
+18.
+
+Q: What is async/await?
+A: A way to write asynchronous JavaScript code.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs explanation of promises and blocking.
+
+19.
+
+Q: What is CSS specificity?
+A: The priority of CSS rules.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs numeric breakdown (IDs, classes, tags).
+
+20.
+
+Q: What is an API?
+A: A way to let systems talk to each other.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs examples (REST, JSON, endpoints).
+
+21.
+
+Q: What is responsive design?
+A: Making websites work on all screens.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs mention of media queries and flexible layouts.
+
+22.
+
+Q: What is CORS?
+A: A browser security rule.
+Structure: 6 | Clarity: 7 | Relevance: 6 | Overall: 6
+Feedback: Needs explanation of headers and cross-origin requests.
+
+23.
+
+Q: What is React?
+A: A JavaScript library for building UI.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs details like virtual DOM.
+
+24.
+
+Q: What is a promise?
+A: A placeholder for a future value.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs states (pending, fulfilled, rejected).
+
+25.
+
+Q: What is version control?
+A: Tool for managing code changes.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs mention of Git workflows.
+
+26.
+
+Q: What is a CSS preprocessor?
+A: A tool for writing CSS differently.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Should name Sass or Less and explain nesting.
+
+27.
+
+Q: What are media queries?
+A: Rules that make CSS adapt to screen size.
+Structure: 7 | Clarity: 8 | Relevance: 8 | Overall: 7
+Feedback: Correct but could mention breakpoints.
+
+28.
+
+Q: What is DOM manipulation?
+A: Changing HTML elements with JavaScript.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs mention of performance concerns.
+
+29.
+
+Q: What is JSON?
+A: A format for sending data.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Should mention its key-value, text-based nature.
+
+30.
+
+Q: What is a CDN?
+A: A network that delivers content.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs benefit details like caching and reducing latency.
+
+⭐ SECTION 3 — 15 BAD / POOR ANSWERS (Vague, incorrect, unusable)
+31.
+
+Q: What is the DOM?
+A: A page thing that browsers use.
+Structure: 2 | Clarity: 3 | Relevance: 3 | Overall: 3
+Feedback: Too vague.
+
+32.
+
+Q: What is CSS?
+A: Something to make websites look nice.
+Structure: 2 | Clarity: 3 | Relevance: 3 | Overall: 2
+Feedback: Oversimplified and shallow.
+
+33.
+
+Q: What is JavaScript?
+A: A computer thing that runs stuff.
+Structure: 1 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Incorrect and unclear.
+
+34.
+
+Q: What is Flexbox?
+A: A tool that flexes boxes.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: No technical meaning.
+
+35.
+
+Q: What is React?
+A: Something that reacts on websites.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Doesn’t mention framework/library.
+
+36.
+
+Q: What is an API call?
+A: Calling something on the internet randomly.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Incorrect.
+
+37.
+
+Q: What is HTML?
+A: A code that websites have.
+Structure: 2 | Clarity: 3 | Relevance: 3 | Overall: 2
+Feedback: Incomplete and unclear.
+
+38.
+
+Q: What is a promise?
+A: When JavaScript promises to run code.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Misleading metaphor.
+
+39.
+
+Q: What is responsive design?
+A: Websites respond to things.
+Structure: 2 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Very vague.
+
+40.
+
+Q: What is CORS?
+A: Something about cores in a browser.
+Structure: 2 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Incorrect acronym expansion.
+
+41.
+
+Q: What is AJAX?
+A: Something like a detergent name.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Not related to development.
+
+42.
+
+Q: What is JSX?
+A: JavaScript times X.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Meaningless answer.
+
+43.
+
+Q: What is a CDN?
+A: Something that downloads websites.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Misleading.
+
+44.
+
+Q: What is event bubbling?
+A: Events popping like bubbles.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Non-technical and incorrect.
+
+45.
+
+Q: What is a web server?
+A: A computer that serves webs.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Completely incorrect.
