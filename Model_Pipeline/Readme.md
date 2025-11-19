@@ -48,7 +48,7 @@ Input Video/Audio → Multi-Modal Pipeline → Integrated Analysis Report
 - **Status**: Production ready with quality guidelines
 
 ### LLM Content Analysis
-**Documentation**: [LLM Details](./Model_Pipeline/LLM VALIDATION/Readme.md)
+**Documentation**: [Model_Pipeline/LLM VALIDATION/README.md](./Model_Pipeline/LLM%20VALIDATION/README.md)
 - **Technology**: FLAN-T5 (base/large) with fine-tuning
 - **Function**: Interview answer evaluation and structured feedback
 - **Performance**: 4.09 MAE (score error), requires model upgrade
