@@ -1,0 +1,78 @@
+TEST SET — MACHINE LEARNING ROLE
+
+
+Q: What is regularization in machine learning?
+A: Regularization reduces overfitting by adding a penalty term to the loss function. L1 encourages sparsity, while L2 reduces coefficient magnitude. This improves model generalization.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent, concise, and technically accurate.
+
+Q: Explain the bias-variance tradeoff.
+A: It describes the balance between model complexity and generalization. High bias models underfit, while high variance models overfit. The goal is minimizing total error by choosing an optimal capacity.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Strong conceptual explanation.
+
+Q: What is gradient descent?
+A: Gradient descent minimizes a loss function by iteratively updating parameters in the opposite direction of the gradient. Variants like SGD, Adam, and RMSProp improve convergence.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Great detail with variants.
+
+Q: What is cross-validation?
+A: Cross-validation splits data into folds, training on some and validating on the remaining. K-fold CV improves reliability of performance estimates and reduces overfitting risks.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Clear and useful.
+
+Q: What is transfer learning?
+A: Transfer learning uses pretrained models on related tasks, fine-tuning them for new tasks with less data. It's standard in NLP and vision due to reduced training cost and improved accuracy.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation.
+
+Q: What is overfitting?
+A: When a model learns the training data too well and fails on new data.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Correct but needs examples or mitigation strategies.
+
+Q: What is a neural network?
+A: A model inspired by the brain with layers of neurons.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs more technical depth.
+
+Q: What is a confusion matrix?
+A: A table that shows predictions vs actual values.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Should explain TP, FP, FN, TN.
+
+Q: What is feature scaling?
+A: Making features have similar ranges.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs mention of normalization vs standardization.
+
+Q: What is clustering?
+A: Grouping data that is similar.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Could name algorithms (K-means, DBSCAN).
+
+Q: What is regularization?
+A: Something that makes models regular.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Not meaningful.
+
+Q: What is gradient descent?
+A: When gradients go down a hill.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Metaphor lacks explanation.
+
+Q: What is a neural network?
+A: A brain inside a computer.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Inaccurate.
+
+Q: What is cross-validation?
+A: Validating something by crossing it.
+Structure: 1 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Wrong and unclear.
+
+Q: What is clustering?
+A: When data sticks together.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Too vague.
+
