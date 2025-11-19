@@ -1,0 +1,7 @@
+
+The bias–variance tradeoff describes how model complexity affects prediction error.
+
+A High bias means model is too simple, underfits, high training and test error.
+where as 
+a High variance means model is too complex, overfits, low training error but high test error.
+The goal is to find a balance using techniques like cross-validation, regularization, or adjusting model capacity.

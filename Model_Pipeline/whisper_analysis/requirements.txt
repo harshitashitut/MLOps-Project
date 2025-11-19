@@ -1,0 +1,19 @@
+# Requirements for LLM Validation
+# Install with: pip install -r requirements_validation.txt
+# Core ML/NLP
+transformers>=4.35.0
+torch>=2.0.0
+sentence-transformers>=2.2.0
+# Metrics and evaluation
+rouge-score>=0.1.2
+jiwer>=3.0.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+# Utilities
+tqdm>=4.65.0

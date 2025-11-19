@@ -1,0 +1,9 @@
+Data imbalances can be handled through Several strategies including:
+
+Resampling: Oversampling minority (SMOTE), undersampling majority.
+second is 
+Class weighting: Penalizing misclassification of minority classes.
+third is
+Choosing better metrics: like F1-score, AUC-ROC, precision–recall etsedera.
+and the last is 
+Algorithmic methods like  Ensemble models and what not.
