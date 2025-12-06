@@ -1,0 +1,148 @@
+{
+  "video_id": "demo_video_1",
+  "timestamp": "2025-11-24T17:07:26.666833Z",
+  "status": "success",
+  "results": {
+    "overall_score": 48,
+    "performance_level": "beginner",
+    "category_scores": {
+      "content": {
+        "score": 40,
+        "structure": 30,
+        "clarity": 60,
+        "engagement": 20,
+        "depth": 50
+      },
+      "vocal_delivery": {
+        "score": 75,
+        "pace": 80,
+        "pace_wpm": 125.1,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 90,
+        "filler_word_frequency": 0,
+        "pause_effectiveness": 70,
+        "volume_consistency": 60
+      },
+      "visual_presentation": {
+        "score": 60,
+        "body_language": 60,
+        "posture": 70,
+        "gestures": 50,
+        "eye_contact": 80,
+        "facial_expressions": 0,
+        "professional_appearance": 80
+      },
+      "tone_emotion": {
+        "score": 30,
+        "dominant_emotion": "disgust",
+        "emotion_appropriateness": 20,
+        "confidence_level": 50,
+        "authenticity": 40,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 21.59,
+      "word_count": 45,
+      "words_per_minute": 125.1,
+      "filler_words_count": 0,
+      "filler_words_per_minute": 0,
+      "gesture_frequency": 5,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "delivery",
+        "strength": "Clear articulation",
+        "evidence": "Articulation score of 90"
+      },
+      {
+        "category": "visual",
+        "strength": "Good eye contact",
+        "evidence": "Eye contact score of 80"
+      }
+    ],
+    "improvements": [
+      {
+        "category": "content",
+        "issue": "Lack of context and examples",
+        "current_metric": "Low engagement score",
+        "target_metric": "Increase engagement score to 70",
+        "recommendation": "Add real-world examples and scenarios to illustrate concepts.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "tone",
+        "issue": "Negative dominant emotion",
+        "current_metric": "Dominant emotion: disgust",
+        "target_metric": "Neutral or positive emotion",
+        "recommendation": "Practice conveying enthusiasm and positive tone through vocal exercises.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Limited facial expressiveness",
+        "current_metric": "Facial expressiveness score of 0",
+        "target_metric": "Increase facial expressiveness score to 60",
+        "recommendation": "Practice using facial expressions to emphasize key points.",
+        "priority": "medium",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "content",
+        "issue": "Weak opening and closing",
+        "current_metric": "Opening and closing strength: weak",
+        "target_metric": "Opening and closing strength: strong",
+        "recommendation": "Craft compelling opening and closing statements to frame the content effectively.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content provides concise definitions of L1 and L2 regularization and their use cases. However, it lacks context, examples, and a clear introduction or conclusion. The structure needs improvement to enhance clarity and engagement. Adding real-world scenarios and a strong opening and closing would significantly improve the content's impact.",
+      "delivery_analysis": "The vocal delivery is generally clear with good articulation and an optimal speaking pace. However, the lack of vocal variation and the presence of a negative dominant emotion detract from the overall effectiveness. Incorporating more vocal variety and practicing conveying a more neutral or positive tone would enhance the delivery.",
+      "visual_analysis": "The visual presentation shows potential with good eye contact and posture. However, the limited facial expressiveness and gesture variety hinder the overall impact. Focusing on incorporating more facial expressions and gestures to emphasize key points would improve the visual communication.",
+      "tone_analysis": "The dominant emotion detected was disgust, which is inappropriate for an explanatory presentation. This negatively impacts the perceived confidence and authenticity. Practicing conveying a more neutral and positive tone is crucial for improving the emotional impact of the presentation."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "disgust",
+        "confidence": 0.129
+      },
+      {
+        "timestamp_seconds": 21,
+        "emotion": "disgust",
+        "confidence": 0.129
+      }
+    ],
+    "comparative_analysis": {
+      "vs_beginner": "similar",
+      "vs_intermediate": "worse",
+      "vs_advanced": "worse"
+    },
+    "next_steps": [
+      "Incorporate real-world examples to improve content engagement.",
+      "Practice vocal exercises to convey a more neutral or positive tone.",
+      "Focus on using facial expressions to emphasize key points."
+    ],
+    "practice_recommendations": {
+      "focus_areas": [
+        "Content Engagement",
+        "Emotional Tone",
+        "Facial Expressiveness"
+      ],
+      "exercises": [
+        "Add examples to the content",
+        "Record and review your tone",
+        "Practice in front of a mirror"
+      ],
+      "estimated_improvement_timeline": "4 weeks with consistent practice"
+    },
+    "timestamp": "2025-11-24T17:07:26.665585Z",
+    "model_used": "gemini-2.5-pro",
+    "processing_complete": true
+  }
+}

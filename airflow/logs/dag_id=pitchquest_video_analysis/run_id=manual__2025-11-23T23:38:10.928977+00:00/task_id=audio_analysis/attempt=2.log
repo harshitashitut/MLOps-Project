@@ -1,0 +1,32 @@
+[2025-11-23T19:21:32.849-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.audio_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:21:32.860-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.audio_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:21:32.861-0500] {taskinstance.py:1361} INFO - Starting attempt 2 of 4
+[2025-11-23T19:21:32.878-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): audio_analysis> on 2025-11-23 23:38:10.928977+00:00
+[2025-11-23T19:21:32.900-0500] {standard_task_runner.py:57} INFO - Started process 36431 to run task
+[2025-11-23T19:21:32.920-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'audio_analysis', 'manual__2025-11-23T23:38:10.928977+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmp826vb1z6']
+[2025-11-23T19:21:32.923-0500] {standard_task_runner.py:85} INFO - Job 35: Subtask audio_analysis
+[2025-11-23T19:21:33.005-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.audio_analysis manual__2025-11-23T23:38:10.928977+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-23T19:21:33.119-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='audio_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-11-23T23:38:10.928977+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-23T23:38:10.928977+00:00'
+[2025-11-23T19:21:33.133-0500] {pitch_analysis_dag.py:116} INFO - Starting audio analysis on /var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/audio_test_video_kvn59zkm.mp3
+[2025-11-23T19:21:33.134-0500] {pitch_analysis_dag.py:119} INFO - Running Whisper transcription...
+[2025-11-23T19:21:33.135-0500] {audio_analysis.py:44} INFO - Transcribing audio: /var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/audio_test_video_kvn59zkm.mp3
+[2025-11-23T19:21:35.363-0500] {_client.py:1013} INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+[2025-11-23T19:21:35.366-0500] {audio_analysis.py:59} INFO - ✅ Transcription complete: 45 words in 21.6s
+[2025-11-23T19:21:35.367-0500] {pitch_analysis_dag.py:123} INFO - Running emotion analysis (Wav2Vec2)...
+[2025-11-23T19:21:35.368-0500] {audio_analysis.py:82} INFO - Analyzing emotion: /var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/audio_test_video_kvn59zkm.mp3
+[2025-11-23T19:21:35.368-0500] {audio_analysis.py:25} INFO - Loading Wav2Vec2 emotion model...
+[2025-11-23T19:21:35.373-0500] {logging_mixin.py:154} WARNING - /Users/salmanbey/Documents/Northeastern /Fall 2025/MLOPS/airflow_pipeline/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py:942 FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+[2025-11-23T19:21:35.536-0500] {logging_mixin.py:154} WARNING - /Users/salmanbey/Documents/Northeastern /Fall 2025/MLOPS/airflow_pipeline/venv/lib/python3.10/site-packages/transformers/configuration_utils.py:381 UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+[2025-11-23T19:21:49.323-0500] {audio_analysis.py:32} INFO - Emotion model loaded on: CPU
+[2025-11-23T19:22:06.851-0500] {audio_analysis.py:98} INFO - ✅ Emotion detected: sad (0.13)
+[2025-11-23T19:22:06.871-0500] {pitch_analysis_dag.py:127} INFO - Computing vocal metrics...
+[2025-11-23T19:22:06.878-0500] {audio_analysis.py:126} INFO - Computing vocal metrics...
+[2025-11-23T19:22:06.908-0500] {audio_analysis.py:166} INFO - ✅ Vocal metrics: 125.1 WPM, 0 fillers, score 9.0
+[2025-11-23T19:22:06.910-0500] {pitch_analysis_dag.py:135} INFO - Combining audio analyses...
+[2025-11-23T19:22:06.912-0500] {audio_analysis.py:203} INFO - Combining audio analyses...
+[2025-11-23T19:22:06.915-0500] {audio_analysis.py:248} INFO - ✅ Audio analyses combined successfully
+[2025-11-23T19:22:06.916-0500] {pitch_analysis_dag.py:143} INFO - ✅ Audio analysis complete
+[2025-11-23T19:22:06.927-0500] {python.py:194} INFO - Done. Returned value was: {'transcript_data': {'full_transcript': "L1 regularizer adds absolute value penalties, encourages sparsity and feature selection. L2 regularizer adds squared penalties, shrinks weights but doesn't force them to zero. We use L1 when you expect some features are redundant. Use L2 when you want stable small weights to reduce overfitting.", 'word_count': 45, 'duration': 21.59000015258789, 'language': 'english'}, 'emotion_data': {'dominant_emotion': 'sad', 'confidence': 0.132, 'emotion_scores': {'sad': 0.132, 'angry': 0.13, 'surprised': 0.129, 'disgust': 0.124, 'neutral': 0.122}, 'vocal_confidence': 'low'}, 'vocal_data': {'wpm': 125.1, 'speaking_pace': 'optimal', 'filler_count': 0, 'filler_words': [], 'articulation_score': 9.0}, 'summary': {'speaking_pace_rating': 'optimal', 'vocal_confidence': 'low', 'filler_words_count': 0, 'emotional_tone': 'sad', 'articulation_score': 9.0}}
+[2025-11-23T19:22:07.067-0500] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=pitchquest_video_analysis, task_id=audio_analysis, execution_date=20251123T233810, start_date=20251124T002132, end_date=20251124T002207
+[2025-11-23T19:22:07.309-0500] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-11-23T19:22:07.379-0500] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

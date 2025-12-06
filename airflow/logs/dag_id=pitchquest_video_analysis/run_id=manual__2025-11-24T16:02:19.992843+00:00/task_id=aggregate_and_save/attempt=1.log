@@ -1,0 +1,19 @@
+[2025-11-24T11:05:29.636-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.aggregate_and_save manual__2025-11-24T16:02:19.992843+00:00 [queued]>
+[2025-11-24T11:05:29.647-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.aggregate_and_save manual__2025-11-24T16:02:19.992843+00:00 [queued]>
+[2025-11-24T11:05:29.647-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-11-24T11:05:29.664-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): aggregate_and_save> on 2025-11-24 16:02:19.992843+00:00
+[2025-11-24T11:05:29.685-0500] {standard_task_runner.py:57} INFO - Started process 41065 to run task
+[2025-11-24T11:05:29.703-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'aggregate_and_save', 'manual__2025-11-24T16:02:19.992843+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmpbmxw2qbd']
+[2025-11-24T11:05:29.705-0500] {standard_task_runner.py:85} INFO - Job 51: Subtask aggregate_and_save
+[2025-11-24T11:05:29.818-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.aggregate_and_save manual__2025-11-24T16:02:19.992843+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-24T11:05:29.937-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='aggregate_and_save' AIRFLOW_CTX_EXECUTION_DATE='2025-11-24T16:02:19.992843+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-24T16:02:19.992843+00:00'
+[2025-11-24T11:05:29.968-0500] {pitch_analysis_dag.py:192} INFO - Starting final aggregation for demo_video_2
+[2025-11-24T11:05:29.969-0500] {aggregation.py:34} INFO - Starting final aggregation with Gemini Pro...
+[2025-11-24T11:05:29.972-0500] {aggregation.py:60} INFO - Calling Gemini (gemini-2.5-pro) for aggregation...
+[2025-11-24T11:05:45.150-0500] {aggregation.py:68} INFO - ✅ Aggregation complete. Overall score: 63
+[2025-11-24T11:05:45.151-0500] {aggregation.py:168} INFO - ✅ Results saved to: data/output/results_demo_video_2.json
+[2025-11-24T11:05:45.152-0500] {pitch_analysis_dag.py:205} INFO - ✅ Pipeline complete! Results saved to data/output/results_demo_video_2.json
+[2025-11-24T11:05:45.152-0500] {python.py:194} INFO - Done. Returned value was: {'video_id': 'demo_video_2', 'output_path': 'data/output/results_demo_video_2.json', 'overall_score': 63, 'performance_level': 'intermediate'}
+[2025-11-24T11:05:45.169-0500] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=pitchquest_video_analysis, task_id=aggregate_and_save, execution_date=20251124T160219, start_date=20251124T160529, end_date=20251124T160545
+[2025-11-24T11:05:45.214-0500] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-11-24T11:05:45.232-0500] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

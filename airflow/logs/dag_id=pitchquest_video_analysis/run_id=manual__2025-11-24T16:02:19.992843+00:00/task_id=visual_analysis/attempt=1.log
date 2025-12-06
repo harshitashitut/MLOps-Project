@@ -1,0 +1,18 @@
+[2025-11-24T11:04:30.796-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-24T16:02:19.992843+00:00 [queued]>
+[2025-11-24T11:04:30.811-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-24T16:02:19.992843+00:00 [queued]>
+[2025-11-24T11:04:30.812-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-11-24T11:04:30.838-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): visual_analysis> on 2025-11-24 16:02:19.992843+00:00
+[2025-11-24T11:04:30.858-0500] {standard_task_runner.py:57} INFO - Started process 40940 to run task
+[2025-11-24T11:04:30.901-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'visual_analysis', 'manual__2025-11-24T16:02:19.992843+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmp1ei_xmhz']
+[2025-11-24T11:04:30.904-0500] {standard_task_runner.py:85} INFO - Job 49: Subtask visual_analysis
+[2025-11-24T11:04:30.982-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-24T16:02:19.992843+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-24T11:04:31.136-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='visual_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-11-24T16:02:19.992843+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-24T16:02:19.992843+00:00'
+[2025-11-24T11:04:31.150-0500] {pitch_analysis_dag.py:85} INFO - Starting visual analysis on 10 frames
+[2025-11-24T11:04:31.151-0500] {visual_analysis.py:18} INFO - Skipping MediaPipe (using Gemini Vision for all analysis)
+[2025-11-24T11:04:31.152-0500] {visual_analysis.py:72} INFO - Analyzing 10 frames with Gemini (REST)
+[2025-11-24T11:04:35.521-0500] {visual_analysis.py:82} INFO - ✅ Gemini analysis successful
+[2025-11-24T11:04:35.522-0500] {pitch_analysis_dag.py:96} INFO - ✅ Visual analysis complete
+[2025-11-24T11:04:35.523-0500] {python.py:194} INFO - Done. Returned value was: {'visual_presentation': {'posture_score_ai': 7.5, 'overall_visual_score': 7, 'posture_score': 7, 'gesture_score': 5, 'eye_contact_score': 7, 'confidence_level': 'moderate', 'visual_feedback': 'Posture appears relaxed and natural, but hard to fully assess due to the camera angle. Head is held upright.', 'strengths': ['Facial expressions', 'Eye contact'], 'improvements': ['Camera angle', 'Gesture variety']}}
+[2025-11-24T11:04:35.540-0500] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=pitchquest_video_analysis, task_id=visual_analysis, execution_date=20251124T160219, start_date=20251124T160430, end_date=20251124T160435
+[2025-11-24T11:04:35.583-0500] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-11-24T11:04:35.610-0500] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
