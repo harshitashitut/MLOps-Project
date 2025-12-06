@@ -1,0 +1,24 @@
+[2025-11-23T17:41:46.043-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.preprocess manual__2025-11-23T22:41:24.341709+00:00 [queued]>
+[2025-11-23T17:41:46.059-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.preprocess manual__2025-11-23T22:41:24.341709+00:00 [queued]>
+[2025-11-23T17:41:46.060-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-11-23T17:41:46.090-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): preprocess> on 2025-11-23 22:41:24.341709+00:00
+[2025-11-23T17:41:46.150-0500] {standard_task_runner.py:57} INFO - Started process 28942 to run task
+[2025-11-23T17:41:46.191-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'preprocess', 'manual__2025-11-23T22:41:24.341709+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmp2rwmsame']
+[2025-11-23T17:41:46.196-0500] {standard_task_runner.py:85} INFO - Job 2: Subtask preprocess
+[2025-11-23T17:41:46.472-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.preprocess manual__2025-11-23T22:41:24.341709+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-23T17:41:46.712-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='preprocess' AIRFLOW_CTX_EXECUTION_DATE='2025-11-23T22:41:24.341709+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-23T22:41:24.341709+00:00'
+[2025-11-23T17:41:46.722-0500] {pitch_analysis_dag.py:50} INFO - Starting preprocessing for video: demo_video_1
+[2025-11-23T17:41:46.725-0500] {preprocessing.py:50} INFO - Extracting frames from data/input/demo_video_1.mp4 (1 frame per 2s)
+[2025-11-23T17:41:46.929-0500] {preprocessing.py:62} INFO - Video: 21.5s, 30.0 fps, 646 total frames
+[2025-11-23T17:41:47.781-0500] {preprocessing.py:83} INFO - Reached max frames limit (10)
+[2025-11-23T17:41:47.790-0500] {preprocessing.py:93} INFO - ✅ Extracted 10 frames to /var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/frames_test_video_s62ndj3w
+[2025-11-23T17:41:47.793-0500] {preprocessing.py:142} INFO - Extracting audio from data/input/demo_video_1.mp4
+[2025-11-23T17:53:51.117-0500] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-11-23T17:53:51.192-0500] {process_utils.py:131} INFO - Sending Signals.SIGTERM to group 28942. PIDs of all processes in the group: [28944, 28942]
+[2025-11-23T17:53:51.195-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 28942
+[2025-11-23T17:54:51.206-0500] {process_utils.py:149} WARNING - process psutil.Process(pid=28942, name='Python', status='stopped', started='17:41:46') did not respond to SIGTERM. Trying SIGKILL
+[2025-11-23T17:54:51.393-0500] {process_utils.py:149} WARNING - process psutil.Process(pid=28944, name='ffmpeg', status='zombie', started='17:41:47') did not respond to SIGTERM. Trying SIGKILL
+[2025-11-23T17:54:51.395-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGKILL to group 28942
+[2025-11-23T17:54:51.410-0500] {process_utils.py:79} INFO - Process psutil.Process(pid=28942, name='Python', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='17:41:46') (28942) terminated with exit code Negsignal.SIGKILL
+[2025-11-23T17:54:51.416-0500] {process_utils.py:79} INFO - Process psutil.Process(pid=28944, name='ffmpeg', status='terminated', started='17:41:47') (28944) terminated with exit code None
+[2025-11-23T17:54:51.418-0500] {standard_task_runner.py:172} ERROR - Job 2 was killed before it finished (likely due to running out of memory)

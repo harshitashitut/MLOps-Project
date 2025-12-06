@@ -1,0 +1,18 @@
+[2025-11-23T19:07:45.495-0500] {taskinstance.py:1149} INFO - Dependencies not met for <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [None]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'preprocess'}
+[2025-11-23T19:07:45.496-0500] {local_task_job_runner.py:154} INFO - Task is not able to be run
+[2025-11-23T19:15:10.613-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:15:10.632-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:15:10.632-0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-11-23T19:15:10.657-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): visual_analysis> on 2025-11-23 23:38:10.928977+00:00
+[2025-11-23T19:15:10.706-0500] {standard_task_runner.py:57} INFO - Started process 35864 to run task
+[2025-11-23T19:15:10.730-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'visual_analysis', 'manual__2025-11-23T23:38:10.928977+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmpdsh2zuol']
+[2025-11-23T19:15:10.734-0500] {standard_task_runner.py:85} INFO - Job 30: Subtask visual_analysis
+[2025-11-23T19:15:10.821-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-23T19:15:10.980-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='visual_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-11-23T23:38:10.928977+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-23T23:38:10.928977+00:00'
+[2025-11-23T19:15:10.996-0500] {pitch_analysis_dag.py:85} INFO - Starting visual analysis on 10 frames
+[2025-11-23T19:15:10.997-0500] {visual_analysis.py:27} INFO - Analyzing pose for 10 frames
+[2025-11-23T19:19:02.530-0500] {process_utils.py:131} INFO - Sending Signals.SIGTERM to group 35864. PIDs of all processes in the group: [35864]
+[2025-11-23T19:19:02.568-0500] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 35864
+[2025-11-23T19:19:18.428-0500] {taskinstance.py:1149} INFO - Dependencies not met for <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2025-11-23T19:19:18.432-0500] {taskinstance.py:1149} INFO - Dependencies not met for <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2025-11-23T19:19:18.434-0500] {local_task_job_runner.py:154} INFO - Task is not able to be run

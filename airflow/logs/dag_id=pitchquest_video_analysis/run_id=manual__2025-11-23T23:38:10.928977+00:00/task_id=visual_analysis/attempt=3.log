@@ -1,0 +1,13 @@
+[2025-11-23T19:22:24.535-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:22:24.545-0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [queued]>
+[2025-11-23T19:22:24.546-0500] {taskinstance.py:1361} INFO - Starting attempt 3 of 5
+[2025-11-23T19:22:24.571-0500] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): visual_analysis> on 2025-11-23 23:38:10.928977+00:00
+[2025-11-23T19:22:24.590-0500] {standard_task_runner.py:57} INFO - Started process 36495 to run task
+[2025-11-23T19:22:24.612-0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'pitchquest_video_analysis', 'visual_analysis', 'manual__2025-11-23T23:38:10.928977+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/pitch_analysis_dag.py', '--cfg-path', '/var/folders/lt/0tmqqyzd7jxghlrbbfn1p7l40000gn/T/tmpu6hqllx3']
+[2025-11-23T19:22:24.615-0500] {standard_task_runner.py:85} INFO - Job 36: Subtask visual_analysis
+[2025-11-23T19:22:24.694-0500] {task_command.py:416} INFO - Running <TaskInstance: pitchquest_video_analysis.visual_analysis manual__2025-11-23T23:38:10.928977+00:00 [running]> on host salmans-macbook-air.local
+[2025-11-23T19:22:24.791-0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='pitchquest' AIRFLOW_CTX_DAG_ID='pitchquest_video_analysis' AIRFLOW_CTX_TASK_ID='visual_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-11-23T23:38:10.928977+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-23T23:38:10.928977+00:00'
+[2025-11-23T19:22:24.803-0500] {pitch_analysis_dag.py:85} INFO - Starting visual analysis on 10 frames
+[2025-11-23T19:22:24.804-0500] {visual_analysis.py:21} INFO - Analyzing pose for 10 frames
+[2025-11-23T19:22:25.342-0500] {local_task_job_runner.py:228} INFO - Task exited with return code Negsignal.SIGABRT
+[2025-11-23T19:22:25.370-0500] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
