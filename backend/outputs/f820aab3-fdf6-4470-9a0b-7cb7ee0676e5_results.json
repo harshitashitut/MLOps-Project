@@ -1,0 +1,203 @@
+{
+  "overall_score": 47,
+  "performance_level": "beginner",
+  "category_scores": {
+    "content": {
+      "score": 30,
+      "structure": 10,
+      "clarity": 60,
+      "engagement": 10,
+      "depth": 30
+    },
+    "vocal_delivery": {
+      "score": 90,
+      "pace": 95,
+      "pace_wpm": 155.1,
+      "optimal_pace_range": "140-160 wpm",
+      "articulation": 63,
+      "filler_word_frequency": 1,
+      "pause_effectiveness": 70,
+      "volume_consistency": 70
+    },
+    "visual_presentation": {
+      "score": 20,
+      "body_language": 20,
+      "posture": 0,
+      "gestures": 0,
+      "eye_contact": 80,
+      "facial_expressions": 0,
+      "professional_appearance": 20
+    },
+    "tone_emotion": {
+      "score": 48,
+      "dominant_emotion": "surprised",
+      "emotion_appropriateness": 30,
+      "confidence_level": 65,
+      "authenticity": 50,
+      "emotional_range": "limited"
+    }
+  },
+  "key_metrics": {
+    "speech_duration_seconds": 23.21,
+    "word_count": 60,
+    "words_per_minute": 155.1,
+    "filler_words_count": 1,
+    "filler_words_per_minute": 2.58,
+    "gesture_frequency": 0,
+    "nervous_habits_count": 0
+  },
+  "strengths": [
+    {
+      "category": "visual",
+      "strength": "Maintained direct eye contact",
+      "evidence": "Eye contact score of 8/10"
+    },
+    {
+      "category": "visual",
+      "strength": "Good lighting on the face",
+      "evidence": "Visual analysis report"
+    },
+    {
+      "category": "delivery",
+      "strength": "Optimal speaking pace",
+      "evidence": "155.1 WPM, within 140-160 WPM optimal range"
+    },
+    {
+      "category": "delivery",
+      "strength": "Minimal use of filler words",
+      "evidence": "Only 1 filler word detected"
+    },
+    {
+      "category": "content",
+      "strength": "Concise and factually accurate",
+      "evidence": "Content analysis report"
+    },
+    {
+      "category": "content",
+      "strength": "Highly focused message",
+      "evidence": "Message focus: highly_focused"
+    }
+  ],
+  "improvements": [
+    {
+      "category": "visual",
+      "issue": "Incorrect video orientation and framing",
+      "current_metric": "Overall visual score: 20",
+      "target_metric": "Overall visual score: 70+",
+      "recommendation": "Ensure the video is correctly oriented and framed to include at least your upper torso for proper body language assessment.",
+      "priority": "high",
+      "estimated_effort": "low"
+    },
+    {
+      "category": "visual",
+      "issue": "Lack of professional appearance and distracting background",
+      "current_metric": "Professional appearance: 20",
+      "target_metric": "Professional appearance: 70+",
+      "recommendation": "Choose a neutral background and consider attire appropriate for the public speaking context.",
+      "priority": "high",
+      "estimated_effort": "low"
+    },
+    {
+      "category": "content",
+      "issue": "Weak speech structure and engagement",
+      "current_metric": "Structure score: 10, Engagement score: 10",
+      "target_metric": "Structure score: 70+, Engagement score: 70+",
+      "recommendation": "Develop a clear speech structure with a strong hook, supporting examples, and a memorable closing. Incorporate storytelling or relatable analogies.",
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "content",
+      "issue": "Limited content depth and audience awareness",
+      "current_metric": "Content depth score: 30, Audience awareness score: 20",
+      "target_metric": "Content depth score: 70+, Audience awareness score: 70+",
+      "recommendation": "Provide more examples or evidence to support technical points and tailor language to avoid excessive jargon for a general audience.",
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "tone",
+      "issue": "Inappropriate dominant emotion for the topic",
+      "current_metric": "Dominant emotion: 'surprised'",
+      "target_metric": "Dominant emotion: 'neutral' or 'calm' with appropriate variation",
+      "recommendation": "Focus on maintaining a calm and authoritative tone for technical explanations, allowing for subtle variations to emphasize key points.",
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "delivery",
+      "issue": "Moderate articulation clarity",
+      "current_metric": "Articulation score: 63",
+      "target_metric": "Articulation score: 80+",
+      "recommendation": "Practice enunciation exercises to improve clarity, especially with technical terms.",
+      "priority": "low",
+      "estimated_effort": "low"
+    }
+  ],
+  "detailed_feedback": {
+    "content_analysis": "The content of your speech was highly focused and concise, effectively introducing the bias-variance trade-off. However, its overall structure was weak, lacking a clear opening hook and a strong closing statement, which significantly impacted engagement. While factually accurate, the presentation suffered from a lack of depth, with no examples or evidence provided to illustrate complex concepts. The heavy use of technical jargon without simplification suggests limited audience awareness, making the content less accessible and memorable for a general audience.\n\nTo improve, consider structuring your speech with a compelling introduction that grabs attention, a body that elaborates with relatable examples, and a conclusion that summarizes key takeaways and provides a call to action or a memorable thought. Integrating storytelling or analogies can transform complex information into an engaging narrative, enhancing both clarity and audience connection.",
+    "delivery_analysis": "Your vocal delivery demonstrated several strengths, particularly an optimal speaking pace of 155.1 words per minute, which is ideal for clarity and audience comprehension. The minimal use of filler words (only one detected) is commendable, indicating a confident and prepared delivery. However, your articulation score of 6.3 suggests there's room for improvement in vocal clarity, especially when delivering technical terms.\n\nTo further enhance your delivery, focus on enunciation exercises to ensure every word is crisp and clear. While your pace is excellent, consider strategic pausing to allow the audience to absorb complex information, which can also contribute to a more dynamic and engaging vocal performance. Maintaining consistent volume will also help ensure your message is heard clearly throughout.",
+    "visual_analysis": "Your visual presentation was significantly hampered by technical issues, including an upside-down video orientation and poor framing that obscured most of your body. This resulted in low scores for posture, gestures, and facial expressiveness, as these elements could not be properly assessed or conveyed. Despite these challenges, you maintained good eye contact, which is a strong foundation for audience connection.\n\nImmediate improvements should focus on technical setup: ensure correct video orientation and frame yourself to include at least your upper torso, allowing for natural gestures and visible posture. Beyond technical fixes, pay attention to your professional appearance and choose a neutral, distraction-free background. Once these foundational elements are addressed, you can then focus on developing more expressive body language and purposeful gestures to enhance your visual communication.",
+    "tone_analysis": "The vocal emotion analysis indicated a dominant emotion of 'surprised,' which may not be the most appropriate tone for a technical explanation. While your vocal confidence was moderate, the overall emotional distribution was quite flat, with no strong, consistent emotion conveyed. This suggests a limited emotional range and potentially impacts the authenticity and impact of your message.\n\nFor a technical topic, aim for a tone that is primarily calm, authoritative, and confident. While 'surprised' can be used for emphasis, it should not be the dominant emotion. Practice modulating your tone to convey enthusiasm for your subject matter and to emphasize key points, ensuring your emotions align with the message you intend to deliver. This will enhance your authenticity and make your presentation more engaging."
+  },
+  "emotion_timeline": [
+    {
+      "timestamp_seconds": 0,
+      "emotion": "surprised",
+      "confidence": 0.131
+    },
+    {
+      "timestamp_seconds": 5,
+      "emotion": "surprised",
+      "confidence": 0.131
+    },
+    {
+      "timestamp_seconds": 10,
+      "emotion": "surprised",
+      "confidence": 0.131
+    },
+    {
+      "timestamp_seconds": 15,
+      "emotion": "surprised",
+      "confidence": 0.131
+    },
+    {
+      "timestamp_seconds": 20,
+      "emotion": "surprised",
+      "confidence": 0.131
+    },
+    {
+      "timestamp_seconds": 23.21,
+      "emotion": "surprised",
+      "confidence": 0.131
+    }
+  ],
+  "comparative_analysis": {
+    "vs_beginner": "similar",
+    "vs_intermediate": "worse",
+    "vs_advanced": "significantly_worse"
+  },
+  "next_steps": [
+    "Correct video orientation and framing for future recordings to allow for proper visual assessment.",
+    "Develop a clear speech structure with a strong opening, supporting examples, and a memorable closing.",
+    "Practice tailoring content and language for your target audience, minimizing jargon and adding relatable context."
+  ],
+  "practice_recommendations": {
+    "focus_areas": [
+      "Visual setup and presence",
+      "Speech structuring and content development",
+      "Audience engagement techniques",
+      "Vocal tone and emotional alignment"
+    ],
+    "exercises": [
+      "Record yourself practicing, focusing on camera framing and background.",
+      "Outline your speech using a 'hook, points, summary' structure.",
+      "Practice explaining technical concepts to a non-expert friend or family member.",
+      "Work on varying your vocal tone to emphasize key points and convey appropriate emotions."
+    ],
+    "estimated_improvement_timeline": "4-6 weeks with consistent practice"
+  },
+  "timestamp": "2025-12-06T23:50:13.492614Z",
+  "model_used": "gemini-2.5-pro",
+  "processing_complete": true
+}
