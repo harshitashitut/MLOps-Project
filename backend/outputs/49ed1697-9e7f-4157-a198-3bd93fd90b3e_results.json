@@ -1,0 +1,150 @@
+{
+  "overall_score": 54,
+  "performance_level": "intermediate",
+  "category_scores": {
+    "content": {
+      "score": 40,
+      "structure": 20,
+      "clarity": 70,
+      "engagement": 20,
+      "depth": 40
+    },
+    "vocal_delivery": {
+      "score": 62,
+      "pace": 30,
+      "pace_wpm": 106.6,
+      "optimal_pace_range": "140-160 wpm",
+      "articulation": 76,
+      "filler_word_frequency": 85,
+      "pause_effectiveness": 60,
+      "volume_consistency": 60
+    },
+    "visual_presentation": {
+      "score": 70,
+      "body_language": 33,
+      "posture": 50,
+      "gestures": 50,
+      "eye_contact": 90,
+      "facial_expressions": 0,
+      "professional_appearance": 70
+    },
+    "tone_emotion": {
+      "score": 37,
+      "dominant_emotion": "disgust",
+      "emotion_appropriateness": 10,
+      "confidence_level": 60,
+      "authenticity": 40,
+      "emotional_range": "limited"
+    }
+  },
+  "key_metrics": {
+    "speech_duration_seconds": 33.78,
+    "word_count": 60,
+    "words_per_minute": 106.6,
+    "filler_words_count": 2,
+    "filler_words_per_minute": 3.55,
+    "gesture_frequency": 2,
+    "nervous_habits_count": 0
+  },
+  "strengths": [
+    {
+      "category": "visual",
+      "strength": "Direct and consistent eye contact",
+      "evidence": "Eye contact score of 90/100."
+    },
+    {
+      "category": "content",
+      "strength": "Clear statement of project goal and conciseness",
+      "evidence": "Content analysis noted clear goal and conciseness in message focus."
+    },
+    {
+      "category": "delivery",
+      "strength": "Minimal use of filler words",
+      "evidence": "Only 2 filler words detected in the entire speech (3.55 per minute)."
+    },
+    {
+      "category": "delivery",
+      "strength": "Good articulation",
+      "evidence": "Articulation score of 76/100."
+    }
+  ],
+  "improvements": [
+    {
+      "category": "content",
+      "issue": "Weak opening and closing, lack of depth and engagement",
+      "current_metric": "Opening strength: weak, Closing strength: weak, Content depth: 40/100, Engagement: 20/100",
+      "target_metric": "Strong opening/closing, depth > 70, engagement > 70",
+      "recommendation": "Start with a compelling hook, provide concrete examples or broader context, and conclude with a clear summary or call to action.",
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "tone",
+      "issue": "Inappropriate dominant emotion ('disgust') and limited emotional range",
+      "current_metric": "Dominant emotion: disgust (13.6%), Emotion appropriateness: 10/100",
+      "target_metric": "Dominant emotion: neutral/positive, Emotion appropriateness > 70",
+      "recommendation": "Be highly mindful of vocal tone to ensure it aligns with the message. Aim for a more neutral, enthusiastic, or confident tone, especially when discussing your project.",
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "delivery",
+      "issue": "Slow speaking pace",
+      "current_metric": "106.6 words per minute",
+      "target_metric": "140-160 words per minute",
+      "recommendation": "Practice speaking at a slightly faster, yet comfortable, pace. Focus on maintaining clarity and varying your pace to emphasize key points.",
+      "priority": "medium",
+      "estimated_effort": "low"
+    },
+    {
+      "category": "visual",
+      "issue": "Limited facial expressiveness, moderate posture and gestures",
+      "current_metric": "Facial expressiveness: 0/100, Posture: 50/100, Gestures: 50/100",
+      "target_metric": "Facial expressiveness > 70, Posture > 70, Gestures > 70",
+      "recommendation": "Incorporate more natural and varied facial expressions to convey enthusiasm and engagement. Practice open and purposeful gestures to support your message and improve overall body language.",
+      "priority": "medium",
+      "estimated_effort": "medium"
+    }
+  ],
+  "detailed_feedback": {
+    "content_analysis": "The speech effectively states the project goal and is concise, which are commendable strengths. However, it suffers from a weak opening and an abrupt ending, failing to capture audience attention or provide a strong conclusion. The content, while technically focused, lacks depth and engaging elements such as storytelling or broader context, making it less accessible and impactful for a general audience. Expanding on the 'why' and 'impact' of the project would significantly enhance its quality.",
+    "delivery_analysis": "The speaker maintains good articulation and minimal filler word usage, which are significant strengths contributing to clarity. However, the speaking pace is notably slow (106.6 WPM), which can affect audience engagement and the overall energy of the presentation. There's an opportunity to vary vocal tone and pace to emphasize key points and maintain listener interest, preventing monotony.",
+    "visual_analysis": "Direct eye contact is a strong point, indicating confidence and engagement with the audience. However, facial expressiveness is severely lacking, which can make the speaker appear disengaged or unenthusiastic. Posture and gestures are moderate, suggesting room for more purposeful and open body language to enhance visual communication and presence. Improving these aspects would create a more dynamic and professional visual impression.",
+    "tone_analysis": "The analysis indicates a dominant emotion of 'disgust', which is highly inappropriate for a professional presentation and can negatively impact audience perception. While vocal confidence is moderate, the overall emotional tone needs significant adjustment to convey enthusiasm, neutrality, or a more positive sentiment aligned with the topic. Ensuring emotional appropriateness is crucial for connecting with the audience and maintaining credibility."
+  },
+  "emotion_timeline": [
+    {
+      "timestamp_seconds": 0,
+      "emotion": "disgust",
+      "confidence": 0.136
+    }
+  ],
+  "comparative_analysis": {
+    "vs_beginner": "better",
+    "vs_intermediate": "similar",
+    "vs_advanced": "worse"
+  },
+  "next_steps": [
+    "Revamp the speech structure to include a compelling hook and a strong, conclusive ending.",
+    "Consciously adjust vocal tone to avoid negative emotions and project a more neutral or enthusiastic demeanor.",
+    "Practice speaking at a slightly faster pace while maintaining clarity and articulation."
+  ],
+  "practice_recommendations": {
+    "focus_areas": [
+      "Speech Structure (Opening/Closing)",
+      "Vocal Tone & Emotion",
+      "Speaking Pace",
+      "Facial Expressiveness"
+    ],
+    "exercises": [
+      "Outline and practice a strong 30-second opening and closing for your speech, focusing on impact.",
+      "Record yourself and identify instances of 'disgust' or other inappropriate emotions, then re-record with a neutral or positive tone.",
+      "Use a metronome or online WPM counter to practice increasing your speaking pace gradually to the optimal range (140-160 WPM).",
+      "Practice in front of a mirror, focusing on natural and varied facial expressions to convey enthusiasm and engagement."
+    ],
+    "estimated_improvement_timeline": "4-6 weeks with consistent practice"
+  },
+  "timestamp": "2025-12-07T00:18:35.576971Z",
+  "model_used": "gemini-2.5-pro",
+  "processing_complete": true
+}
