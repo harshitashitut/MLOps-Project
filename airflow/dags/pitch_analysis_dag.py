@@ -2,11 +2,15 @@
 PitchQuest Video Analysis DAG - Production Grade MLOps Pipeline
 5-Task Consolidated Architecture for Compute Efficiency
 """
+import sys
+import os
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import logging
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Import pipeline modules
 from pipeline.preprocessing import extract_frames, extract_audio
 from pipeline.visual_analysis import (
@@ -44,8 +48,8 @@ def preprocess_task(**context):
     Returns: Paths stored as artifacts
     """
     try:
-        video_id = context['dag_run'].conf.get('video_id', 'demo_video_1')
-        video_path = f"data/input/{video_id}.mp4"
+        video_id = context['dag_run'].conf.get('video_id', 'demo_video_2')
+        video_path = context['dag_run'].conf.get('video_path', f"data/input/{video_id}.mp4")
         
         logger.info(f"Starting preprocessing for video: {video_id}")
         

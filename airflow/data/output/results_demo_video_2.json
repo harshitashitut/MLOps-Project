@@ -1,13 +1,13 @@
 {
   "video_id": "demo_video_2",
-  "timestamp": "2025-11-24T16:47:37.630634Z",
+  "timestamp": "2025-12-07T01:03:58.180447Z",
   "status": "success",
   "results": {
-    "overall_score": 63,
+    "overall_score": 62,
     "performance_level": "intermediate",
     "category_scores": {
       "content": {
-        "score": 63,
+        "score": 60,
         "structure": 60,
         "clarity": 70,
         "engagement": 40,
@@ -18,31 +18,31 @@
         "pace": 85,
         "pace_wpm": 134.3,
         "optimal_pace_range": "140-160 wpm",
-        "articulation": 49,
+        "articulation": 50,
         "filler_word_frequency": 6,
         "pause_effectiveness": 70,
-        "volume_consistency": 80
+        "volume_consistency": 70
       },
       "visual_presentation": {
-        "score": 68,
+        "score": 65,
         "body_language": 70,
         "posture": 70,
         "gestures": 60,
-        "eye_contact": 80,
+        "eye_contact": 70,
         "facial_expressions": 0,
-        "professional_appearance": 90
+        "professional_appearance": 80
       },
       "tone_emotion": {
-        "score": 40,
-        "dominant_emotion": "angry",
-        "emotion_appropriateness": 30,
+        "score": 60,
+        "dominant_emotion": "neutral",
+        "emotion_appropriateness": 70,
         "confidence_level": 60,
-        "authenticity": 70,
+        "authenticity": 60,
         "emotional_range": "limited"
       }
     },
     "key_metrics": {
-      "speech_duration_seconds": 45.58,
+      "speech_duration_seconds": 45.58000183105469,
       "word_count": 102,
       "words_per_minute": 134.3,
       "filler_words_count": 6,
@@ -53,82 +53,69 @@
     "strengths": [
       {
         "category": "content",
-        "strength": "Practical approach to weakness",
-        "evidence": "Mentioned a fixed timeline strategy"
+        "strength": "Identifies weakness and proposes solution",
+        "evidence": "Content analysis highlights solution-oriented approach"
       },
       {
         "category": "content",
-        "strength": "Team collaboration",
-        "evidence": "Sharing outline with teammates for feedback"
-      },
-      {
-        "category": "visual",
-        "strength": "Eye contact",
-        "evidence": "Eye contact score of 80"
+        "strength": "Audience awareness",
+        "evidence": "Audience awareness score of 80"
       }
     ],
     "improvements": [
       {
         "category": "content",
-        "issue": "Weak opening and closing",
-        "current_metric": "Weak",
-        "target_metric": "Strong",
-        "recommendation": "Start with a compelling hook and end with a clear call to action or summary.",
-        "priority": "high",
+        "issue": "Lack of specific examples",
+        "current_metric": "Limited details",
+        "target_metric": "Concrete examples provided",
+        "recommendation": "Incorporate 1-2 specific examples to illustrate points.",
+        "priority": "medium",
         "estimated_effort": "medium"
       },
       {
         "category": "delivery",
-        "issue": "Suboptimal speaking pace",
-        "current_metric": "134.3 wpm",
-        "target_metric": "140-160 wpm",
-        "recommendation": "Practice speaking slightly faster, focusing on clear articulation.",
-        "priority": "medium",
-        "estimated_effort": "low"
-      },
-      {
-        "category": "delivery",
-        "issue": "High filler word usage",
+        "issue": "Filler word usage",
         "current_metric": "6 filler words",
-        "target_metric": "Less than 3 filler words",
-        "recommendation": "Record yourself speaking and identify when you use filler words. Practice pausing instead.",
+        "target_metric": "Reduce filler words to <3",
+        "recommendation": "Practice pausing and mindful speaking to reduce filler words.",
         "priority": "medium",
         "estimated_effort": "medium"
       },
       {
         "category": "visual",
-        "issue": "Lack of facial expressiveness",
-        "current_metric": "Low",
-        "target_metric": "Moderate",
-        "recommendation": "Practice in front of a mirror, focusing on conveying emotions through your face.",
-        "priority": "medium",
-        "estimated_effort": "low"
-      },
-      {
-        "category": "tone",
-        "issue": "Dominant emotion is anger",
-        "current_metric": "Angry",
-        "target_metric": "Neutral/Positive",
-        "recommendation": "Be more aware of your tone and try to sound more neutral and positive.",
+        "issue": "Limited facial expressiveness",
+        "current_metric": "Facial expressions score of 0",
+        "target_metric": "Increase facial expressiveness",
+        "recommendation": "Practice speaking in front of a mirror to monitor and improve facial expressions.",
         "priority": "high",
-        "estimated_effort": "medium"
+        "estimated_effort": "low"
       }
     ],
     "detailed_feedback": {
-      "content_analysis": "The content demonstrates a good understanding of the problem and a practical approach to addressing it. The structure is adequate, but the opening and closing are weak and lack impact. The message is generally clear, but could benefit from more specific examples to illustrate the points being made. Engagement could be improved by using more compelling language and storytelling techniques.",
-      "delivery_analysis": "The vocal delivery is generally adequate. The speaking pace is slightly below the optimal range. The articulation could be improved. The use of filler words is noticeable and detracts from the overall delivery. Varying the tone and pace more would increase engagement.",
-      "visual_analysis": "The visual presentation is fair. Eye contact is a strength. Posture and gestures are adequate. Facial expressiveness is lacking, which makes the presentation appear flat and unengaging. Work on conveying emotions through facial expressions to connect better with the audience.",
-      "tone_analysis": "The dominant emotion detected was anger, which is not appropriate for the context. The speaker needs to be more aware of their tone and strive for a more neutral and positive delivery. Confidence is moderate, and authenticity is good."
+      "content_analysis": "The content demonstrates self-awareness and a solution-oriented approach, which are positive attributes. The structure is adequate, but the engagement could be improved. The opening is weak and could be made more impactful. The lack of specific examples and limited depth detract from the overall strength of the message. Consider adding concrete examples to enhance clarity and engagement.",
+      "delivery_analysis": "The vocal delivery is generally adequate. The speaking pace is within an optimal range. Articulation could be improved. The frequency of filler words is noticeable and detracts from the overall professionalism. Varying vocal tone and emphasis could enhance engagement. Practicing mindful speaking and reducing filler words will improve delivery.",
+      "visual_analysis": "Visual presentation is mixed. Posture and eye contact are adequate. However, the lack of facial expressiveness significantly impacts the overall impression. Improving facial expressions will greatly enhance visual communication. Consider also varying gestures to add emphasis. Camera angle should be adjusted for better framing.",
+      "tone_analysis": "The dominant emotion is neutral, which may not be appropriate for all communication contexts. While neutrality can be perceived as professional, it can also come across as disengaged. Increasing emotional range and demonstrating appropriate emotions can enhance connection with the audience. Confidence level is moderate and could be improved."
     },
     "emotion_timeline": [
       {
         "timestamp_seconds": 0,
-        "emotion": "angry",
+        "emotion": "neutral",
         "confidence": 0.133
       },
       {
+        "timestamp_seconds": 15,
+        "emotion": "disgust",
+        "confidence": 0.128
+      },
+      {
         "timestamp_seconds": 30,
-        "emotion": "angry",
+        "emotion": "sad",
+        "confidence": 0.126
+      },
+      {
+        "timestamp_seconds": 45,
+        "emotion": "neutral",
         "confidence": 0.133
       }
     ],
@@ -138,24 +125,24 @@
       "vs_advanced": "worse"
     },
     "next_steps": [
-      "Improve opening and closing statements to create a stronger impact.",
-      "Reduce filler word usage through conscious awareness and practice.",
-      "Practice facial expressions to better convey emotions and engage the audience."
+      "Practice facial expressions in front of a mirror for 15 minutes daily.",
+      "Record and review your speech to identify and reduce filler words.",
+      "Incorporate specific examples into your next presentation to enhance clarity."
     ],
     "practice_recommendations": {
       "focus_areas": [
-        "Opening/Closing Statements",
-        "Facial Expressiveness",
-        "Filler Word Reduction"
+        "Facial Expressions",
+        "Filler Word Reduction",
+        "Content Depth"
       ],
       "exercises": [
-        "Write and rehearse compelling opening and closing statements for various scenarios.",
-        "Practice delivering speeches in front of a mirror, focusing on facial expressions.",
-        "Record yourself speaking and identify filler words. Practice pausing instead."
+        "Mirror Exercises for Facial Expression",
+        "Mindful Speaking and Pausing",
+        "Storytelling with Specific Examples"
       ],
       "estimated_improvement_timeline": "4 weeks with consistent practice"
     },
-    "timestamp": "2025-11-24T16:47:37.629594Z",
+    "timestamp": "2025-12-07T01:03:58.002039Z",
     "model_used": "gemini-2.5-pro",
     "processing_complete": true
   }

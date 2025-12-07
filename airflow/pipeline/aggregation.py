@@ -136,7 +136,7 @@ def _extract_content_data(content_analysis: Dict) -> Dict:
 
 def save_results(aggregated_results: Dict, video_id: str, **context) -> str:
     """
-    Save final results to JSON file (placeholder for future DB integration)
+    Save final results to database and JSON backup
     
     Args:
         aggregated_results: Complete dashboard report
@@ -147,6 +147,7 @@ def save_results(aggregated_results: Dict, video_id: str, **context) -> str:
     """
     try:
         import os
+        from utils.db_helper import save_results_to_db
         
         # Ensure output directory exists
         output_dir = "data/output"
@@ -160,22 +161,65 @@ def save_results(aggregated_results: Dict, video_id: str, **context) -> str:
             "results": aggregated_results
         }
         
-        # Save to JSON
+        # Save to database (PRIMARY)
+        logger.info(f"Saving results to database for video: {video_id}")
+        save_results_to_db(video_id, final_output)
+        
+        # Save to JSON (BACKUP)
         output_path = f"{output_dir}/results_{video_id}.json"
         with open(output_path, 'w') as f:
             json.dump(final_output, f, indent=2)
         
-        logger.info(f"✅ Results saved to: {output_path}")
-        
-        # TODO: Future integration
-        # - Upload to GCS: upload_to_gcs(output_path, bucket_name, destination)
-        # - Save to database: save_results_to_db(video_id, final_output)
+        logger.info(f"✅ Results saved to database AND {output_path}")
         
         return output_path
         
     except Exception as e:
         logger.error(f"Failed to save results: {e}")
         raise PipelineError(f"Result saving failed: {e}")
+
+# def save_results(aggregated_results: Dict, video_id: str, **context) -> str:
+#     """
+#     Save final results to JSON file (placeholder for future DB integration)
+    
+#     Args:
+#         aggregated_results: Complete dashboard report
+#         video_id: Unique video identifier
+        
+#     Returns:
+#         Path to saved results file
+#     """
+#     try:
+#         import os
+        
+#         # Ensure output directory exists
+#         output_dir = "data/output"
+#         os.makedirs(output_dir, exist_ok=True)
+        
+#         # Build final output structure
+#         final_output = {
+#             "video_id": video_id,
+#             "timestamp": datetime.utcnow().isoformat() + 'Z',
+#             "status": "success",
+#             "results": aggregated_results
+#         }
+        
+#         # Save to JSON
+#         output_path = f"{output_dir}/results_{video_id}.json"
+#         with open(output_path, 'w') as f:
+#             json.dump(final_output, f, indent=2)
+        
+#         logger.info(f"✅ Results saved to: {output_path}")
+        
+#         # TODO: Future integration
+#         # - Upload to GCS: upload_to_gcs(output_path, bucket_name, destination)
+#         # - Save to database: save_results_to_db(video_id, final_output)
+        
+#         return output_path
+        
+#     except Exception as e:
+#         logger.error(f"Failed to save results: {e}")
+#         raise PipelineError(f"Result saving failed: {e}")
 
 
 def generate_summary_stats(aggregated_results: Dict, **context) -> Dict:

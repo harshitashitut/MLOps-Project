@@ -1,10 +1,10 @@
 {
   "video_id": "demo_video_1",
-  "timestamp": "2025-11-24T17:07:26.666833Z",
+  "timestamp": "2025-12-07T00:54:43.291585Z",
   "status": "success",
   "results": {
-    "overall_score": 48,
-    "performance_level": "beginner",
+    "overall_score": 51,
+    "performance_level": "intermediate",
     "category_scores": {
       "content": {
         "score": 40,
@@ -15,29 +15,29 @@
       },
       "vocal_delivery": {
         "score": 75,
-        "pace": 80,
+        "pace": 85,
         "pace_wpm": 125.1,
         "optimal_pace_range": "140-160 wpm",
         "articulation": 90,
         "filler_word_frequency": 0,
         "pause_effectiveness": 70,
-        "volume_consistency": 60
+        "volume_consistency": 70
       },
       "visual_presentation": {
         "score": 60,
-        "body_language": 60,
-        "posture": 70,
+        "body_language": 65,
+        "posture": 75,
         "gestures": 50,
         "eye_contact": 80,
         "facial_expressions": 0,
-        "professional_appearance": 80
+        "professional_appearance": 70
       },
       "tone_emotion": {
-        "score": 30,
-        "dominant_emotion": "disgust",
-        "emotion_appropriateness": 20,
-        "confidence_level": 50,
-        "authenticity": 40,
+        "score": 70,
+        "dominant_emotion": "happy",
+        "emotion_appropriateness": 75,
+        "confidence_level": 70,
+        "authenticity": 65,
         "emotional_range": "limited"
       }
     },
@@ -65,83 +65,72 @@
     "improvements": [
       {
         "category": "content",
-        "issue": "Lack of context and examples",
-        "current_metric": "Low engagement score",
-        "target_metric": "Increase engagement score to 70",
-        "recommendation": "Add real-world examples and scenarios to illustrate concepts.",
+        "issue": "Weak structure and engagement",
+        "current_metric": "Structure: 30, Engagement: 20",
+        "target_metric": "Structure: 70, Engagement: 60",
+        "recommendation": "Develop a clear introduction, body, and conclusion. Use storytelling or examples to engage the audience.",
         "priority": "high",
         "estimated_effort": "medium"
       },
       {
-        "category": "tone",
-        "issue": "Negative dominant emotion",
-        "current_metric": "Dominant emotion: disgust",
-        "target_metric": "Neutral or positive emotion",
-        "recommendation": "Practice conveying enthusiasm and positive tone through vocal exercises.",
-        "priority": "high",
-        "estimated_effort": "medium"
-      },
-      {
-        "category": "visual",
-        "issue": "Limited facial expressiveness",
-        "current_metric": "Facial expressiveness score of 0",
-        "target_metric": "Increase facial expressiveness score to 60",
-        "recommendation": "Practice using facial expressions to emphasize key points.",
+        "category": "delivery",
+        "issue": "Speaking pace is slightly slow",
+        "current_metric": "125.1 wpm",
+        "target_metric": "140-160 wpm",
+        "recommendation": "Practice speaking at a slightly faster pace. Use a metronome or timer to monitor your speed.",
         "priority": "medium",
         "estimated_effort": "low"
       },
       {
-        "category": "content",
-        "issue": "Weak opening and closing",
-        "current_metric": "Opening and closing strength: weak",
-        "target_metric": "Opening and closing strength: strong",
-        "recommendation": "Craft compelling opening and closing statements to frame the content effectively.",
+        "category": "visual",
+        "issue": "Lack of facial expressiveness",
+        "current_metric": "Facial Expressions: 0",
+        "target_metric": "Facial Expressions: 60",
+        "recommendation": "Practice using more varied facial expressions to convey emotion and enthusiasm.",
         "priority": "medium",
         "estimated_effort": "medium"
       }
     ],
     "detailed_feedback": {
-      "content_analysis": "The content provides concise definitions of L1 and L2 regularization and their use cases. However, it lacks context, examples, and a clear introduction or conclusion. The structure needs improvement to enhance clarity and engagement. Adding real-world scenarios and a strong opening and closing would significantly improve the content's impact.",
-      "delivery_analysis": "The vocal delivery is generally clear with good articulation and an optimal speaking pace. However, the lack of vocal variation and the presence of a negative dominant emotion detract from the overall effectiveness. Incorporating more vocal variety and practicing conveying a more neutral or positive tone would enhance the delivery.",
-      "visual_analysis": "The visual presentation shows potential with good eye contact and posture. However, the limited facial expressiveness and gesture variety hinder the overall impact. Focusing on incorporating more facial expressions and gestures to emphasize key points would improve the visual communication.",
-      "tone_analysis": "The dominant emotion detected was disgust, which is inappropriate for an explanatory presentation. This negatively impacts the perceived confidence and authenticity. Practicing conveying a more neutral and positive tone is crucial for improving the emotional impact of the presentation."
+      "content_analysis": "The content focuses on L1 and L2 regularization, providing concise definitions and distinguishing use cases. However, the presentation lacks a clear structure, with no distinct opening or closing. The absence of examples or context makes the information difficult to grasp for those unfamiliar with the topic. Improving the structure and adding real-world examples would significantly enhance the content's clarity and engagement.",
+      "delivery_analysis": "The vocal delivery is generally good, with clear articulation and no filler words. The speaking pace is slightly below the optimal range. Varying vocal tone and emphasis could further enhance the delivery and maintain audience interest. Overall, the delivery is competent but could benefit from increased dynamism.",
+      "visual_analysis": "Eye contact is a strong point, indicating engagement with the audience. However, the lack of facial expressions makes the presentation appear monotone and unenthusiastic. Incorporating more natural gestures and improving posture could enhance visual presence and create a more engaging experience for the audience.",
+      "tone_analysis": "The dominant emotion is happy, which is generally positive. However, the emotional range is limited, suggesting a lack of variation in tone. Injecting more emotional nuance and authenticity into the delivery could make the presentation more compelling and relatable."
     },
     "emotion_timeline": [
       {
         "timestamp_seconds": 0,
-        "emotion": "disgust",
-        "confidence": 0.129
+        "emotion": "happy",
+        "confidence": 0.131
       },
       {
         "timestamp_seconds": 21,
-        "emotion": "disgust",
-        "confidence": 0.129
+        "emotion": "happy",
+        "confidence": 0.131
       }
     ],
     "comparative_analysis": {
-      "vs_beginner": "similar",
-      "vs_intermediate": "worse",
+      "vs_beginner": "better",
+      "vs_intermediate": "similar",
       "vs_advanced": "worse"
     },
     "next_steps": [
-      "Incorporate real-world examples to improve content engagement.",
-      "Practice vocal exercises to convey a more neutral or positive tone.",
-      "Focus on using facial expressions to emphasize key points."
+      "Develop a structured outline for future presentations, including an engaging opening, clear main points, and a strong conclusion.",
+      "Practice varying your vocal tone and facial expressions to convey emotion and enthusiasm.",
+      "Increase speaking pace slightly to fall within the optimal range of 140-160 wpm."
     ],
     "practice_recommendations": {
       "focus_areas": [
-        "Content Engagement",
-        "Emotional Tone",
+        "Content Structure",
         "Facial Expressiveness"
       ],
       "exercises": [
-        "Add examples to the content",
-        "Record and review your tone",
-        "Practice in front of a mirror"
+        "Record yourself giving a short presentation and analyze your structure and engagement.",
+        "Practice speaking in front of a mirror, focusing on varying your facial expressions to match the content."
       ],
       "estimated_improvement_timeline": "4 weeks with consistent practice"
     },
-    "timestamp": "2025-11-24T17:07:26.665585Z",
+    "timestamp": "2025-12-07T00:54:43.153661Z",
     "model_used": "gemini-2.5-pro",
     "processing_complete": true
   }
