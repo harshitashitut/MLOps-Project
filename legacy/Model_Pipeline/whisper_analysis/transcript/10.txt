@@ -1,0 +1,1 @@
+Feature stores are centralized repositories for storing, managing, and serving ML features. They ensure consistency between training and serving, enable feature reuse across teams, provide versioning and lineage tracking, and reduce data preparation time.

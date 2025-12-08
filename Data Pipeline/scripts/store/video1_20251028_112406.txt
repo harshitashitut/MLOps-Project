@@ -1,0 +1,15 @@
+============================================================
+INTERVIEW TRANSCRIPTION
+============================================================
+
+Question: Tell me about yourself
+
+Video: video1.webm
+Date: 2025-10-28 11:24:06
+Transcription length: 266 characters
+
+============================================================
+TRANSCRIPTION
+============================================================
+
+ Hello, my name is Mohad. I'm here to apply for the role of ML ops engineer. I have two years work experience working in data pipelining and CI CD pipelines. And on top of that, I'm a very good data annotator as well. My previous employer was very satisfied with me.

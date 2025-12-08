@@ -1,0 +1,183 @@
+{
+  "status": "success",
+  "video_id": "98f70212-1685-4e9a-895a-190cac9fc78e",
+  "processing_time_seconds": 232.587495803833,
+  "results": {
+    "overall_score": 54,
+    "performance_level": "intermediate",
+    "category_scores": {
+      "content": {
+        "score": 60,
+        "structure": 60,
+        "clarity": 90,
+        "engagement": 30,
+        "depth": 60
+      },
+      "vocal_delivery": {
+        "score": 61,
+        "pace": 85,
+        "pace_wpm": 134.3,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 49,
+        "filler_word_frequency": 7.89,
+        "pause_effectiveness": 65,
+        "volume_consistency": 65
+      },
+      "visual_presentation": {
+        "score": 40,
+        "body_language": 17,
+        "posture": 50,
+        "gestures": 0,
+        "eye_contact": 60,
+        "facial_expressions": 0,
+        "professional_appearance": 70
+      },
+      "tone_emotion": {
+        "score": 47,
+        "dominant_emotion": "fearful",
+        "emotion_appropriateness": 30,
+        "confidence_level": 60,
+        "authenticity": 50,
+        "emotional_range": "moderate"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 45.58,
+      "word_count": 102,
+      "words_per_minute": 134.3,
+      "filler_words_count": 6,
+      "filler_words_per_minute": 7.89,
+      "gesture_frequency": 0,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "content",
+        "strength": "Clear problem identification",
+        "evidence": "Content analysis highlights 'clear problem identification' as a strong element."
+      },
+      {
+        "category": "content",
+        "strength": "Practical solution provided",
+        "evidence": "The speaker offers a clear strategy to manage project initiation."
+      },
+      {
+        "category": "content",
+        "strength": "Logical progression of ideas",
+        "evidence": "The narrative flows from problem to solution and team collaboration."
+      },
+      {
+        "category": "delivery",
+        "strength": "Optimal speaking pace",
+        "evidence": "Words per minute (134.3) is close to the optimal range of 140-160 wpm."
+      },
+      {
+        "category": "visual",
+        "strength": "Good lighting",
+        "evidence": "Visual analysis noted 'Good lighting' as a strength."
+      }
+    ],
+    "improvements": [
+      {
+        "category": "visual",
+        "issue": "Incorrect camera orientation and framing",
+        "current_metric": "Overall visual score: 40/100",
+        "target_metric": "Correct orientation, wider framing",
+        "recommendation": "Ensure the camera is correctly oriented (landscape) and framed to include your upper body and gestures.",
+        "priority": "high",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "delivery",
+        "issue": "High filler word frequency",
+        "current_metric": "7.89 filler words per minute",
+        "target_metric": "<3 filler words per minute",
+        "recommendation": "Practice pausing intentionally instead of using filler words like 'So' and 'like'. Record yourself and identify common fillers.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Lack of gestures and facial expressiveness",
+        "current_metric": "Gesture score: 0/100, Facial expressiveness score: 0/100",
+        "target_metric": "Moderate, purposeful gestures and expressions",
+        "recommendation": "Incorporate natural hand gestures to emphasize points and use facial expressions to convey emotion and engagement.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "content",
+        "issue": "Weak opening and low engagement",
+        "current_metric": "Engagement score: 30/100, Opening strength: 'weak'",
+        "target_metric": "Engaging opening, higher audience connection",
+        "recommendation": "Start with a hook, a question, or a compelling statement to immediately capture audience attention. Vary language to increase memorability.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "tone",
+        "issue": "Dominant fearful emotion and low appropriateness",
+        "current_metric": "Dominant emotion: 'fearful', Emotion appropriateness: 30/100",
+        "target_metric": "Neutral/confident tone, appropriate emotional expression",
+        "recommendation": "Be mindful of your vocal tone when discussing challenges. Aim for a more neutral, reflective, or confident tone rather than fearful.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content demonstrates strong clarity in identifying a problem and proposing a practical solution, showcasing a logical progression of ideas. The message is highly focused on self-management and team collaboration in project initiation. However, the opening is weak, failing to immediately engage the audience. There's a repetitive use of 'So' and a general lack of vivid language or rhetorical devices, which diminishes emotional appeal and memorability. To enhance content quality, focus on crafting a compelling introduction and diversifying vocabulary to make the message more impactful and engaging.",
+      "delivery_analysis": "Your vocal delivery maintains a near-optimal speaking pace, which contributes to good comprehensibility. However, there is a noticeable frequency of filler words, particularly 'So' and 'like', which can distract the listener and reduce perceived confidence. Articulation also appears to be an area for improvement, suggesting that some words may not be pronounced with full clarity. While volume consistency was not directly measured, addressing filler words and articulation will significantly enhance the professionalism and impact of your vocal delivery.",
+      "visual_analysis": "The visual presentation requires significant attention. The overall visual score is low, primarily due to a lack of gestures and facial expressiveness, which are crucial for conveying engagement and dynamism. Posture is moderate, but eye contact, while present, could be more consistent. Critically, the camera orientation and framing issues detected suggest that the audience may not have a full view of your body language, hindering your ability to communicate effectively non-verbally. Improving these aspects will greatly enhance your presence and professionalism.",
+      "tone_analysis": "The vocal emotion analysis indicates a dominant 'fearful' emotion, which may not be entirely appropriate for the context of discussing a personal weakness and a solution. While your vocal confidence is moderate, the emotional distribution suggests a somewhat flat delivery, lacking strong, purposeful emotional shifts. To improve, focus on aligning your emotional tone with the message you intend to convey, aiming for more confidence, determination, or neutrality when discussing challenges and solutions, thereby enhancing authenticity."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "neutral",
+        "confidence": 0.6
+      },
+      {
+        "timestamp_seconds": 15,
+        "emotion": "fearful",
+        "confidence": 0.5
+      },
+      {
+        "timestamp_seconds": 30,
+        "emotion": "neutral",
+        "confidence": 0.55
+      },
+      {
+        "timestamp_seconds": 45,
+        "emotion": "calm",
+        "confidence": 0.5
+      }
+    ],
+    "comparative_analysis": {
+      "vs_beginner": "better",
+      "vs_intermediate": "similar",
+      "vs_advanced": "worse"
+    },
+    "next_steps": [
+      "Correct camera setup and framing to ensure full visual presence.",
+      "Actively reduce filler words by practicing intentional pauses.",
+      "Incorporate more purposeful gestures and facial expressions to enhance engagement."
+    ],
+    "practice_recommendations": {
+      "focus_areas": [
+        "Visual presence and body language",
+        "Vocal clarity and filler word reduction",
+        "Emotional congruence with content"
+      ],
+      "exercises": [
+        "Record and review: Practice your speech while recording yourself, focusing on camera framing, gestures, and facial expressions. Identify areas for improvement.",
+        "Pause practice: Consciously replace filler words with brief, silent pauses. This improves clarity and confidence.",
+        "Emotion mapping: For future speeches, identify key emotional points in your content and practice conveying those emotions through vocal tone and facial expressions."
+      ],
+      "estimated_improvement_timeline": "4-6 weeks with consistent practice"
+    },
+    "timestamp": "2025-12-08T20:19:14.562845Z",
+    "model_used": "gemini-2.5-flash",
+    "processing_complete": true
+  },
+  "timestamp": "2025-12-08T20:19:15.072056"
+}

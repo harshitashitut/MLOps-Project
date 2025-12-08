@@ -1,0 +1,148 @@
+{
+  "video_id": "full_test",
+  "timestamp": "2025-11-23T13:59:40.736761Z",
+  "status": "success",
+  "results": {
+    "overall_score": 48,
+    "performance_level": "beginner",
+    "category_scores": {
+      "content": {
+        "score": 40,
+        "structure": 30,
+        "clarity": 60,
+        "engagement": 20,
+        "depth": 50
+      },
+      "vocal_delivery": {
+        "score": 75,
+        "pace": 80,
+        "pace_wpm": 125.1,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 90,
+        "filler_word_frequency": 0,
+        "pause_effectiveness": 70,
+        "volume_consistency": 60
+      },
+      "visual_presentation": {
+        "score": 60,
+        "body_language": 65,
+        "posture": 70,
+        "gestures": 50,
+        "eye_contact": 80,
+        "facial_expressions": 0,
+        "professional_appearance": 70
+      },
+      "tone_emotion": {
+        "score": 40,
+        "dominant_emotion": "angry",
+        "emotion_appropriateness": 20,
+        "confidence_level": 60,
+        "authenticity": 40,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 21.59,
+      "word_count": 45,
+      "words_per_minute": 125.1,
+      "filler_words_count": 0,
+      "filler_words_per_minute": 0,
+      "gesture_frequency": 5,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "delivery",
+        "strength": "Clear Articulation",
+        "evidence": "Articulation score of 90 indicates high clarity of speech."
+      },
+      {
+        "category": "visual",
+        "strength": "Good Eye Contact",
+        "evidence": "Eye contact score of 80 suggests consistent engagement with the audience."
+      }
+    ],
+    "improvements": [
+      {
+        "category": "content",
+        "issue": "Lack of Context",
+        "current_metric": "Low structure and engagement scores",
+        "target_metric": "Improve structure score to 70, engagement to 60",
+        "recommendation": "Begin with a clear introduction outlining the topic and its relevance.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "tone",
+        "issue": "Inappropriate Emotion",
+        "current_metric": "Dominant emotion: Angry",
+        "target_metric": "Neutral or positive emotional tone",
+        "recommendation": "Practice conveying information in a calm and neutral tone. Focus on modulating your voice.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Limited Facial Expressiveness",
+        "current_metric": "Facial expression score of 0",
+        "target_metric": "Increase facial expressiveness score to 60",
+        "recommendation": "Consciously use facial expressions to emphasize key points and show enthusiasm.",
+        "priority": "medium",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "delivery",
+        "issue": "Speaking Pace",
+        "current_metric": "125.1 WPM",
+        "target_metric": "140-160 WPM",
+        "recommendation": "Practice speaking at a slightly faster pace to improve engagement.",
+        "priority": "low",
+        "estimated_effort": "low"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content presented definitions of L1 and L2 regularization but lacked a broader context or introductory remarks. While the distinctions between the two methods were clear, the absence of examples or supporting evidence weakened the overall impact. The abrupt ending further detracted from the presentation's effectiveness, leaving the audience without a sense of closure or actionable takeaways.",
+      "delivery_analysis": "The vocal delivery was generally clear and articulate, with a good articulation score. The speaking pace was slightly below the optimal range, which could impact audience engagement. The absence of filler words is a positive aspect. However, volume consistency could be improved for a more engaging presentation.",
+      "visual_analysis": "Eye contact was a strong point, indicating good audience engagement. However, facial expressiveness was notably lacking, which could make the presentation appear monotone and unenthusiastic. Gestures could be more frequent and purposeful to enhance visual communication. Posture was adequate but could be improved for a more confident presence.",
+      "tone_analysis": "The dominant emotion detected was anger, which is inappropriate for an informative presentation. This could stem from the vocal confidence being perceived as aggressive. It's important to consciously moderate the emotional tone to convey information in a neutral and objective manner."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "angry",
+        "confidence": 0.133
+      },
+      {
+        "timestamp_seconds": 21,
+        "emotion": "angry",
+        "confidence": 0.133
+      }
+    ],
+    "comparative_analysis": {
+      "vs_beginner": "better",
+      "vs_intermediate": "similar",
+      "vs_advanced": "worse"
+    },
+    "next_steps": [
+      "Revise the content to include a clear introduction and conclusion, providing context and actionable takeaways.",
+      "Practice modulating your voice to maintain a neutral and objective tone throughout the presentation.",
+      "Incorporate more facial expressions and purposeful gestures to enhance visual engagement."
+    ],
+    "practice_recommendations": {
+      "focus_areas": [
+        "Content Structure",
+        "Emotional Tone",
+        "Facial Expressiveness"
+      ],
+      "exercises": [
+        "Outline presentations with clear introductions, body, and conclusions.",
+        "Record yourself speaking and analyze your emotional tone. Practice speaking neutrally.",
+        "Practice in front of a mirror, focusing on using facial expressions to emphasize key points."
+      ],
+      "estimated_improvement_timeline": "4 weeks with consistent practice"
+    },
+    "timestamp": "2025-11-23T13:59:40.736471Z",
+    "model_used": "gemini-2.5-pro",
+    "processing_complete": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "overall_score": 7.0,
+  "performance_level": "good",
+  "category_scores": {
+    "visual_presentation": {
+      "score": 2,
+      "rating": "good"
+    },
+    "vocal_delivery": {
+      "score": 1.5,
+      "rating": "fair"
+    },
+    "content": {
+      "score": 1,
+      "rating": "good"
+    },
+    "tone_emotion": {
+      "score": 7.0,
+      "rating": "good"
+    }
+  },
+  "key_metrics": {
+    "words_per_minute": 99.5,
+    "filler_words_count": 3,
+    "speaking_pace": "slow",
+    "dominant_emotion": "surprised"
+  },
+  "strengths": [
+    "Analysis completed successfully",
+    "Speaking pace: slow (99.5 WPM)",
+    "Visual presentation score: 2/10"
+  ],
+  "improvements": [
+    "Review detailed analysis for specific feedback",
+    "Filler words detected: 3",
+    "Practice maintaining consistent eye contact"
+  ],
+  "summary": "Analysis completed. Using simplified aggregation due to processing constraints.",
+  "note": "Full AI aggregation failed - using basic score compilation",
+  "timestamp": "2025-12-07T00:21:08.259682Z",
+  "model_used": "gemini-2.5-pro",
+  "processing_complete": true
+}

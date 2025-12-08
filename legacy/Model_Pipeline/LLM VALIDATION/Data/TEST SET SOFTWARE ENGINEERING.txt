@@ -1,0 +1,102 @@
+TEST SET — SOFTWARE ENGINEERING ROLE
+
+
+
+Q: What is multithreading?
+A: Multithreading allows multiple threads within a process to run concurrently, improving responsiveness in I/O-bound tasks and enabling parallelism.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent technical clarity.
+
+
+
+Q: Explain SOLID principles.
+A: The SOLID principles guide maintainable software design: SRP, OCP, LSP, ISP, and DIP. They promote decoupling, flexibility, and testability.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Perfect overview.
+
+
+
+Q: What is a race condition?
+A: A race condition occurs when multiple threads access shared data without synchronization, causing unpredictable behavior. Locks and atomics prevent it.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Strong explanation.
+
+
+
+Q: What is a design pattern?
+A: A reusable, proven solution to common software design problems, such as Factory, Singleton, Observer, and Strategy patterns.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Clear with examples.
+
+
+
+Q: Explain dependency injection.
+A: DI provides required dependencies externally rather than creating them inside a class, improving flexibility and testability.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Accurate and concise.
+
+
+
+Q: What is a thread?
+A: A lightweight process.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs more detail.
+
+
+
+Q: What is Git branching?
+A: Creating separate lines of code development.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Could mention workflows.
+
+
+
+Q: What is a stack?
+A: A LIFO structure.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Basic but correct.
+
+
+
+Q: What is SQL?
+A: A language to manage data in databases.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Needs examples (SELECT, JOIN).
+
+
+Q: What is caching?
+A: Temporarily storing often-used data.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Could mention cache invalidation.
+
+
+Q: What is multithreading?
+A: Doing many threads.
+Structure: 1 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Not meaningful.
+
+
+Q: What is SQL?
+A: A software program.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Incorrect.
+
+
+Q: What is a race condition?
+A: Threads racing to finish.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 2
+Feedback: Wrong interpretation.
+
+
+Q: What is a design pattern?
+A: A style pattern in software.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Not accurate.
+
+
+Q: What is Git?
+A: Something used by programmers.
+Structure: 2 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Too vague.
+
+

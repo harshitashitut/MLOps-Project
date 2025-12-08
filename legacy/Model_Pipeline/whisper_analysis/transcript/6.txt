@@ -1,0 +1,1 @@
+MLOps extends DevOps practices to machine learning systems. Unlike traditional DevOps, MLOps must handle data versioning, model experimentation, model drift monitoring, and reproducibility challenges. It combines software engineering, data engineering, and ML to deploy and maintain models in production.

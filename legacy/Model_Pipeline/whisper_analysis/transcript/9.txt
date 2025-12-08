@@ -1,0 +1,1 @@
+Monitor model performance metrics like accuracy, latency, data quality like feature distributions, missing values, and system health like CPU/memory, API response times. Set up real-time dashboards and alerts for threshold violations.

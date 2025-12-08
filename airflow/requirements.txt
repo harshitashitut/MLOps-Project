@@ -1,0 +1,42 @@
+# --- The Peacemakers (Fix Dependencies) ---
+# Force Protobuf 3 for MediaPipe compatibility
+protobuf==3.20.3
+# FIX: Pin httpx to a version compatible with openai 1.3.7
+httpx==0.24.1
+
+# Downgrade OpenTelemetry to work with Protobuf 3
+opentelemetry-api==1.24.0
+opentelemetry-proto==1.24.0
+opentelemetry-sdk==1.24.0
+opentelemetry-exporter-otlp==1.24.0
+opentelemetry-exporter-otlp-proto-grpc==1.24.0
+opentelemetry-exporter-otlp-proto-http==1.24.0
+
+# --- Core Application ---
+apache-airflow==2.7.3
+apache-airflow-providers-docker==3.7.0
+
+# --- ML & Processing ---
+mediapipe==0.10.8
+opencv-python-headless==4.8.1.78
+ffmpeg-python==0.2.0
+librosa==0.10.1
+soundfile==0.12.1
+scipy==1.11.4
+
+# --- AI Models ---
+# Use CPU versions to save space/time on Mac
+torch==2.1.0
+torchaudio==2.1.0
+transformers==4.35.2
+openai==1.3.7
+# REMOVED: google-generativeai (Using custom REST client to avoid protobuf conflict)
+
+# --- Utils ---
+python-dotenv==1.0.0
+psutil==5.9.6
+requests>=2.31.0
+
+# --- Testing ---
+pytest==7.4.3
+pytest-cov==4.1.0

@@ -1,0 +1,25 @@
+============================================================
+INTERVIEW ANALYSIS REPORT
+============================================================
+
+Video: video1.webm
+Date: 2025-10-28 18:57:55
+Transcription length: 266 characters
+
+============================================================
+QUESTION
+============================================================
+
+Tell me about yourself
+
+============================================================
+TRANSCRIPTION
+============================================================
+
+ Hello, my name is Mohad. I'm here to apply for the role of ML ops engineer. I have two years work experience working in data pipelining and CI CD pipelines. And on top of that, I'm a very good data annotator as well. My previous employer was very satisfied with me.
+
+============================================================
+AI FEEDBACK
+============================================================
+
+(1-10) and list 3 strengths and 3 areas to improve: (i) I have two years work experience working in data pipelining and CI CD pipelines. And on top of that, I'm a very good data annotator as well. My previous employer was very satisfied with me.

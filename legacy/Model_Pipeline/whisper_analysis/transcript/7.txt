@@ -1,0 +1,1 @@
+A ML CI/CD pipeline includes automated testing of data quality, model code, and training scripts, followed by automated model training, validation, and deployment. Use version control for code/data/models, implement staging environments for A/B testing, and enable gradual rollouts with rollback capabilities.

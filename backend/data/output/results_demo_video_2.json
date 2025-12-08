@@ -1,0 +1,162 @@
+{
+  "video_id": "demo_video_2",
+  "timestamp": "2025-11-24T16:47:37.630634Z",
+  "status": "success",
+  "results": {
+    "overall_score": 63,
+    "performance_level": "intermediate",
+    "category_scores": {
+      "content": {
+        "score": 63,
+        "structure": 60,
+        "clarity": 70,
+        "engagement": 40,
+        "depth": 50
+      },
+      "vocal_delivery": {
+        "score": 65,
+        "pace": 85,
+        "pace_wpm": 134.3,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 49,
+        "filler_word_frequency": 6,
+        "pause_effectiveness": 70,
+        "volume_consistency": 80
+      },
+      "visual_presentation": {
+        "score": 68,
+        "body_language": 70,
+        "posture": 70,
+        "gestures": 60,
+        "eye_contact": 80,
+        "facial_expressions": 0,
+        "professional_appearance": 90
+      },
+      "tone_emotion": {
+        "score": 40,
+        "dominant_emotion": "angry",
+        "emotion_appropriateness": 30,
+        "confidence_level": 60,
+        "authenticity": 70,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 45.58,
+      "word_count": 102,
+      "words_per_minute": 134.3,
+      "filler_words_count": 6,
+      "filler_words_per_minute": 7.9,
+      "gesture_frequency": 0,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "content",
+        "strength": "Practical approach to weakness",
+        "evidence": "Mentioned a fixed timeline strategy"
+      },
+      {
+        "category": "content",
+        "strength": "Team collaboration",
+        "evidence": "Sharing outline with teammates for feedback"
+      },
+      {
+        "category": "visual",
+        "strength": "Eye contact",
+        "evidence": "Eye contact score of 80"
+      }
+    ],
+    "improvements": [
+      {
+        "category": "content",
+        "issue": "Weak opening and closing",
+        "current_metric": "Weak",
+        "target_metric": "Strong",
+        "recommendation": "Start with a compelling hook and end with a clear call to action or summary.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "delivery",
+        "issue": "Suboptimal speaking pace",
+        "current_metric": "134.3 wpm",
+        "target_metric": "140-160 wpm",
+        "recommendation": "Practice speaking slightly faster, focusing on clear articulation.",
+        "priority": "medium",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "delivery",
+        "issue": "High filler word usage",
+        "current_metric": "6 filler words",
+        "target_metric": "Less than 3 filler words",
+        "recommendation": "Record yourself speaking and identify when you use filler words. Practice pausing instead.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Lack of facial expressiveness",
+        "current_metric": "Low",
+        "target_metric": "Moderate",
+        "recommendation": "Practice in front of a mirror, focusing on conveying emotions through your face.",
+        "priority": "medium",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "tone",
+        "issue": "Dominant emotion is anger",
+        "current_metric": "Angry",
+        "target_metric": "Neutral/Positive",
+        "recommendation": "Be more aware of your tone and try to sound more neutral and positive.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content demonstrates a good understanding of the problem and a practical approach to addressing it. The structure is adequate, but the opening and closing are weak and lack impact. The message is generally clear, but could benefit from more specific examples to illustrate the points being made. Engagement could be improved by using more compelling language and storytelling techniques.",
+      "delivery_analysis": "The vocal delivery is generally adequate. The speaking pace is slightly below the optimal range. The articulation could be improved. The use of filler words is noticeable and detracts from the overall delivery. Varying the tone and pace more would increase engagement.",
+      "visual_analysis": "The visual presentation is fair. Eye contact is a strength. Posture and gestures are adequate. Facial expressiveness is lacking, which makes the presentation appear flat and unengaging. Work on conveying emotions through facial expressions to connect better with the audience.",
+      "tone_analysis": "The dominant emotion detected was anger, which is not appropriate for the context. The speaker needs to be more aware of their tone and strive for a more neutral and positive delivery. Confidence is moderate, and authenticity is good."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "angry",
+        "confidence": 0.133
+      },
+      {
+        "timestamp_seconds": 30,
+        "emotion": "angry",
+        "confidence": 0.133
+      }
+    ],
+    "comparative_analysis": {
+      "vs_beginner": "better",
+      "vs_intermediate": "similar",
+      "vs_advanced": "worse"
+    },
+    "next_steps": [
+      "Improve opening and closing statements to create a stronger impact.",
+      "Reduce filler word usage through conscious awareness and practice.",
+      "Practice facial expressions to better convey emotions and engage the audience."
+    ],
+    "practice_recommendations": {
+      "focus_areas": [
+        "Opening/Closing Statements",
+        "Facial Expressiveness",
+        "Filler Word Reduction"
+      ],
+      "exercises": [
+        "Write and rehearse compelling opening and closing statements for various scenarios.",
+        "Practice delivering speeches in front of a mirror, focusing on facial expressions.",
+        "Record yourself speaking and identify filler words. Practice pausing instead."
+      ],
+      "estimated_improvement_timeline": "4 weeks with consistent practice"
+    },
+    "timestamp": "2025-11-24T16:47:37.629594Z",
+    "model_used": "gemini-2.5-pro",
+    "processing_complete": true
+  }
+}

@@ -1,0 +1,17 @@
+# Model files (too large for GitHub)
+fine_tuned_interview_model/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Results (can be regenerated)
+llm_validation_results/
+store/
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~

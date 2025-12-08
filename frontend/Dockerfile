@@ -1,0 +1,34 @@
+# Multi-stage build for Vite React app
+
+# Stage 1: Build
+FROM node:18-alpine AS builder
+WORKDIR /app
+
+# Declare build arguments (Vite needs these during build)
+ARG VITE_SUPABASE_URL
+ARG VITE_SUPABASE_ANON_KEY
+ARG VITE_API_URL
+
+# Copy package files
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Build the application (Vite reads ARGs as environment variables)
+RUN npm run build
+
+# Stage 2: Production with Nginx
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+
+CMD ["nginx", "-g", "daemon off;"]

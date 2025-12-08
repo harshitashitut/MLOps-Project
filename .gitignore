@@ -1,0 +1,148 @@
+# .gitignore for PitchQuest MLOps Project
+
+# ==================== SECRETS & ENV ====================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+secrets/
+credentials.json
+
+# ==================== PYTHON ====================
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.cover
+
+# Distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# ==================== NODE.JS / NEXT.JS ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+.vercel
+
+# ==================== AIRFLOW ====================
+# Airflow logs and temp files
+airflow/logs/
+airflow/data/temp/
+airflow/data/output/
+*.log
+
+# Airflow database
+airflow.db
+airflow.cfg
+unittests.cfg
+webserver_config.py
+
+# ==================== DOCKER ====================
+# Don't commit these if generated
+docker-compose.override.yml
+
+# ==================== DATA & UPLOADS ====================
+# Videos and processed data
+data/input/*.mp4
+data/input/*.mov
+data/input/*.avi
+data/temp/
+data/output/*.json
+uploads/
+*.mp4
+*.mov
+*.avi
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# ==================== IDEs ====================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Cursor
+.cursor/
+
+# ==================== OS ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ==================== MISC ====================
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# ==================== KEEP THESE ====================
+# Allow .env.example (with placeholders only)
+!.env.example
+
+# Allow example configs
+!config.example.yml
+!docker-compose.example.yml.env

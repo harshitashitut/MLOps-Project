@@ -1,0 +1,155 @@
+{
+  "overall_score": 51,
+  "performance_level": "intermediate",
+  "category_scores": {
+    "content": {
+      "score": 40,
+      "structure": 20,
+      "clarity": 100,
+      "engagement": 20,
+      "depth": 40
+    },
+    "vocal_delivery": {
+      "score": 59,
+      "pace": 40,
+      "pace_wpm": 106.6,
+      "optimal_pace_range": "140-160 wpm",
+      "articulation": 76,
+      "filler_word_frequency": 2,
+      "pause_effectiveness": 50,
+      "volume_consistency": 70
+    },
+    "visual_presentation": {
+      "score": 60,
+      "body_language": 25,
+      "posture": 75,
+      "gestures": 0,
+      "eye_contact": 90,
+      "facial_expressions": 0,
+      "professional_appearance": 90
+    },
+    "tone_emotion": {
+      "score": 43,
+      "dominant_emotion": "fearful",
+      "emotion_appropriateness": 20,
+      "confidence_level": 60,
+      "authenticity": 50,
+      "emotional_range": "limited"
+    }
+  },
+  "key_metrics": {
+    "speech_duration_seconds": 33.78,
+    "word_count": 60,
+    "words_per_minute": 106.6,
+    "filler_words_count": 2,
+    "filler_words_per_minute": 3.55,
+    "gesture_frequency": 0,
+    "nervous_habits_count": 0
+  },
+  "strengths": [
+    {
+      "category": "content",
+      "strength": "Clear statement of project and technical specificity",
+      "evidence": "Clarity score of 100, message focus 'highly_focused', 'clear statement of project' and 'technical specificity' identified as strongest elements."
+    },
+    {
+      "category": "visual",
+      "strength": "Strong eye contact and confident presence",
+      "evidence": "Eye contact score of 90, 'high' confidence level, and no nervous habits detected."
+    },
+    {
+      "category": "delivery",
+      "strength": "Good articulation",
+      "evidence": "Articulation score of 76."
+    }
+  ],
+  "improvements": [
+    {
+      "category": "content",
+      "issue": "Weak structure, engagement, and depth",
+      "current_metric": "Structure: 20/100, Engagement: 20/100, Depth: 40/100",
+      "target_metric": "Structure: 70+/100, Engagement: 70+/100, Depth: 70+/100",
+      "recommendation": "Develop a clear speech structure with a strong opening hook, engaging examples, and a concise closing. Avoid technical jargon without explanation.",
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "visual",
+      "issue": "Lack of gestures and facial expressiveness",
+      "current_metric": "Gestures: 0/100, Facial Expressions: 0/100",
+      "target_metric": "Gestures: 60+/100, Facial Expressions: 60+/100",
+      "recommendation": "Incorporate natural hand gestures to emphasize points and use varied facial expressions to convey enthusiasm and connect with the audience.",
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "category": "delivery",
+      "issue": "Slow speaking pace and filler words",
+      "current_metric": "Pace: 106.6 WPM, Filler words: 2",
+      "target_metric": "Pace: 140-160 WPM, Filler words: <1",
+      "recommendation": "Practice speaking at a slightly faster, more dynamic pace. Consciously reduce filler words by pausing deliberately instead.",
+      "priority": "medium",
+      "estimated_effort": "low"
+    },
+    {
+      "category": "tone",
+      "issue": "Inappropriate dominant emotion and limited emotional range",
+      "current_metric": "Dominant Emotion: 'fearful', Emotion Appropriateness: 20/100",
+      "target_metric": "Dominant Emotion: 'neutral'/'calm'/'enthusiastic', Emotion Appropriateness: 80+/100",
+      "recommendation": "Align your vocal tone and emotional expression with the professional and informative nature of your topic. Aim for a confident and engaging, rather than fearful, delivery.",
+      "priority": "medium",
+      "estimated_effort": "medium"
+    }
+  ],
+  "detailed_feedback": {
+    "content_analysis": "The speech demonstrates a clear focus on the project and its technical details, which is a strong point for clarity. However, the overall structure is weak, lacking a compelling opening to hook the audience and an effective closing to summarize key takeaways. The content depth is insufficient for a comprehensive presentation, and the use of technical jargon without adequate explanation may alienate a general audience, leading to low engagement. Developing a more narrative flow with supporting examples would significantly enhance the message's impact.",
+    "delivery_analysis": "Your vocal delivery is characterized by good articulation, ensuring your words are generally clear. However, the speaking pace of 106.6 words per minute is quite slow, falling below the optimal range and potentially affecting audience engagement. The presence of filler words, though not excessive, indicates moments of hesitation. Improving pace and reducing fillers by practicing deliberate pauses will make your delivery more dynamic and confident. Volume consistency is adequate, but varying your vocal tone could add more emphasis and interest.",
+    "visual_analysis": "Your eye contact is a significant strength, showing good connection with the audience and contributing to a confident presence. You also exhibit no detectable nervous habits. However, there is a notable absence of gestures and facial expressiveness, which makes the visual presentation appear static and less engaging. While posture is acceptable, incorporating more dynamic body language and appropriate facial expressions would greatly enhance your overall visual communication and professionalism.",
+    "tone_analysis": "The dominant emotion detected, 'fearful,' is inappropriate for a technical project update and can undermine your message's credibility. The emotional distribution is quite flat, suggesting a limited range of expression and potentially a lack of authenticity in conveying the subject matter. While your vocal confidence is moderate, aligning your emotional tone with the professional and informative nature of your content is crucial for effective communication and audience connection."
+  },
+  "emotion_timeline": [
+    {
+      "timestamp_seconds": 0,
+      "emotion": "fearful",
+      "confidence": 0.133
+    },
+    {
+      "timestamp_seconds": 16,
+      "emotion": "fearful",
+      "confidence": 0.133
+    },
+    {
+      "timestamp_seconds": 33,
+      "emotion": "fearful",
+      "confidence": 0.133
+    }
+  ],
+  "comparative_analysis": {
+    "vs_beginner": "better",
+    "vs_intermediate": "similar",
+    "vs_advanced": "worse"
+  },
+  "next_steps": [
+    "Re-structure content with a strong hook, clear body, and impactful closing, focusing on audience engagement.",
+    "Practice incorporating purposeful gestures and varied facial expressions to enhance visual communication.",
+    "Work on adjusting speaking pace to the optimal range (140-160 WPM) and eliminating filler words."
+  ],
+  "practice_recommendations": {
+    "focus_areas": [
+      "Speech Structuring & Storytelling",
+      "Non-Verbal Communication (Gestures & Facial Expressions)",
+      "Pacing & Filler Word Reduction",
+      "Emotional Tone Alignment"
+    ],
+    "exercises": [
+      "Outline your speech using a 'hook, main points, call to action' framework.",
+      "Record yourself practicing and review for gestures and facial expressions, aiming for natural movement.",
+      "Use a metronome or pacing app during practice to maintain a consistent, optimal WPM. Practice pausing instead of using filler words.",
+      "Identify the desired emotion for different parts of your speech and practice conveying it vocally."
+    ],
+    "estimated_improvement_timeline": "4-6 weeks with consistent practice"
+  },
+  "timestamp": "2025-12-07T00:55:57.225381Z",
+  "model_used": "gemini-2.5-flash",
+  "processing_complete": true
+}

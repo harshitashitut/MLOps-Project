@@ -1,0 +1,1 @@
+so, as i mentioned, I'm currently working on a depression emotion classifier on Reddit dataset. My team and I have trained models like Bi-LSTM and BERT nd we are seeing what really works for our pipeline from data processing to training logs and checkpointing. The project is teaching me a lot on how to iterate quickly and keep models reproducible  

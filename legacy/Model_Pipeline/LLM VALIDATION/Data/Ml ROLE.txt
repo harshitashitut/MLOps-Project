@@ -1,0 +1,317 @@
+
+
+1.
+
+Q: Explain the difference between supervised and unsupervised learning.
+A: Supervised learning uses labeled data to learn a mapping from inputs to outputs, enabling prediction of future labels. Unsupervised learning uses unlabeled data to uncover structure, patterns, or groupings, such as clustering or dimensionality reduction.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation with clear contrast and examples.
+
+2.
+
+Q: What is regularization and why is it important?
+A: Regularization discourages overly complex models by adding penalties like L1 or L2 to the loss function. This helps prevent overfitting and improves generalization.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Strong explanation with correct motivation and details.
+
+3.
+
+Q: Describe how gradient descent works.
+A: Gradient descent iteratively updates parameters in the direction opposite the gradient of the loss. The learning rate controls the step size, and convergence is reached when gradient magnitudes become small.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Very clear and structured, captures core mechanism well.
+
+4.
+
+Q: What is the bias–variance tradeoff?
+A: It represents the balance between underfitting (high bias) and overfitting (high variance). Optimal models find a sweet spot minimizing total error by tuning complexity.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Excellent and concise. Shows deep understanding.
+
+5.
+
+Q: Why do we use cross-validation?
+A: Cross-validation tests model generalization by evaluating it on multiple train–validation splits. It reduces variance in performance estimates and helps select robust hyperparameters.
+Structure: 9 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Very strong, shows understanding of model selection.
+
+6.
+
+Q: What is PCA used for?
+A: PCA transforms correlated features into orthogonal principal components ranked by variance. It's used for dimensionality reduction, noise removal, and visualization.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent, complete answer.
+
+7.
+
+Q: Explain dropout in neural networks.
+A: Dropout randomly deactivates neurons during training, forcing the network to learn redundant representations. This reduces overfitting and enhances generalization.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Very strong with strong conceptual understanding.
+
+8.
+
+Q: What is a confusion matrix?
+A: It's a table showing TP, TN, FP, and FN for classification models. It helps compute metrics like precision, recall, and F1-score.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent clarity and completeness.
+
+9.
+
+Q: Describe ensemble learning.
+A: Ensemble learning combines multiple weak or strong learners to improve robustness and accuracy. Techniques include bagging, boosting, and stacking.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: High-quality with examples.
+
+10.
+
+Q: What is transfer learning?
+A: Transfer learning fine-tunes models pre-trained on large datasets to new tasks. This reduces training time, improves performance, and benefits low-data scenarios.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent application-focused explanation.
+
+11.
+
+Q: How does k-means clustering work?
+A: It initializes k centroids, assigns points to the nearest centroid, updates centroids based on cluster means, and repeats until convergence.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 9
+Feedback: Strong summarization of iterative nature.
+
+12.
+
+Q: What is the vanishing gradient problem?
+A: Gradients shrink as they propagate backward, especially in deep networks with saturating activations, preventing early layers from learning.
+Structure: 10 | Clarity: 9 | Relevance: 10 | Overall: 10
+Feedback: Very strong. Shows deep conceptual mastery.
+
+13.
+
+Q: What is model drift?
+A: Model drift happens when the statistical properties of data or relationships change over time, degrading model accuracy. It includes data drift and concept drift.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent definition with clear categories.
+
+14.
+
+Q: Describe the attention mechanism.
+A: Attention assigns weights to input elements based on relevance, allowing models to focus on the most informative parts. It improves long-range dependency modeling.
+Structure: 9 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Clean and accurate.
+
+15.
+
+Q: Why is monitoring critical after deploying ML models?
+A: Monitoring ensures performance stability, detects drift, identifies data quality issues, and triggers retraining pipelines when degradation occurs.
+Structure: 10 | Clarity: 10 | Relevance: 10 | Overall: 10
+Feedback: Excellent explanation of importance and use cases.
+
+16.
+
+Q: What is supervised learning?
+A: It's when data has labels and the model predicts those labels.
+Structure: 7 | Clarity: 8 | Relevance: 9 | Overall: 7
+Feedback: Correct but too brief; lacks detail and examples.
+
+17.
+
+Q: Explain logistic regression.
+A: It predicts probabilities for binary outcomes using a sigmoid function.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Accurate but missing explanation of decision boundaries.
+
+18.
+
+Q: What is overfitting?
+A: When a model learns noise from training data and doesn't generalize well.
+Structure: 8 | Clarity: 7 | Relevance: 9 | Overall: 7
+Feedback: Correct idea, but shallow explanation.
+
+19.
+
+Q: What is batch normalization?
+A: It normalizes layer inputs to stabilize training.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs more detail on why it's helpful.
+
+20.
+
+Q: What is gradient boosting?
+A: It's an ensemble method that builds models step by step.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Missing the residual-fitting explanation.
+
+21.
+
+Q: What are embeddings?
+A: They are vector forms of words.
+Structure: 5 | Clarity: 6 | Relevance: 8 | Overall: 6
+Feedback: Needs explanation of semantics and dimensionality.
+
+22.
+
+Q: Why use feature scaling?
+A: To make features balanced.
+Structure: 5 | Clarity: 6 | Relevance: 6 | Overall: 6
+Feedback: Needs more explanation and examples.
+
+23.
+
+Q: What is SMOTE?
+A: It's a method to oversample minority classes.
+Structure: 6 | Clarity: 6 | Relevance: 7 | Overall: 6
+Feedback: Correct but overly simplistic.
+
+24.
+
+Q: What is recall?
+A: It's how many positives you find.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Needs formal definition and example.
+
+25.
+
+Q: What is a decision tree?
+A: A model that splits data based on conditions.
+Structure: 7 | Clarity: 7 | Relevance: 7 | Overall: 7
+Feedback: Good but lacks depth on splitting criteria.
+
+26.
+
+Q: Explain ARIMA in time series.
+A: It's a model for predicting future values in time series.
+Structure: 6 | Clarity: 6 | Relevance: 7 | Overall: 6
+Feedback: Needs explanation of AR, I, MA components.
+
+27.
+
+Q: What is A/B testing?
+A: Comparing two versions to see which is better.
+Structure: 6 | Clarity: 7 | Relevance: 7 | Overall: 6
+Feedback: Missing statistical rigor aspect.
+
+28.
+
+Q: What is feature engineering?
+A: Creating useful features from raw data.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs examples of techniques.
+
+29.
+
+Q: What is a learning rate?
+A: It controls how big the steps are in training.
+Structure: 6 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Basic explanation; needs effects of too high/low.
+
+30.
+
+Q: What is clustering?
+A: Grouping data points that are similar.
+Structure: 7 | Clarity: 7 | Relevance: 8 | Overall: 7
+Feedback: Needs mention of unsupervised nature and techniques.
+
+
+31.
+
+Q: Explain supervised vs unsupervised learning.
+A: Supervised is better than unsupervised.
+Structure: 2 | Clarity: 2 | Relevance: 3 | Overall: 2
+Feedback: Incorrect and vague. No conceptual explanation.
+
+32.
+
+Q: What is regularization?
+A: Something added to the model to make it stronger.
+Structure: 2 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Incorrect; doesn’t describe penalization or overfitting.
+
+33.
+
+Q: What is overfitting?
+A: When the model is too slow.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Wrong definition.
+
+34.
+
+Q: Explain gradient descent.
+A: It goes down a hill to get the answer.
+Structure: 3 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Metaphor with no technical detail.
+
+35.
+
+Q: What is PCA?
+A: A way to clean your data.
+Structure: 2 | Clarity: 3 | Relevance: 1 | Overall: 2
+Feedback: Incorrect and missing essential explanation.
+
+36.
+
+Q: What is a confusion matrix?
+A: A matrix that is confusing.
+Structure: 1 | Clarity: 1 | Relevance: 1 | Overall: 1
+Feedback: Completely uninformative.
+
+37.
+
+Q: What is a neural network?
+A: Something that works like a brain.
+Structure: 4 | Clarity: 4 | Relevance: 3 | Overall: 3
+Feedback: Extremely vague; lacks architecture explanation.
+
+38.
+
+Q: What is clustering?
+A: Just grouping random stuff.
+Structure: 3 | Clarity: 3 | Relevance: 3 | Overall: 3
+Feedback: Too vague and misleading.
+
+39.
+
+Q: What is a learning rate?
+A: How fast the model learns like a student.
+Structure: 3 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: Useless analogy; no details.
+
+40.
+
+Q: What is dropout?
+A: When you remove neurons because they don't work.
+Structure: 3 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Incorrect interpretation.
+
+41.
+
+Q: What is gradient boosting?
+A: Boosting gradients to make them bigger.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Completely incorrect.
+
+42.
+
+Q: What is time series forecasting?
+A: Predicting the time.
+Structure: 2 | Clarity: 3 | Relevance: 1 | Overall: 1
+Feedback: Wrong and incomplete.
+
+43.
+
+Q: What are embeddings?
+A: Something embedded in the model.
+Structure: 3 | Clarity: 2 | Relevance: 2 | Overall: 2
+Feedback: No information provided.
+
+44.
+
+Q: What is model drift?
+A: When the model drifts away from predictions.
+Structure: 3 | Clarity: 3 | Relevance: 2 | Overall: 2
+Feedback: Misleading and lacks definition.
+
+45.
+
+Q: Why monitor ML models?
+A: To see what happens.
+Structure: 2 | Clarity: 2 | Relevance: 1 | Overall: 1
+Feedback: Not actionable or informative.

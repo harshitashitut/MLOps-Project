@@ -1,0 +1,105 @@
+{
+  "results": {
+    "overall_score": 57,
+    "performance_level": "intermediate",
+    "category_scores": {
+      "content": {
+        "score": 60,
+        "structure": 50,
+        "clarity": 90,
+        "engagement": 40,
+        "depth": 60
+      },
+      "vocal_delivery": {
+        "score": 73,
+        "pace": 85,
+        "pace_wpm": 134.3,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 98,
+        "filler_word_frequency": 40,
+        "pause_effectiveness": 70,
+        "volume_consistency": 70
+      },
+      "visual_presentation": {
+        "score": 40,
+        "body_language": 28,
+        "posture": 50,
+        "gestures": 0,
+        "eye_contact": 60,
+        "facial_expressions": 0,
+        "professional_appearance": 50
+      },
+      "tone_emotion": {
+        "score": 40,
+        "dominant_emotion": "sad",
+        "emotion_appropriateness": 30,
+        "confidence_level": 30,
+        "authenticity": 60,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 45.58000183105469,
+      "word_count": 102,
+      "words_per_minute": 134.3,
+      "filler_words_count": 6,
+      "filler_words_per_minute": 7.9,
+      "gesture_frequency": 0.1,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "content",
+        "strength": "Clear problem identification and practical solution offered.",
+        "evidence": "The transcript clearly outlines a problem and a structured approach to solving it."
+      },
+      {
+        "category": "content",
+        "strength": "Concise communication.",
+        "evidence": "The message is direct and to the point without excessive verbosity."
+      },
+      {
+        "category": "visual",
+        "strength": "Clear lighting on face and natural facial expressions.",
+        "evidence": "Visual analysis noted good lighting and natural expressions, contributing to a clear view of the speaker."
+      },
+      {
+        "category": "delivery",
+        "strength": "Excellent articulation.",
+        "evidence": "An articulation score of 98 indicates clear and precise speech."
+      }
+    ],
+    "improvements": [
+      {
+        "category": "visual",
+        "issue": "Suboptimal camera orientation and distracting background.",
+        "current_metric": "Overall visual score: 40/100",
+        "target_metric": "Professional appearance: >75/100",
+        "recommendation": "Ensure the camera is at eye level and use a plain, uncluttered background to enhance professionalism.",
+        "priority": "high",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "visual",
+        "issue": "Lack of purposeful gestures and inconsistent eye contact.",
+        "current_metric": "Gesture score: 0/100, Eye contact score: 60/100",
+        "target_metric": "Gesture score: >70/100, Eye contact score: >80/100",
+        "recommendation": "Practice incorporating natural, purposeful hand gestures to emphasize points and maintain consistent eye contact with the camera or audience.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "content",
+        "issue": "Weak opening hook and abrupt closing.",
+        "current_metric": "Opening strength: 'weak', Closing strength: 'weak'",
+        "target_metric": "Opening/Closing strength: 'strong'",
+        "recommendation": "Develop a compelling opening to immediately engage the audience and a clear, concise closing that summarizes key takeaways or includes a call-to-action.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      }
+    ],
+    "timestamp": "2025-12-08T01:33:24.747485Z",
+    "model_used": "gemini-2.5-flash",
+    "processing_complete": true
+  }
+}

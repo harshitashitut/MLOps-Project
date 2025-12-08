@@ -1,0 +1,155 @@
+{
+  "status": "success",
+  "video_id": "7a95a72f-5620-41e1-94b7-4fe9332778fd",
+  "processing_time_seconds": 119.87252306938171,
+  "results": {
+    "overall_score": 58,
+    "performance_level": "intermediate",
+    "category_scores": {
+      "content": {
+        "score": 60,
+        "structure": 60,
+        "clarity": 90,
+        "engagement": 40,
+        "depth": 50
+      },
+      "vocal_delivery": {
+        "score": 75,
+        "pace": 85,
+        "pace_wpm": 134.3,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 98,
+        "filler_word_frequency": 7.89,
+        "pause_effectiveness": 60,
+        "volume_consistency": 60
+      },
+      "visual_presentation": {
+        "score": 40,
+        "body_language": 28,
+        "posture": 60,
+        "gestures": 0,
+        "eye_contact": 50,
+        "facial_expressions": 0,
+        "professional_appearance": 60
+      },
+      "tone_emotion": {
+        "score": 45,
+        "dominant_emotion": "disgust",
+        "emotion_appropriateness": 25,
+        "confidence_level": 65,
+        "authenticity": 50,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 45.58,
+      "word_count": 102,
+      "words_per_minute": 134.3,
+      "filler_words_count": 6,
+      "filler_words_per_minute": 7.89,
+      "gesture_frequency": 0,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "content",
+        "strength": "Clear and concise message",
+        "evidence": "Clarity score of 90 and 'message clarity' identified as a strongest element."
+      },
+      {
+        "category": "content",
+        "strength": "Logical progression of ideas",
+        "evidence": "'Logical progression of ideas' identified as a strongest element."
+      },
+      {
+        "category": "delivery",
+        "strength": "Excellent articulation",
+        "evidence": "Articulation score of 98 (4.9 out of 5)."
+      },
+      {
+        "category": "delivery",
+        "strength": "Optimal speaking pace",
+        "evidence": "Speaking pace identified as 'optimal' at 134.3 WPM, close to the ideal range."
+      },
+      {
+        "category": "visual",
+        "strength": "Good lighting setup",
+        "evidence": "'Good lighting' identified in visual analysis strengths."
+      }
+    ],
+    "improvements": [
+      {
+        "category": "visual",
+        "issue": "Lack of gestures and facial expressiveness",
+        "current_metric": "Gesture score: 0, Facial expressiveness score: 0",
+        "target_metric": "Gesture score: 70+, Facial expressiveness score: 70+",
+        "recommendation": "Actively incorporate natural hand gestures to emphasize points and practice conveying emotions through varied facial expressions to enhance engagement.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Suboptimal camera angle and framing",
+        "current_metric": "Visual analysis notes 'major issue' with camera angle/framing",
+        "target_metric": "Professional framing and eye-level angle",
+        "recommendation": "Adjust your camera to eye-level and ensure your upper body is clearly visible within the frame for a more professional appearance.",
+        "priority": "high",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "tone",
+        "issue": "Inappropriate dominant emotion ('disgust')",
+        "current_metric": "Dominant emotion: disgust (13.1% distribution)",
+        "target_metric": "Dominant emotion: neutral/positive (e.g., happy, confident)",
+        "recommendation": "Focus on vocal tone and emotional delivery to align with the message's intent, aiming for a more neutral, confident, or enthusiastic tone.",
+        "priority": "high",
+        "estimated_effort": "high"
+      },
+      {
+        "category": "content",
+        "issue": "Weak opening and closing",
+        "current_metric": "Opening strength: weak, Closing strength: weak",
+        "target_metric": "Strong opening hook and memorable conclusion",
+        "recommendation": "Develop a compelling hook to immediately capture attention and a clear call-to-action or summary to leave a lasting impression.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "delivery",
+        "issue": "Moderate filler word usage",
+        "current_metric": "6 filler words (7.89 per minute)",
+        "target_metric": "Less than 3 filler words per minute",
+        "recommendation": "Practice pausing intentionally instead of using filler words. Record yourself to identify and eliminate common fillers.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content of your speech demonstrates commendable clarity and a logical flow of ideas, making it easy for the audience to follow your thought process. Your message is concise and well-structured, particularly in explaining your approach to project management and self-improvement. However, the presentation lacks a strong opening hook to immediately capture attention and a memorable conclusion to leave a lasting impact. There's also an opportunity to enhance engagement by incorporating more storytelling or specific examples to illustrate your points, which would add depth and emotional appeal to your narrative. Varying sentence structure and using rhetorical devices could further elevate the language quality and audience engagement.\n\nWhile the core message is highly focused, its overall impact is somewhat diminished by the absence of these engaging elements. Strengthening the introduction and conclusion, along with weaving in more relatable anecdotes, would transform an 'adequate' content rating into a truly compelling one. Consider how you can make your personal process more vivid and inspiring for your audience.",
+      "delivery_analysis": "Your vocal delivery is a significant strength, marked by excellent articulation that ensures every word is clear and understandable. Your speaking pace, at 134.3 words per minute, falls within an optimal range, contributing to a comfortable listening experience. This consistent pace prevents the audience from feeling rushed or disengaged. However, there is room for improvement in reducing the frequency of filler words, which, while not excessive, can occasionally interrupt the flow of your speech. Focusing on intentional pauses rather than fillers would enhance your professional presence and allow your key messages to resonate more effectively.\n\nVolume consistency is moderate, suggesting that while generally audible, there might be slight fluctuations. Practicing vocal variety in terms of pitch and volume could add more dynamism to your delivery, preventing monotony and keeping the audience more engaged. Overall, your vocal foundation is strong, and with minor adjustments, you can achieve an even more polished and impactful delivery.",
+      "visual_analysis": "Your visual presentation currently presents the most significant areas for improvement. While the lighting is good, contributing to a clear image, your overall visual score is low due to several factors. A major issue identified is the camera angle and framing, which may detract from your professional appearance. Additionally, there is a notable absence of gestures and facial expressiveness, which are crucial for conveying enthusiasm, confidence, and engagement. This lack of dynamic body language can make the presentation appear static and less engaging.\n\nEye contact is moderate, indicating that while you do look at the camera, consistency could be improved to foster a stronger connection with your audience. Addressing these visual elements\u2014specifically, optimizing your camera setup, consciously incorporating purposeful gestures, and allowing for more natural facial expressions\u2014will dramatically enhance your presence and professionalism, making your delivery much more impactful and engaging.",
+      "tone_analysis": "The emotional tone of your speech is a critical area for development. The analysis indicates 'disgust' as the dominant emotion, which is highly inappropriate for the context of discussing project management and self-improvement. While your vocal confidence is moderate, this underlying emotional tone can inadvertently convey a negative or unenthusiastic impression, undermining the positive aspects of your message. The emotional range appears limited, with no strong positive or inspiring emotional peaks.\n\nTo improve, focus on aligning your vocal tone with the intended message of growth and collaboration. Practice conveying enthusiasm, confidence, and a positive outlook through your voice. Ensuring emotional appropriateness and cultivating a more authentic, positive emotional range will significantly enhance your connection with the audience and the overall impact of your speech."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "neutral",
+        "confidence": 0.5
+      },
+      {
+        "timestamp_seconds": 10,
+        "emotion": "disgust",
+        "confidence": 0.6
+      },
+      {
+        "timestamp_seconds": 20,
+        "emotion": "neutral",
+        "confidence": 0.55
+      }
+    ],
+    "timestamp": "2025-12-08T02:38:46.315090Z",
+    "model_used": "gemini-2.5-flash",
+    "processing_complete": true
+  },
+  "timestamp": "2025-12-08T02:38:46.742618"
+}

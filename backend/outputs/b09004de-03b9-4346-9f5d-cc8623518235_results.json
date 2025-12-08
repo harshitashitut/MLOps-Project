@@ -1,0 +1,187 @@
+{
+  "status": "success",
+  "video_id": "b09004de-03b9-4346-9f5d-cc8623518235",
+  "processing_time_seconds": 116.12955594062805,
+  "results": {
+    "overall_score": 59,
+    "performance_level": "intermediate",
+    "category_scores": {
+      "content": {
+        "score": 60,
+        "structure": 40,
+        "clarity": 90,
+        "engagement": 30,
+        "depth": 60
+      },
+      "vocal_delivery": {
+        "score": 78,
+        "pace": 80,
+        "pace_wpm": 134.3,
+        "optimal_pace_range": "140-160 wpm",
+        "articulation": 98,
+        "filler_word_frequency": 6,
+        "pause_effectiveness": 80,
+        "volume_consistency": 70
+      },
+      "visual_presentation": {
+        "score": 40,
+        "body_language": 33,
+        "posture": 50,
+        "gestures": 50,
+        "eye_contact": 60,
+        "facial_expressions": 0,
+        "professional_appearance": 30
+      },
+      "tone_emotion": {
+        "score": 44,
+        "dominant_emotion": "disgust",
+        "emotion_appropriateness": 20,
+        "confidence_level": 65,
+        "authenticity": 40,
+        "emotional_range": "limited"
+      }
+    },
+    "key_metrics": {
+      "speech_duration_seconds": 45.58,
+      "word_count": 102,
+      "words_per_minute": 134.3,
+      "filler_words_count": 6,
+      "filler_words_per_minute": 7.89,
+      "gesture_frequency": 0,
+      "nervous_habits_count": 0
+    },
+    "strengths": [
+      {
+        "category": "content",
+        "strength": "Clear identification of a problem and proposed a practical solution.",
+        "evidence": "Content analysis highlights 'Clear identification of a problem' and 'Proposed a practical solution'."
+      },
+      {
+        "category": "content",
+        "strength": "Concise and to the point delivery of the message.",
+        "evidence": "Content analysis notes the speech as 'Concise and to the point'."
+      },
+      {
+        "category": "delivery",
+        "strength": "Optimal speaking pace, contributing to good comprehension.",
+        "evidence": "Words per minute (134.3) is close to the optimal range (140-160 wpm)."
+      },
+      {
+        "category": "delivery",
+        "strength": "High articulation score, indicating clear pronunciation.",
+        "evidence": "Articulation score of 4.9 out of 5."
+      },
+      {
+        "category": "visual",
+        "strength": "Adequate lighting on the face, ensuring visibility.",
+        "evidence": "Visual analysis mentions 'Adequate lighting on the face' as a strength."
+      }
+    ],
+    "improvements": [
+      {
+        "category": "visual",
+        "issue": "Incorrect camera orientation and distracting background.",
+        "current_metric": "Unprofessional visual setup",
+        "target_metric": "Professional and neutral visual setup",
+        "recommendation": "Ensure camera is correctly oriented (landscape) and choose a less busy, neutral background.",
+        "priority": "high",
+        "estimated_effort": "low"
+      },
+      {
+        "category": "content",
+        "issue": "Lack of a strong opening hook and memorable conclusion.",
+        "current_metric": "Opening strength: weak, Closing strength: weak",
+        "target_metric": "Strong opening and closing",
+        "recommendation": "Craft an engaging opening to immediately capture attention and a powerful closing to leave a lasting impression.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "tone",
+        "issue": "Dominant emotion of 'disgust' is inappropriate for the context.",
+        "current_metric": "Dominant emotion: disgust (13.3%)",
+        "target_metric": "Dominant emotion: neutral/calm/confident",
+        "recommendation": "Practice vocal exercises to project a more appropriate and confident emotional tone, aligning with the message.",
+        "priority": "high",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "visual",
+        "issue": "Limited facial expressiveness during the speech.",
+        "current_metric": "Facial expressiveness score: 0",
+        "target_metric": "Increased facial expressiveness (score > 70)",
+        "recommendation": "Consciously use facial expressions to convey emotions and emphasize points, practicing in front of a mirror.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      },
+      {
+        "category": "delivery",
+        "issue": "Frequent use of filler words.",
+        "current_metric": "Filler words per minute: 7.89",
+        "target_metric": "Filler words per minute: < 3",
+        "recommendation": "Practice pausing intentionally instead of using filler words, and record yourself to identify and reduce them.",
+        "priority": "medium",
+        "estimated_effort": "medium"
+      }
+    ],
+    "detailed_feedback": {
+      "content_analysis": "The content demonstrates a clear understanding of the speaker's weakness and a well-structured approach to problem-solving, highlighting self-awareness and a practical solution. The message is highly focused and concise, which are significant strengths. However, the presentation suffers from a weak opening and closing, failing to immediately hook the audience or provide a memorable conclusion. The engagement score is low, suggesting a lack of storytelling or vivid language that could make the content more compelling and impactful. Repetitive use of 'So' also detracts from the overall language quality and flow.\n\nTo elevate the content, focus on crafting a more dynamic introduction that grabs attention and a strong closing that summarizes key takeaways or provides a call to action. Incorporating more vivid language, anecdotes, or rhetorical devices could significantly boost engagement and make the message more memorable. While the clarity is excellent, the structure could benefit from more varied transitions beyond simple conjunctions.",
+      "delivery_analysis": "Vocal delivery is a strong point, with an optimal speaking pace of 134.3 words per minute, which ensures the audience can easily follow along. Articulation is exceptionally clear, contributing to high comprehensibility. However, the presence of 6 filler words within a relatively short speech (7.89 filler words per minute) indicates an area for improvement. While the overall pace is good, these fillers can disrupt the flow and diminish perceived confidence.\n\nTo refine vocal delivery, practice intentional pausing to replace filler words, allowing for natural breaks that enhance clarity and impact. Maintaining the current optimal pace and articulation is crucial, but focusing on eliminating verbal crutches will make the delivery even more polished and professional. Exploring vocal variety, such as changes in pitch and tone, could also further enhance engagement and prevent monotony.",
+      "visual_analysis": "The visual presentation is the weakest aspect of this performance. While adequate lighting is present, fundamental issues like incorrect camera orientation (90-degree rotation) and a busy background severely detract from professionalism and audience perception. The overall visual score is low, indicating significant room for improvement across multiple visual elements. Eye contact is moderate, but inconsistent, and facial expressiveness is notably absent, which can make the speaker appear disengaged or unapproachable.\n\nImmediate actions should include correcting the camera orientation and selecting a clean, neutral background. Beyond these technical fixes, conscious effort is needed to improve body language. This includes maintaining more consistent direct eye contact to build rapport, and actively using facial expressions to convey enthusiasm, seriousness, or other appropriate emotions. Wider framing would also allow for better assessment and utilization of gestures and posture, which currently have moderate scores.",
+      "tone_analysis": "The vocal emotion analysis reveals a dominant emotion of 'disgust,' which is highly inappropriate for a professional context and significantly impacts the perceived authenticity and appropriateness of the tone. While vocal confidence is moderate, the underlying emotional tone conveyed undermines the message, potentially creating a disconnect with the audience. The emotional distribution is somewhat flat, suggesting a limited range of appropriate emotional expression, or a lack of intentional emotional modulation.\n\nAddressing the dominant emotional tone is critical. The speaker needs to practice projecting emotions that align with the message's intent, such as confidence, enthusiasm, or thoughtfulness, rather than negative emotions. This involves self-awareness of vocal habits and conscious effort to modulate tone and pitch to convey desired emotions. Working on authenticity means ensuring that the vocal delivery genuinely reflects the intended message and emotional state, rather than an unintended one like 'disgust'."
+    },
+    "emotion_timeline": [
+      {
+        "timestamp_seconds": 0,
+        "emotion": "disgust",
+        "confidence": 0.133
+      },
+      {
+        "timestamp_seconds": 15,
+        "emotion": "disgust",
+        "confidence": 0.133
+      },
+      {
+        "timestamp_seconds": 30,
+        "emotion": "disgust",
+        "confidence": 0.133
+      },
+      {
+        "timestamp_seconds": 45,
+        "emotion": "disgust",
+        "confidence": 0.133
+      }
+    ],
+    "comparative_analysis": {
+      "vs_beginner": "better",
+      "vs_intermediate": "similar",
+      "vs_advanced": "worse"
+    },
+    "next_steps": [
+      "Correct camera orientation and choose a neutral background for immediate visual improvement.",
+      "Develop a strong opening hook and a memorable conclusion for future presentations.",
+      "Practice vocal exercises to project a more appropriate and confident emotional tone, avoiding 'disgust'."
+    ],
+    "practice_recommendations": {
+      "focus_areas": [
+        "Visual setup and professionalism",
+        "Content structure (opening/closing)",
+        "Emotional tone and vocal modulation",
+        "Reducing filler words",
+        "Facial expressiveness"
+      ],
+      "exercises": [
+        "Record and review practice sessions, focusing on camera angle, background, and facial expressions.",
+        "Outline speeches with explicit attention to crafting compelling introductions and conclusions.",
+        "Practice delivering the speech with different emotional intentions (e.g., confident, enthusiastic) and record to compare.",
+        "Use a 'filler word counter' tool during practice to track and reduce 'um', 'uh', 'so', etc.",
+        "Practice in front of a mirror, exaggerating facial expressions to become more comfortable using them."
+      ],
+      "estimated_improvement_timeline": "4-6 weeks with consistent practice"
+    },
+    "timestamp": "2025-12-08T02:31:15.261182Z",
+    "model_used": "gemini-2.5-flash",
+    "processing_complete": true
+  },
+  "timestamp": "2025-12-08T02:31:15.965089"
+}

@@ -1,0 +1,123 @@
+.PHONY: help build up down restart logs clean dev prod test
+
+# Default target
+help:
+	@echo "🐳 PitchQuest Docker Commands"
+	@echo ""
+	@echo "Development:"
+	@echo "  make dev          - Start development environment with hot reload"
+	@echo "  make dev-build    - Build and start development environment"
+	@echo ""
+	@echo "Production:"
+	@echo "  make prod         - Start production environment"
+	@echo "  make prod-build   - Build and start production environment"
+	@echo ""
+	@echo "Management:"
+	@echo "  make up           - Start all containers"
+	@echo "  make down         - Stop all containers"
+	@echo "  make restart      - Restart all containers"
+	@echo "  make build        - Build all images"
+	@echo ""
+	@echo "Logs & Debugging:"
+	@echo "  make logs         - View logs for all services"
+	@echo "  make logs-backend - View backend logs"
+	@echo "  make logs-frontend- View frontend logs"
+	@echo "  make shell-backend- Enter backend container shell"
+	@echo "  make shell-frontend- Enter frontend container shell"
+	@echo ""
+	@echo "Database:"
+	@echo "  make db-shell     - Access PostgreSQL shell"
+	@echo "  make db-backup    - Backup database"
+	@echo "  make db-restore   - Restore database from backup"
+	@echo ""
+	@echo "Maintenance:"
+	@echo "  make clean        - Remove containers and volumes"
+	@echo "  make clean-all    - Remove everything including images"
+	@echo "  make prune        - Clean up unused Docker resources"
+
+# Development
+dev:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+dev-build:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+
+# Production
+prod:
+	docker-compose up -d
+
+prod-build:
+	docker-compose up -d --build
+
+# Basic operations
+build:
+	docker-compose build
+
+up:
+	docker-compose up -d
+
+down:
+	docker-compose down
+
+restart:
+	docker-compose restart
+
+# Logs
+logs:
+	docker-compose logs -f
+
+logs-backend:
+	docker-compose logs -f backend
+
+logs-frontend:
+	docker-compose logs -f frontend
+
+# Shell access
+shell-backend:
+	docker-compose exec backend bash
+
+shell-frontend:
+	docker-compose exec frontend sh
+
+# Database operations
+db-shell:
+	docker-compose exec postgres psql -U postgres -d pitchquest
+
+db-backup:
+	@echo "Creating database backup..."
+	docker-compose exec postgres pg_dump -U postgres pitchquest > backup_$(shell date +%Y%m%d_%H%M%S).sql
+	@echo "Backup created!"
+
+db-restore:
+	@echo "Restoring database from backup.sql..."
+	docker-compose exec -T postgres psql -U postgres pitchquest < backup.sql
+	@echo "Database restored!"
+
+# Testing
+test:
+	docker-compose run backend pytest
+	docker-compose run frontend npm test
+
+# Cleanup
+clean:
+	docker-compose down -v
+
+clean-all:
+	docker-compose down -v --rmi all
+
+prune:
+	docker system prune -a --volumes
+
+# Health check
+health:
+	@echo "Checking service health..."
+	@curl -f http://localhost:8000/health || echo "Backend: ❌"
+	@curl -f http://localhost:3000 || echo "Frontend: ❌"
+
+# View status
+ps:
+	docker-compose ps
+
+# View resource usage
+stats:
+	docker stats

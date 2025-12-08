@@ -1,0 +1,9 @@
+data/
+*.mov
+*.avi
+__pycache__/
+*.pyc
+.DS_Store
+mlruns/
+# Allow specific sample video
+!sample.mp4
