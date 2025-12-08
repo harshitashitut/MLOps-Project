@@ -23,6 +23,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
 import PublicSpeaking from './pages/PublicSpeaking';
+import InterviewAnalysis from './pages/InterviewAnalysis';
+import Pitching from './pages/Pitching';
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/public-speaking" element={<PublicSpeaking />} />
+        <Route path="/interview-analysis" element={<InterviewAnalysis />} />
+        <Route path="/pitching" element={<Pitching />} />
         <Route
           path="/"
           element={
