@@ -1,0 +1,43 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [ main, develop, feature/** ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/frontend-ci.yml'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    name: Build & Test Frontend
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Build Docker image
+        run: |
+          cd frontend
+          docker build -t pitchquest-frontend:test .
+      
+      - name: Test Docker image starts
+        run: |
+          docker run -d --name test-frontend -p 3000:80 \
+            pitchquest-frontend:test
+          
+          sleep 10
+          
+          # Test frontend serves content
+          curl -f http://localhost:3000 || exit 1
+          
+          docker stop test-frontend
+          docker rm test-frontend
+      
+      - name: Success
+        run: echo "✅ Frontend Docker build successful!"
