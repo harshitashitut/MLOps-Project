@@ -31,11 +31,22 @@ jobs:
           docker run -d --name test-backend -p 8000:8000 \
             -e OPENAI_API_KEY=test-key \
             -e GEMINI_API_KEY=test-key \
+            -e SUPABASE_URL=http://mock.supabase.co \
+            -e SUPABASE_KEY=mock-key \
             pitchquest-backend:test
           
-          sleep 15
+          # Wait for backend to be ready (with retries)
+          echo "Waiting for backend to start..."
+          for i in {1..30}; do
+            if curl -f http://localhost:8000/ 2>/dev/null; then
+              echo "✅ Backend is ready!"
+              break
+            fi
+            echo "Attempt $i/30: Backend not ready yet, waiting..."
+            sleep 2
+          done
           
-          # Test root endpoint
+          # Final check
           curl -f http://localhost:8000/ || exit 1
           
           docker stop test-backend
