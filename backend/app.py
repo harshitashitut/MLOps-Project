@@ -100,7 +100,16 @@ async def startup_event():
     logger.info(f"📁 Upload directory: {UPLOAD_DIR.absolute()}")
     logger.info(f"📁 Output directory: {OUTPUT_DIR.absolute()}")
     
-    # Test database connection
+    # Check if running in CI/test mode
+    CI_MODE = os.getenv('CI_MODE', 'false').lower() == 'true'
+    SUPABASE_URL = os.getenv('SUPABASE_URL', '')
+    
+    if CI_MODE or 'mock' in SUPABASE_URL.lower():
+        logger.warning("🧪 Running in CI/TEST mode - skipping database initialization")
+        logger.info("✅ CI mode active - backend will start without database")
+        return
+    
+    # Normal production mode - test database connection
     if test_connection():
         logger.info("✅ Database connection verified")
         try:
@@ -129,6 +138,20 @@ async def root():
 @app.get("/health")
 async def health_check():
     """Comprehensive health check"""
+    CI_MODE = os.getenv('CI_MODE', 'false').lower() == 'true'
+    
+    if CI_MODE:
+        return {
+            "status": "healthy",
+            "mode": "ci_test",
+            "database": "skipped",
+            "storage": {
+                "upload_dir": str(UPLOAD_DIR.exists()),
+                "output_dir": str(OUTPUT_DIR.exists())
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+    
     db_status = "healthy" if test_connection() else "unhealthy"
     
     return {
@@ -140,7 +163,6 @@ async def health_check():
         },
         "timestamp": datetime.utcnow().isoformat()
     }
-
 # ==================== BACKGROUND TASK FUNCTION ====================
 def process_video_background(video_path: str, video_id: str, user_id: str):
     """

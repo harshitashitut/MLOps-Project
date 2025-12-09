@@ -28,29 +28,50 @@ jobs:
       
       - name: Test Docker image starts
         run: |
+          # Start container with CI_MODE enabled
           docker run -d --name test-backend -p 8000:8000 \
+            -e CI_MODE=true \
             -e OPENAI_API_KEY=test-key \
             -e GEMINI_API_KEY=test-key \
-            -e SUPABASE_URL=http://mock.supabase.co \
-            -e SUPABASE_KEY=mock-key \
+            -e SUPABASE_URL=https://mock.supabase.co \
+            -e SUPABASE_SERVICE_KEY=mock-key \
             pitchquest-backend:test
           
-          # Wait for backend to be ready (with retries)
-          echo "Waiting for backend to start..."
-          for i in {1..30}; do
-            if curl -f http://localhost:8000/ 2>/dev/null; then
-              echo "✅ Backend is ready!"
-              break
-            fi
-            echo "Attempt $i/30: Backend not ready yet, waiting..."
-            sleep 2
-          done
+          echo "⏳ Waiting for backend to start..."
+          sleep 10
           
-          # Final check
-          curl -f http://localhost:8000/ || exit 1
+          # Show logs
+          echo "📋 Container logs:"
+          docker logs test-backend
           
+          # Check if running
+          if ! docker ps | grep test-backend; then
+            echo "❌ Container stopped! Full logs:"
+            docker logs test-backend
+            docker rm test-backend
+            exit 1
+          fi
+          
+          # Test connection
+          echo "🧪 Testing root endpoint..."
+          if curl -f http://localhost:8000/ 2>/dev/null; then
+            echo "✅ Backend responding!"
+          else
+            echo "❌ Backend not responding. Logs:"
+            docker logs test-backend
+            docker stop test-backend
+            docker rm test-backend
+            exit 1
+          fi
+          
+          # Test health endpoint
+          echo "🧪 Testing health endpoint..."
+          curl http://localhost:8000/health
+          
+          # Cleanup
           docker stop test-backend
           docker rm test-backend
+          echo "✅ Backend CI passed!"
       
       - name: Success
         run: echo "✅ Backend Docker build successful!"
