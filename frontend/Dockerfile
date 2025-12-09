@@ -1,7 +1,7 @@
 # Multi-stage build for Vite React app
 
 # Stage 1: Build
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Declare build arguments (Vite needs these during build)

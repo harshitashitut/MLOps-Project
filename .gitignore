@@ -66,6 +66,13 @@ out/
 next-env.d.ts
 .vercel
 
+
+# Backend outputs
+backend/uploads/
+backend/outputs/
+backend/*.mp4
+backend/*.mp3
+
 # ==================== AIRFLOW ====================
 # Airflow logs and temp files
 airflow/logs/
