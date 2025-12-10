@@ -627,4 +627,4 @@ This project is developed for academic purposes as part of an MLOps course. Lice
 
 **Built with ❤️ for better public speaking**
 
-*Last Updated: December 2024*
+*Last Updated: December 2025*
